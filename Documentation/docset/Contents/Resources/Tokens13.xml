@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UINavigationController+M13ProgressViewBar.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UINavigationController(M13ProgressViewBar)</TokenIdentifier>
+			<Abstract type="html">A UINavagationController category that adds a progress view to the UINavigationBar.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/showProgress</TokenIdentifier>
+			<Abstract type="html">Show the progress bar.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)showProgress</Declaration>
+			
+			
+			<Anchor>//api/name/showProgress</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setProgress:animated:</TokenIdentifier>
+			<Abstract type="html">Set the progress to display on the progress bar.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)setProgress:(CGFloat)progress animated:(BOOL)animated</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>progress</Name>
+					<Abstract type="html">The progress to display as a percentage from 0-1.</Abstract>
+				</Parameter><Parameter>
+					<Name>animated</Name>
+					<Abstract type="html">Wether or not to animate the change.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setProgress:animated:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setProgressTitle:</TokenIdentifier>
+			<Abstract type="html">Set the string to replace the UINavigationBar&apos;s title with while showing progress. Send nil to reset the title.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)setProgressTitle:(NSString *)title</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The string to replace the UINavigationBar&apos;s title while showing progress.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setProgressTitle:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setIndeterminate:</TokenIdentifier>
+			<Abstract type="html">Set wether or not to show indeterminate.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)setIndeterminate:(BOOL)indeterminate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>indeterminate</Name>
+					<Abstract type="html">wether or not the progress bar is indeterminate.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setIndeterminate:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/finishProgress</TokenIdentifier>
+			<Abstract type="html">Fill the progress bar completely and remove it from display.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)finishProgress</Declaration>
+			
+			
+			<Anchor>//api/name/finishProgress</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/cancelProgress</TokenIdentifier>
+			<Abstract type="html">Remove the progress bar from the display.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)cancelProgress</Declaration>
+			
+			
+			<Anchor>//api/name/cancelProgress</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

@@ -33,6 +33,7 @@ typedef enum {
 
 /**@name Initalization*/
 /**Initalize the HUD with a customized progress view.
+ @param progressView The progres view to display in the HUD.
  @note If you create the HUD with this method, you are responsible for creating the progress view and setting the frame size of the progress view.*/
 - (id)initWithProgressView:(M13ProgressView *)progressView;
 

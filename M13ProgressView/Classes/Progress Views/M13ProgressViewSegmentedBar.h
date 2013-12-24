@@ -26,7 +26,7 @@ typedef enum {
     M13ProgressViewSegmentedBarSegmentShapeCircle
 } M13ProgressViewSegmentedBarSegmentShape;
 
-/*A progress bar that shows progress with discrete values.*/
+/**A progress bar that shows progress with discrete values.*/
 @interface M13ProgressViewSegmentedBar : M13ProgressView
 
 /**@name Appearance*/

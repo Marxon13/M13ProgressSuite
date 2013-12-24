@@ -13,6 +13,7 @@
 
 #import "M13ProgressView.h"
 
+/**A progress view that shows progress with a pie chart.*/
 @interface M13ProgressViewPie : M13ProgressView
 
 /**@name Appearance*/
