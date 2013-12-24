@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA1022BC183AA1A400987599"
-               BuildableName = "M13ProgressView.app"
+               BuildableName = "M13ProgressSuite.app"
                BlueprintName = "M13ProgressSuite"
                ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA1022E0183AA1A400987599"
-               BuildableName = "M13ProgressViewTests.xctest"
+               BuildableName = "M13ProgressSuiteTests.xctest"
                BlueprintName = "M13ProgressSuiteTests"
                ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA1022BC183AA1A400987599"
-            BuildableName = "M13ProgressView.app"
+            BuildableName = "M13ProgressSuite.app"
             BlueprintName = "M13ProgressSuite"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA1022BC183AA1A400987599"
-            BuildableName = "M13ProgressView.app"
+            BuildableName = "M13ProgressSuite.app"
             BlueprintName = "M13ProgressSuite"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA1022BC183AA1A400987599"
-            BuildableName = "M13ProgressView.app"
+            BuildableName = "M13ProgressSuite.app"
             BlueprintName = "M13ProgressSuite"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
          </BuildableReference>
