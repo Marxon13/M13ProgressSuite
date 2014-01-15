@@ -355,6 +355,7 @@
     _backgroundLayer.frame = self.bounds;
     _progressLayer.frame = self.bounds;
     _iconLayer.frame = self.bounds;
+    _percentageLabel.frame = self.bounds;
     
     //Update font size
     _percentageLabel.font = [UIFont systemFontOfSize:(self.bounds.size.width / 5)];
