@@ -66,7 +66,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
  
 
-  s.source_files  = 'M13ProgressView/Classes/{Console,HUD,Progress Views,UINavigationController}/*
+  s.source_files  = 'M13ProgressView/Classes/{Console,HUD,Progress Views,UINavigationController}/*'
 
   s.framework  = 'Foundation','Accelerate','CoreImage','QuartzCore','CoreGraphics','UIKit'
 
