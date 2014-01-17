@@ -122,8 +122,6 @@
     
     //Set the label
     _percentageLabel = [[UILabel alloc] init];
-    _percentageLabel.font = [UIFont systemFontOfSize:(self.bounds.size.width / 5)];
-    _percentageLabel.textColor = self.primaryColor;
     _percentageLabel.textAlignment = NSTextAlignmentCenter;
     _percentageLabel.contentMode = UIViewContentModeCenter;
     _percentageLabel.frame = self.bounds;
@@ -357,9 +355,11 @@
     _backgroundLayer.frame = self.bounds;
     _progressLayer.frame = self.bounds;
     _iconLayer.frame = self.bounds;
+    _percentageLabel.frame = self.bounds;
     
     //Update font size
     _percentageLabel.font = [UIFont systemFontOfSize:(self.bounds.size.width / 5)];
+    _percentageLabel.textColor = self.primaryColor;
     
     //Update line widths if not overriden
     if (!_backgroundRingWidthOverriden) {
