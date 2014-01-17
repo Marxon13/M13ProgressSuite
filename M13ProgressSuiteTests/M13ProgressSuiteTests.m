@@ -1,18 +1,18 @@
 //
-//  M13ProgressViewTests.m
-//  M13ProgressViewTests
+//  M13ProgressSuiteTests.m
+//  M13ProgressSuiteTests
 //
-//  Created by Brandon McQuilkin on 11/18/13.
-//  Copyright (c) 2013 Brandon McQuilkin. All rights reserved.
+//  Created by Brandon McQuilkin on 1/17/14.
+//  Copyright (c) 2014 Brandon McQuilkin. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface M13ProgressViewTests : XCTestCase
+@interface M13ProgressSuiteTests : XCTestCase
 
 @end
 
-@implementation M13ProgressViewTests
+@implementation M13ProgressSuiteTests
 
 - (void)setUp
 {

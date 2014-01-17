@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA1E01FF18691D36006AB102"
+               BlueprintIdentifier = "CA2FB03F1889984A00BCAEF5"
                BuildableName = "Documentation"
                BlueprintName = "Documentation"
                ReferencedContainer = "container:M13ProgressSuite.xcodeproj">

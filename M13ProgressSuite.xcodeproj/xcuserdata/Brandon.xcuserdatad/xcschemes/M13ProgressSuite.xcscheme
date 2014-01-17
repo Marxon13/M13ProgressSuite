@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA1022BC183AA1A400987599"
+               BlueprintIdentifier = "CA2FAF971889907300BCAEF5"
                BuildableName = "M13ProgressSuite.app"
                BlueprintName = "M13ProgressSuite"
                ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA1022E0183AA1A400987599"
+               BlueprintIdentifier = "CA2FAFBB1889907300BCAEF5"
                BuildableName = "M13ProgressSuiteTests.xctest"
                BlueprintName = "M13ProgressSuiteTests"
                ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA1022BC183AA1A400987599"
+            BlueprintIdentifier = "CA2FAF971889907300BCAEF5"
             BuildableName = "M13ProgressSuite.app"
             BlueprintName = "M13ProgressSuite"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA1022BC183AA1A400987599"
+            BlueprintIdentifier = "CA2FAF971889907300BCAEF5"
             BuildableName = "M13ProgressSuite.app"
             BlueprintName = "M13ProgressSuite"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA1022BC183AA1A400987599"
+            BlueprintIdentifier = "CA2FAF971889907300BCAEF5"
             BuildableName = "M13ProgressSuite.app"
             BlueprintName = "M13ProgressSuite"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
