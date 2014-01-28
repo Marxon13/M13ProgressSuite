@@ -94,8 +94,6 @@ A set of progess view based off of the same superclass. Allowing easy switching 
 
 <img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Striped.gif">
 
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/StripedStill.gif">
-
 <img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/StripedIndeterminate.gif">
 
 Known Bugs:
