@@ -1,3 +1,4 @@
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/M13ProgressSuiteBanner.png">
 M13ProgressSuite
 ================
 
@@ -15,67 +16,87 @@ UINavigationController (M13ProgressViewBar)
 ---------------------
 Adds a progress bar to the UINavigationController's UINavigationBar. The progress bar is controlled through the UINavigationController. 
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/NavigationBar.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/UINavigationBar.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/NavigationBarIndeterminate.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/UINavigationBarIndeterminate.gif">
+
 
 M13ProgressHUD
 ---------------
 A customizable HUD that displays progress, and status information to the user. It uses the M13ProgressView class to allow easy changing of the progress view style.
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/M13ProgressHUD.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/HUDBasic.gif">
+
 
 M13ProgressConsole
 ------------------
 A progress view styled like Terminal on OS X.
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/M13ProgressConsole.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ConsolePercent.gif">
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ConsoleDots.gif">
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ConsoleDotsRaise.gif">
 
 M13ProgressViews
 ----------------
 A set of progess view based off of the same superclass. Allowing easy switching between progress view. Each progress view has success and failure actions, an indeterminate mode, and appearance customization features.
 
-**Ring**
+***Bar***
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/Ring.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Bar.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/RingIndeterminate.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/BarIndeterminate.gif">
 
-**Segmented Ring**
+***Bordered Bar***
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/SegmentedRing.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/BorderedBar.gif">
 
-**Pie**
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/BorderedIndeterminate.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/Pie.png)
+***Filtered Image***
 
-**Bar**
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/FilteredImage.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/Bar.png)
+***Image***
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/BarIndeterminate.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Image.gif">
 
-**Segmented Bar**
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ImageHidden.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/SegmentedBar.png)
+***Pie***
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/SegmentedBarIndeterminate.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Pie.gif">
 
-**Bordered Bar**
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/PieIndeterminate.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/BorderedBar.png)
+***Ring***
 
-**Striped Bar**
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Ring.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/StripedBar.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/RingIndeterminate.gif">
 
-**Image**
+**Segmented Bar***
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/Image.png)
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedBar.gif">
 
-**Filtered Image**
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedBarIndeterminate.gif">
 
-![image](https://raw.github.com/Marxon13/M13ProgressSuite/master/Images/FilteredImage.png)
+***Segmented Ring***
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedRing.gif">
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedRingStraight.gif">
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedRingIndeterminate.gif">
+
+***Striped Bar***
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Striped.gif">
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/StripedStill.gif">
+
+<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/StripedIndeterminate.gif">
 
 Known Bugs:
 ------------
