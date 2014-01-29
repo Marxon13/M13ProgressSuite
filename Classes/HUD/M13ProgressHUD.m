@@ -280,6 +280,13 @@
     //reset the blurs to the curent screen if need be
     [self setNeedsLayout];
     [self setNeedsDisplay];
+
+    if (!CGPointEqualToPoint(self.animationPoint, CGPointZero)) {
+      CGRect r = backgroundView.frame;
+      r.origin = CGPointApplyAffineTransform([self convertPoint:self.animationPoint toView:backgroundView], CGAffineTransformMakeTranslation(-r.size.width/3.5, r.size.height/1.25));
+      backgroundView.frame = r;
+    }
+
     //Animate the HUD on screen
     [CATransaction begin];
     CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -316,6 +323,20 @@
     scaleAnimation.removedOnCompletion = YES;
     
     [backgroundView.layer addAnimation:scaleAnimation forKey:@"transformAnimation"];
+
+    if (!CGPointEqualToPoint(self.animationPoint, CGPointZero)) {
+      CGRect r = backgroundView.frame;
+      CGPoint p =CGPointApplyAffineTransform([self convertPoint:self.animationPoint toView:backgroundView], CGAffineTransformMakeTranslation(r.size.width/8.0, r.size.height*1.25));
+
+      CABasicAnimation *frameAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+      frameAnimation.fromValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
+      frameAnimation.toValue = [NSValue valueWithCGPoint:p];
+      frameAnimation.removedOnCompletion = YES;
+      backgroundView.layer.position = p;
+      [backgroundView.layer addAnimation:frameAnimation forKey:@"frameAnimation"];
+    }
+
+    [CATransaction commit];
 }
 
 - (void)dismiss:(BOOL)animated
