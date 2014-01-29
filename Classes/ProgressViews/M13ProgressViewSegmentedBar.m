@@ -353,6 +353,8 @@
     }
     //Set the paths to the layer
     _progressLayer.path = pathRef;
+
+    CGPathRelease(pathRef);
 }
 
 - (void)drawBackground
@@ -420,6 +422,8 @@
     }
     //Set the paths to the layer
     _backgroundLayer.path = pathRef;
+
+    CGPathRelease(pathRef);
 }
 
 - (void)drawIndeterminate
@@ -496,6 +500,10 @@
     //Set the paths to the layer
     _progressLayer.path = progressPathRef;
     _backgroundLayer.path = backgroundPathRef;
+
+    CGPathRelease(progressPathRef);
+    CGPathRelease(backgroundPathRef);
+
     //increase the index by one for movement
     indeterminateIndex += 1;
     if (indeterminateIndex == numberOfSegmentsToBeColored + _numberOfSegments) {
