@@ -487,14 +487,14 @@
     
     //Set the frame of the background and its subviews
     [UIView animateWithDuration:_animationDuration animations:^{
-        backgroundView.frame = backgroundRect;
-        _progressView.frame = progressRect;
+        backgroundView.frame = CGRectIntegral(backgroundRect);
+        _progressView.frame = CGRectIntegral(progressRect);
         //Fade the label
         statusLabel.alpha = 0.0;
     } completion:^(BOOL finished) {
         if (finished) {
             //Set the label frame
-            statusLabel.frame = statusRect;
+            statusLabel.frame = CGRectIntegral(statusRect);
             statusLabel.text = optimalStatusString;
             [UIView animateWithDuration:_animationDuration animations:^{
                 //Show the label
