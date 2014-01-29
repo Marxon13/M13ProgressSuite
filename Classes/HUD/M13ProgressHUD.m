@@ -457,6 +457,23 @@
             statusRect.origin.y = (backgroundRect.size.height / 2.0) - (statusRect.size.height / 2.0);
         }
     } else {
+        //Calculate background height
+        backgroundRect.size.height = (statusRect.size.height > progressRect.size.height) ? statusRect.size.height : progressRect.size.height;
+        backgroundRect.size.height += 2 * _contentMargin;
+        if (backgroundRect.size.height < _minimumSize.height) {
+            backgroundRect.size.height = _minimumSize.height;
+        }
+        
+        //Calculate background width
+        backgroundRect.size.width = (statusRect.size.width > _progressViewSize.width) ? statusRect.size.width : _progressViewSize.width;
+        backgroundRect.size.width += 2 * _contentMargin;
+        if (backgroundRect.size.width < _minimumSize.width) {
+            backgroundRect.size.width = _minimumSize.width;
+        }
+        
+        backgroundRect.origin.x = (self.bounds.size.width / 2.0) - (backgroundRect.size.width / 2.0);
+        backgroundRect.origin.y = (self.bounds.size.height / 2.0) - (_minimumSize.height / 2.0);        
+        
         //There is no status label text, center the progress view
         progressRect.origin.x = (backgroundRect.size.width / 2.0) - (progressRect.size.width / 2.0);
         progressRect.origin.y = (backgroundRect.size.height / 2.0) - (progressRect.size.height / 2.0);
