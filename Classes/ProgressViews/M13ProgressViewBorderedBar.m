@@ -406,7 +406,7 @@
     }
     
     //Draw the path
-    CGRect rect;
+    CGRect rect = CGRectZero;
     if (_progressDirection == M13ProgressViewBorderedBarProgressDirectionLeftToRight) {
         rect = CGRectMake(_borderWidth * 2, _borderWidth * 2, (self.bounds.size.width - (4 * _borderWidth)) * self.progress, self.bounds.size.height - (4 * _borderWidth));
     } else if (_progressDirection == M13ProgressViewBorderedBarProgressDirectionRightToLeft) {

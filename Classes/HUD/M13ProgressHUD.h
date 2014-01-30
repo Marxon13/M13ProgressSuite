@@ -72,6 +72,8 @@ typedef enum {
 @property (nonatomic, retain) UIFont *statusFont;
 /**The size of the progress view.*/
 @property (nonatomic, assign) CGSize progressViewSize;
+/**The origin of the show/hide animation. show: will animate from this point, and hide: will animate to this point.*/
+@property (nonatomic, assign) CGPoint animationPoint;
 
 /**@name Properties*/
 /**The durations of animations in seconds.*/

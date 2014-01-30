@@ -533,6 +533,8 @@
     
     //Set the path
     _backgroundLayer.path = pathRef;
+
+    CGPathRelease(pathRef);
 }
 
 - (void)drawProgress
@@ -572,6 +574,8 @@
     //Set the path
     _progressLayer.path = pathRef;
     
+    CGPathRelease(pathRef);
+
     //Update label
     _percentageLabel.text = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:self.progress]];
 }
