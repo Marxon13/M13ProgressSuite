@@ -132,6 +132,7 @@
     [super setPrimaryColor:primaryColor];
     _percentageLabel.foregroundColor = self.primaryColor.CGColor;
     _progressLayer.strokeColor = self.primaryColor.CGColor;
+    _indeterminateLayer.backgroundColor = self.primaryColor.CGColor;
     [self setNeedsDisplay];
 }
 
