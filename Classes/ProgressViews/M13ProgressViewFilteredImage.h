@@ -24,6 +24,8 @@
 /**@name Appearance*/
 /**The image to use when showing progress.*/
 @property (nonatomic, retain) UIImage *progressImage;
+/**The UIImageView that shows the progress image.*/
+@property (nonatomic, retain) UIImageView *progressView;
 /**The array of CIFilters to apply to the image.
  @note The filters need to be encased in a M13ProgressViewCIFilterWrapper*/
 @property (nonatomic, retain) NSArray *filters;

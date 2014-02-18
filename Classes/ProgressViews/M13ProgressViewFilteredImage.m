@@ -25,8 +25,6 @@
 @property (nonatomic, strong) CADisplayLink *displayLink;
 /**Allow us to write to the progress.*/
 @property (nonatomic, readwrite) CGFloat progress;
-/**The UIImageView that shows the progress image.*/
-@property (nonatomic, retain) UIImageView *progressView;
 
 @end
 
