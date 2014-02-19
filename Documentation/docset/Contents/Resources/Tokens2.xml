@@ -606,6 +606,42 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/setAnimationPoint:</TokenIdentifier>
+			<Abstract type="html">The origin of the show/hide animation. show: will animate from this point, and hide: will animate to this point.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGPoint animationPoint</Declaration>
+			
+			
+			<Anchor>//api/name/animationPoint</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/animationPoint</TokenIdentifier>
+			<Abstract type="html">The origin of the show/hide animation. show: will animate from this point, and hide: will animate to this point.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGPoint animationPoint</Declaration>
+			
+			
+			<Anchor>//api/name/animationPoint</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressHUD/animationPoint</TokenIdentifier>
+			<Abstract type="html">The origin of the show/hide animation. show: will animate from this point, and hide: will animate to this point.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGPoint animationPoint</Declaration>
+			
+			
+			<Anchor>//api/name/animationPoint</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/setAnimationDuration:</TokenIdentifier>
 			<Abstract type="html">The durations of animations in seconds.</Abstract>
 			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
@@ -758,6 +794,78 @@
 			
 			
 			<Anchor>//api/name/isVisible</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/setShouldAutorotate:</TokenIdentifier>
+			<Abstract type="html">Wether or not the HUD will auto rotate to the device orientation.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAutorotate</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAutorotate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/shouldAutorotate</TokenIdentifier>
+			<Abstract type="html">Wether or not the HUD will auto rotate to the device orientation.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAutorotate</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAutorotate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressHUD/shouldAutorotate</TokenIdentifier>
+			<Abstract type="html">Wether or not the HUD will auto rotate to the device orientation.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAutorotate</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAutorotate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/setOrientation:</TokenIdentifier>
+			<Abstract type="html">The orientation of the HUD.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIInterfaceOrientation orientation</Declaration>
+			
+			
+			<Anchor>//api/name/orientation</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/orientation</TokenIdentifier>
+			<Abstract type="html">The orientation of the HUD.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIInterfaceOrientation orientation</Declaration>
+			
+			
+			<Anchor>//api/name/orientation</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressHUD/orientation</TokenIdentifier>
+			<Abstract type="html">The orientation of the HUD.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIInterfaceOrientation orientation</Declaration>
+			
+			
+			<Anchor>//api/name/orientation</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

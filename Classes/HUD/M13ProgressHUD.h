@@ -87,6 +87,12 @@ typedef enum {
 @property (nonatomic, assign) BOOL dismissAfterAction;
 /**Wether or not the HUD is currenty visible.*/
 - (BOOL)isVisible;
+/**Wether or not the HUD will auto rotate to the device orientation.
+ @note If set to `YES`, The HUD will rotate automatically to the device orientation, regardless of the interface orientation. This setting is suggested if the displayed view controller rotates and the HUD is displayed in a UIWindow. If the HUD is contained in a UIViewController. This setting should be set to NO, and the rotation should be set manually via the rotation property.
+ */
+@property (nonatomic, assign) BOOL shouldAutorotate;
+/**The orientation of the HUD.*/
+@property (nonatomic, assign) UIInterfaceOrientation orientation;
 
 /**@name Actions*/
 /**Set the progress of the `M13ProgressView`.
@@ -101,6 +107,7 @@ typedef enum {
  @param animated Wether or not to animate the change*/
 - (void)show:(BOOL)animated;
 /**Hide the progress HUD.
+ @note This method should be used when the HUD is going to be reused. When the HUD needs to be shown again, use `show:` do not initalize another instance. That will cause a memory leak. If the HUD is not going to be reused, use `dismiss:` instead. To retreive a hidden HUD, either hold onto it with a global variable, or use the `progressHUD` method for UIView.
  @param animated Wether or not to animate the change*/
 - (void)hide:(BOOL)animated;
 /**Dismiss the progress HUD and remove it from its superview.

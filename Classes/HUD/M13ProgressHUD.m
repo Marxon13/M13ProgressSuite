@@ -76,6 +76,7 @@
     _secondaryColor = [UIColor colorWithRed:181/255.0 green:182/255.0 blue:183/255.0 alpha:1.0];
     _progress = 0;
     _indeterminate = NO;
+    _shouldAutorotate = YES;
     if (self.frame.size.height != 0 && self.frame.size.width != 0) {
         _progressViewSize = CGSizeMake(150 / 4, 150 / 4);
     }
@@ -278,6 +279,7 @@
 - (void)show:(BOOL)animated
 {
     //reset the blurs to the curent screen if need be
+    [self registerForNotificationCenter];
     [self setNeedsLayout];
     [self setNeedsDisplay];
 
@@ -309,6 +311,8 @@
 
 - (void)hide:(BOOL)animated
 {
+    [self unregisterFromNotificationCenter];
+    
     CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     fadeAnimation.fromValue = [NSNumber numberWithFloat:1.0];
     fadeAnimation.toValue = [NSNumber numberWithFloat:0.0];
@@ -342,6 +346,9 @@
 - (void)dismiss:(BOOL)animated
 {
     [self hide:animated];
+    
+    //Removes the HUD from the superview, dismissing it.
+    [self performSelector:@selector(removeFromSuperview) withObject:Nil afterDelay:_animationDuration];
 }
 
 #pragma mark - Notifications
@@ -357,11 +364,23 @@
 }
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^{
-        [self setNeedsLayout];
-        [self setNeedsDisplay];
-    });
+    if (_shouldAutorotate) {
+        UIDeviceOrientation deviceOrientation = [notification.object orientation];
+        if (UIDeviceOrientationIsPortrait(deviceOrientation)) {
+            if (deviceOrientation == UIDeviceOrientationPortraitUpsideDown) {
+                _orientation = UIInterfaceOrientationPortraitUpsideDown;
+            } else {
+                _orientation = UIInterfaceOrientationPortrait;
+            }
+        } else {
+            if (deviceOrientation == UIDeviceOrientationLandscapeLeft) {
+                _orientation = UIInterfaceOrientationLandscapeLeft;
+            } else {
+                _orientation = UIInterfaceOrientationLandscapeRight;
+            }
+        }
+        [self layoutHUD];
+    }
 }
 
 #pragma mark Layout
@@ -502,10 +521,19 @@
         statusRect.size.height = 0.0;
     }
     
+    //Swap height and with on rotation
+    if (_orientation == UIInterfaceOrientationLandscapeLeft || _orientation == UIInterfaceOrientationLandscapeRight) {
+        //Flip the width and height.
+        CGFloat temp = backgroundRect.size.width;
+        backgroundRect.size.width = backgroundRect.size.height;
+        backgroundRect.size.height = temp;
+    }
+    
     //Set the frame of the background and its subviews
     [UIView animateWithDuration:_animationDuration animations:^{
         backgroundView.frame = CGRectIntegral(backgroundRect);
         _progressView.frame = CGRectIntegral(progressRect);
+         backgroundView.transform = CGAffineTransformMakeRotation([self angleForDeviceOrientation]);
         //Fade the label
         statusLabel.alpha = 0.0;
     } completion:^(BOOL finished) {
@@ -712,12 +740,11 @@
 
 - (CGFloat)angleForDeviceOrientation
 {
-    UIInterfaceOrientation orientation = UIApplication.sharedApplication.statusBarOrientation;
-    if (orientation == UIInterfaceOrientationLandscapeLeft) {
-        return -M_PI_2;
-    } else if (orientation == UIInterfaceOrientationLandscapeRight) {
+    if (_orientation == UIInterfaceOrientationLandscapeLeft) {
         return M_PI_2;
-    } else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
+    } else if (_orientation == UIInterfaceOrientationLandscapeRight) {
+        return -M_PI_2;
+    } else if (_orientation == UIInterfaceOrientationPortraitUpsideDown) {
         return M_PI;
     }
     return 0;

@@ -49,6 +49,42 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewFilteredImage/setProgressView:</TokenIdentifier>
+			<Abstract type="html">The UIImageView that shows the progress image.</Abstract>
+			<DeclaredIn>M13ProgressViewFilteredImage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) UIImageView *progressView</Declaration>
+			
+			
+			<Anchor>//api/name/progressView</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewFilteredImage/progressView</TokenIdentifier>
+			<Abstract type="html">The UIImageView that shows the progress image.</Abstract>
+			<DeclaredIn>M13ProgressViewFilteredImage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) UIImageView *progressView</Declaration>
+			
+			
+			<Anchor>//api/name/progressView</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewFilteredImage/progressView</TokenIdentifier>
+			<Abstract type="html">The UIImageView that shows the progress image.</Abstract>
+			<DeclaredIn>M13ProgressViewFilteredImage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) UIImageView *progressView</Declaration>
+			
+			
+			<Anchor>//api/name/progressView</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewFilteredImage/setFilters:</TokenIdentifier>
 			<Abstract type="html">The array of CIFilters to apply to the image.</Abstract>
 			<DeclaredIn>M13ProgressViewFilteredImage.h</DeclaredIn>
@@ -376,42 +412,6 @@
 			
 			
 			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewFilteredImage/setProgressView:</TokenIdentifier>
-			<Abstract type="html">The UIImageView that shows the progress image.</Abstract>
-			<DeclaredIn>M13ProgressViewFilteredImage.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) UIImageView *progressView</Declaration>
-			
-			
-			<Anchor>//api/name/progressView</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewFilteredImage/progressView</TokenIdentifier>
-			<Abstract type="html">The UIImageView that shows the progress image.</Abstract>
-			<DeclaredIn>M13ProgressViewFilteredImage.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) UIImageView *progressView</Declaration>
-			
-			
-			<Anchor>//api/name/progressView</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewFilteredImage/progressView</TokenIdentifier>
-			<Abstract type="html">The UIImageView that shows the progress image.</Abstract>
-			<DeclaredIn>M13ProgressViewFilteredImage.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) UIImageView *progressView</Declaration>
-			
-			
-			<Anchor>//api/name/progressView</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
