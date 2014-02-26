@@ -293,10 +293,10 @@ static char indeterminateLayerKey;
 
 - (void)setProgress:(CGFloat)progress
 {
-    if (progress > 100) {
-        progress = 100;
-    } else if (progress < 0) {
-        progress = 0;
+    if (progress > 1.0) {
+        progress = 1.0;
+    } else if (progress < 0.0) {
+        progress = 0.0;
     }
     objc_setAssociatedObject(self, &progressKey, [NSNumber numberWithFloat:progress], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     //Draw the update
