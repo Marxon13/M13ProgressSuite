@@ -89,22 +89,24 @@ static char indeterminateLayerKey;
 
 - (void)finishProgress
 {
-    if ([self getProgressView]) {
-        UIView *progressView = [self getProgressView];
-        
-        [UIView animateWithDuration:0.1 animations:^{
-            CGRect progressFrame = progressView.frame;
-            progressFrame.size.width = self.navigationBar.frame.size.width;
-            progressView.frame = progressFrame;
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.5 animations:^{
-                progressView.alpha = 0;
+    UIView *progressView = [self getProgressView];
+
+    if (progressView) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:0.1 animations:^{
+                CGRect progressFrame = progressView.frame;
+                progressFrame.size.width = self.navigationBar.frame.size.width;
+                progressView.frame = progressFrame;
             } completion:^(BOOL finished) {
-                [progressView removeFromSuperview];
-                progressView.alpha = 1;
-                [self setTitle:nil];
+                [UIView animateWithDuration:0.5 animations:^{
+                    progressView.alpha = 0;
+                } completion:^(BOOL finished) {
+                    [progressView removeFromSuperview];
+                    progressView.alpha = 1;
+                    [self setTitle:nil];
+                }];
             }];
-        }];
+        });
     }
 }
 
@@ -113,13 +115,15 @@ static char indeterminateLayerKey;
     UIView *progressView = [self getProgressView];
     
     if (progressView) {
-        [UIView animateWithDuration:0.5 animations:^{
-            progressView.alpha = 0;
-        } completion:^(BOOL finished) {
-            [progressView removeFromSuperview];
-            progressView.alpha = 1;
-            [self setTitle:nil];
-        }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:0.5 animations:^{
+                progressView.alpha = 0;
+            } completion:^(BOOL finished) {
+                [progressView removeFromSuperview];
+                progressView.alpha = 1;
+                [self setTitle:nil];
+            }];
+        });
     }
 }
 
@@ -293,10 +297,10 @@ static char indeterminateLayerKey;
 
 - (void)setProgress:(CGFloat)progress
 {
-    if (progress > 100) {
-        progress = 100;
-    } else if (progress < 0) {
-        progress = 0;
+    if (progress > 1.0) {
+        progress = 1.0;
+    } else if (progress < 0.0) {
+        progress = 0.0;
     }
     objc_setAssociatedObject(self, &progressKey, [NSNumber numberWithFloat:progress], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     //Draw the update
