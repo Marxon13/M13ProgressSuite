@@ -661,7 +661,7 @@
         //Set the background
         maskView.backgroundColor = [UIColor colorWithPatternImage:image];
     } else if (_maskType == M13ProgressHUDMaskTypeIOS7Blur) {
-        [self redrawBlurs];
+        // do nothing; we don't want to take a snapshot of the background for blurring now, no idea what the background is
     }
 }
 
