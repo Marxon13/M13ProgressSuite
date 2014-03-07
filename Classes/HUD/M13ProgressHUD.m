@@ -410,7 +410,8 @@
     if (optimalStatusString.length != 0 && optimalStatusString != nil) {
         if (_statusPosition == M13ProgressHUDStatusPositionBelowProgress) {
             //Calculate background height
-            backgroundRect.size.height = _contentMargin + _progressViewSize.height + _contentMargin + statusRect.size.height + _contentMargin;
+            CGFloat backgroundRectBaseHeight = _progressViewSize.height + _contentMargin * 3;
+            backgroundRect.size.height = backgroundRectBaseHeight + statusRect.size.height;
             if (backgroundRect.size.height < _minimumSize.height) {
                 backgroundRect.size.height = _minimumSize.height;
             }
@@ -422,7 +423,7 @@
             }
             //Calculate background origin (Calculated to keep the progress bar in the same position on the screen during frame changes.)
             backgroundRect.origin.x = (self.bounds.size.width / 2.0) - (backgroundRect.size.width / 2.0);
-            backgroundRect.origin.y = (self.bounds.size.height / 2.0) - (_minimumSize.height / 2.0);
+            backgroundRect.origin.y = (self.bounds.size.height / 2.0) - (backgroundRectBaseHeight / 2.0);
             //Calculate the progress view rect
             progressRect.origin.x = (backgroundRect.size.width / 2.0) - (progressRect.size.width / 2.0);
             progressRect.origin.y = _contentMargin;
