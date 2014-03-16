@@ -67,6 +67,22 @@
     return self;
 }
 
+- (id)initAndShowWithProgressView:(M13ProgressView *)progressView progress:(CGFloat)progress indeterminate:(BOOL)indeterminate status:(NSString *)status mask:(M13ProgressHUDMaskType)maskType inView:(UIView *)view
+{
+    self = [super init];
+    if (self) {
+        _progressView = progressView;
+        [self setup];
+        self.progress = progress;
+        self.indeterminate = indeterminate;
+        self.status = status;
+        self.maskType = maskType;
+        [view addSubview:self];
+        [self show:YES];
+    }
+    return self;
+}
+
 - (void)setup
 {
     //Set the defaults for the progress view

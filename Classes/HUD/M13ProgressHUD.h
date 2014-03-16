@@ -36,6 +36,15 @@ typedef enum {
  @param progressView The progres view to display in the HUD.
  @note If you create the HUD with this method, you are responsible for creating the progress view and setting the frame size of the progress view.*/
 - (id)initWithProgressView:(M13ProgressView *)progressView;
+/**Initalize and show the hud with parameters.
+ @param progressView The progress view to show in the HUD.
+ @param indeterminate Wether or not the progress view is indeterminate.
+ @param progress The progress to display in the progress view.
+ @param status The status to display in the HUD.
+ @param maskType The type of mask to use for the HUD.
+ @param view The view to show the HUD in.
+ @return A instance of M13PRogressHUD*/
+- (id)initAndShowWithProgressView:(M13ProgressView *)progressView progress:(CGFloat)progress indeterminate:(BOOL)indeterminate status:(NSString *)status mask:(M13ProgressHUDMaskType)maskType inView:(UIView *)view;
 
 /**@name Progress View Convienence Properties*/
 /**The progress view displaied.*/
