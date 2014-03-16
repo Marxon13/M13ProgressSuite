@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		CA1C945E18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */; };
 		CA2FAF9C1889907300BCAEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9B1889907300BCAEF5 /* Foundation.framework */; };
 		CA2FAF9E1889907300BCAEF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9D1889907300BCAEF5 /* CoreGraphics.framework */; };
 		CA2FAFA01889907300BCAEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9F1889907300BCAEF5 /* UIKit.framework */; };
@@ -67,6 +68,13 @@
 		CA2FB03A1889974600BCAEF5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB0391889974600BCAEF5 /* Accelerate.framework */; };
 		CA2FB03C1889975400BCAEF5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB03B1889975400BCAEF5 /* CoreImage.framework */; };
 		CA2FB03E1889975A00BCAEF5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB03D1889975A00BCAEF5 /* QuartzCore.framework */; };
+		CA316F4E18D51F6B0081C01E /* M13ProgressViewShuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA316F4D18D51F6B0081C01E /* M13ProgressViewShuffle.m */; };
+		CA316F5118D521830081C01E /* M13ProgressViewShuffleDotPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA316F5018D521830081C01E /* M13ProgressViewShuffleDotPolygon.m */; };
+		CA412B0218D252FE00FCB7CC /* M13ProgressViewRadiative.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0118D252FE00FCB7CC /* M13ProgressViewRadiative.m */; };
+		CA412B0518D2638E00FCB7CC /* RadiativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */; };
+		CA58FEB618D609D50077EB04 /* ShuffleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA58FEB518D609D50077EB04 /* ShuffleViewController.m */; };
+		CA66890318CBBD1400827C48 /* M13ProgressViewMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */; };
+		CA66890618CBEF9300827C48 /* MetroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890518CBEF9300827C48 /* MetroViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA1C945C18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetroDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.h; sourceTree = "<group>"; };
+		CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetroDotPolygon.m; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.m; sourceTree = "<group>"; };
 		CA2FAF981889907300BCAEF5 /* M13ProgressSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2FAF9B1889907300BCAEF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA2FAF9D1889907300BCAEF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -157,6 +167,20 @@
 		CA2FB0391889974600BCAEF5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		CA2FB03B1889975400BCAEF5 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		CA2FB03D1889975A00BCAEF5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CA316F4C18D51F6B0081C01E /* M13ProgressViewShuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewShuffle.h; path = Classes/ProgressViews/M13ProgressViewShuffle.h; sourceTree = "<group>"; };
+		CA316F4D18D51F6B0081C01E /* M13ProgressViewShuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewShuffle.m; path = Classes/ProgressViews/M13ProgressViewShuffle.m; sourceTree = "<group>"; };
+		CA316F4F18D521830081C01E /* M13ProgressViewShuffleDotPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewShuffleDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewShuffleDotPolygon.h; sourceTree = "<group>"; };
+		CA316F5018D521830081C01E /* M13ProgressViewShuffleDotPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewShuffleDotPolygon.m; path = Classes/ProgressViews/M13ProgressViewShuffleDotPolygon.m; sourceTree = "<group>"; };
+		CA412B0018D252FE00FCB7CC /* M13ProgressViewRadiative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewRadiative.h; path = Classes/ProgressViews/M13ProgressViewRadiative.h; sourceTree = "<group>"; };
+		CA412B0118D252FE00FCB7CC /* M13ProgressViewRadiative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewRadiative.m; path = Classes/ProgressViews/M13ProgressViewRadiative.m; sourceTree = "<group>"; };
+		CA412B0318D2638E00FCB7CC /* RadiativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadiativeViewController.h; sourceTree = "<group>"; };
+		CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadiativeViewController.m; sourceTree = "<group>"; };
+		CA58FEB418D609D50077EB04 /* ShuffleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuffleViewController.h; sourceTree = "<group>"; };
+		CA58FEB518D609D50077EB04 /* ShuffleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuffleViewController.m; sourceTree = "<group>"; };
+		CA66890118CBBD1400827C48 /* M13ProgressViewMetro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetro.h; path = Classes/ProgressViews/M13ProgressViewMetro.h; sourceTree = "<group>"; };
+		CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetro.m; path = Classes/ProgressViews/M13ProgressViewMetro.m; sourceTree = "<group>"; };
+		CA66890418CBEF9300827C48 /* MetroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetroViewController.h; sourceTree = "<group>"; };
+		CA66890518CBEF9300827C48 /* MetroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetroViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2FAFE01889935F00BCAEF5 /* ProgressViews */,
+				CA412AEE18D1F28500FCB7CC /* AppInstall */,
 				CA2FAFDF1889935700BCAEF5 /* HUD */,
 				CA2FAFDB1889934300BCAEF5 /* Console */,
 				CA2FAFD41889928200BCAEF5 /* M13ProgressNavigationController */,
@@ -318,6 +343,17 @@
 				CA2FB005188993AA00BCAEF5 /* Segmented Bar */,
 				CA2FB006188993B300BCAEF5 /* Segmented Ring */,
 				CA2FB007188993BF00BCAEF5 /* Striped Bar */,
+				CA66890018CBBCB800827C48 /* Metro */,
+				CA412AEA18D1F1A400FCB7CC /* Radiative */,
+				CA412AEB18D1F1E000FCB7CC /* Shuffle */,
+				CA412AEC18D1F23A00FCB7CC /* Dial */,
+				CA412AED18D1F26400FCB7CC /* GradientRing */,
+				CA412AEF18D1F2A200FCB7CC /* Metaball */,
+				CA412AF118D1F2CE00FCB7CC /* SegmentedOSX */,
+				CA412AF218D1F2F600FCB7CC /* Wii */,
+				CA412AF318D1F31E00FCB7CC /* Letterpress */,
+				CA412AF418D1F35500FCB7CC /* Weather */,
+				CA412AF018D1F2C100FCB7CC /* OSX */,
 			);
 			name = ProgressViews;
 			sourceTree = "<group>";
@@ -406,6 +442,110 @@
 		CA2FB02F1889947500BCAEF5 /* Example View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CA412B0618D2655500FCB7CC /* Finished */,
+				CA58FEB418D609D50077EB04 /* ShuffleViewController.h */,
+				CA58FEB518D609D50077EB04 /* ShuffleViewController.m */,
+			);
+			name = "Example View Controllers";
+			sourceTree = "<group>";
+		};
+		CA2FB033188994E200BCAEF5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CA2FB0341889952E00BCAEF5 /* Galaxy.jpg */,
+				CA2FB0351889952E00BCAEF5 /* Striped_apple_logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CA412AEA18D1F1A400FCB7CC /* Radiative */ = {
+			isa = PBXGroup;
+			children = (
+				CA412B0018D252FE00FCB7CC /* M13ProgressViewRadiative.h */,
+				CA412B0118D252FE00FCB7CC /* M13ProgressViewRadiative.m */,
+			);
+			name = Radiative;
+			sourceTree = "<group>";
+		};
+		CA412AEB18D1F1E000FCB7CC /* Shuffle */ = {
+			isa = PBXGroup;
+			children = (
+				CA316F4C18D51F6B0081C01E /* M13ProgressViewShuffle.h */,
+				CA316F4D18D51F6B0081C01E /* M13ProgressViewShuffle.m */,
+				CA316F4F18D521830081C01E /* M13ProgressViewShuffleDotPolygon.h */,
+				CA316F5018D521830081C01E /* M13ProgressViewShuffleDotPolygon.m */,
+			);
+			name = Shuffle;
+			sourceTree = "<group>";
+		};
+		CA412AEC18D1F23A00FCB7CC /* Dial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dial;
+			sourceTree = "<group>";
+		};
+		CA412AED18D1F26400FCB7CC /* GradientRing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GradientRing;
+			sourceTree = "<group>";
+		};
+		CA412AEE18D1F28500FCB7CC /* AppInstall */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppInstall;
+			sourceTree = "<group>";
+		};
+		CA412AEF18D1F2A200FCB7CC /* Metaball */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Metaball;
+			sourceTree = "<group>";
+		};
+		CA412AF018D1F2C100FCB7CC /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		CA412AF118D1F2CE00FCB7CC /* SegmentedOSX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SegmentedOSX;
+			sourceTree = "<group>";
+		};
+		CA412AF218D1F2F600FCB7CC /* Wii */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wii;
+			sourceTree = "<group>";
+		};
+		CA412AF318D1F31E00FCB7CC /* Letterpress */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Letterpress;
+			sourceTree = "<group>";
+		};
+		CA412AF418D1F35500FCB7CC /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
+		CA412B0618D2655500FCB7CC /* Finished */ = {
+			isa = PBXGroup;
+			children = (
+				CA412B0318D2638E00FCB7CC /* RadiativeViewController.h */,
+				CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */,
 				CA2FB0081889946F00BCAEF5 /* BarViewController.h */,
 				CA2FB0091889946F00BCAEF5 /* BarViewController.m */,
 				CA2FB00A1889946F00BCAEF5 /* BorderedBarViewController.h */,
@@ -432,17 +572,21 @@
 				CA2FB01F1889946F00BCAEF5 /* SegmentedRingViewController.m */,
 				CA2FB0201889946F00BCAEF5 /* StripedBarViewController.h */,
 				CA2FB0211889946F00BCAEF5 /* StripedBarViewController.m */,
+				CA66890418CBEF9300827C48 /* MetroViewController.h */,
+				CA66890518CBEF9300827C48 /* MetroViewController.m */,
 			);
-			name = "Example View Controllers";
+			name = Finished;
 			sourceTree = "<group>";
 		};
-		CA2FB033188994E200BCAEF5 /* Images */ = {
+		CA66890018CBBCB800827C48 /* Metro */ = {
 			isa = PBXGroup;
 			children = (
-				CA2FB0341889952E00BCAEF5 /* Galaxy.jpg */,
-				CA2FB0351889952E00BCAEF5 /* Striped_apple_logo.png */,
+				CA66890118CBBD1400827C48 /* M13ProgressViewMetro.h */,
+				CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */,
+				CA1C945C18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.h */,
+				CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */,
 			);
-			name = Images;
+			name = Metro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,13 +712,17 @@
 				CA2FB0221889946F00BCAEF5 /* BarViewController.m in Sources */,
 				CA2FAFDE1889935400BCAEF5 /* M13ProgressHUD.m in Sources */,
 				CA2FB0271889946F00BCAEF5 /* M13ProgressViewBarNavigationControllerViewController.m in Sources */,
+				CA412B0518D2638E00FCB7CC /* RadiativeViewController.m in Sources */,
 				CA2FB0291889946F00BCAEF5 /* ProgressHUDViewController.m in Sources */,
 				CA2FB02A1889946F00BCAEF5 /* RingViewController.m in Sources */,
 				CA2FAFF81889937800BCAEF5 /* M13ProgressViewFilteredImage.m in Sources */,
 				CA2FAFFD1889937800BCAEF5 /* M13ProgressViewSegmentedRing.m in Sources */,
 				CA2FAFF91889937800BCAEF5 /* M13ProgressViewImage.m in Sources */,
+				CA66890318CBBD1400827C48 /* M13ProgressViewMetro.m in Sources */,
 				CA2FB02C1889946F00BCAEF5 /* SegmentedBarViewController.m in Sources */,
+				CA316F5118D521830081C01E /* M13ProgressViewShuffleDotPolygon.m in Sources */,
 				CA2FAFFE1889937800BCAEF5 /* M13ProgressViewStripedBar.m in Sources */,
+				CA66890618CBEF9300827C48 /* MetroViewController.m in Sources */,
 				CA2FAFFA1889937800BCAEF5 /* M13ProgressViewPie.m in Sources */,
 				CA2FB032188994B700BCAEF5 /* UIImage+ImageEffects.m in Sources */,
 				CA2FAFD71889933200BCAEF5 /* UINavigationController+M13ProgressViewBar.m in Sources */,
@@ -582,13 +730,17 @@
 				CA2FB0261889946F00BCAEF5 /* ImageViewController.m in Sources */,
 				CA2FAFF61889937800BCAEF5 /* M13ProgressViewBar.m in Sources */,
 				CA2FB0231889946F00BCAEF5 /* BorderedBarViewController.m in Sources */,
+				CA316F4E18D51F6B0081C01E /* M13ProgressViewShuffle.m in Sources */,
 				CA2FAFAC1889907300BCAEF5 /* AppDelegate.m in Sources */,
 				CA2FAFA81889907300BCAEF5 /* main.m in Sources */,
 				CA2FB0251889946F00BCAEF5 /* FilteredImageViewController.m in Sources */,
+				CA1C945E18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m in Sources */,
 				CA2FB0241889946F00BCAEF5 /* ConsoleViewController.m in Sources */,
 				CA2FAFF71889937800BCAEF5 /* M13ProgressViewBorderedBar.m in Sources */,
 				CA2FB02E1889946F00BCAEF5 /* StripedBarViewController.m in Sources */,
+				CA58FEB618D609D50077EB04 /* ShuffleViewController.m in Sources */,
 				CA2FAFFC1889937800BCAEF5 /* M13ProgressViewSegmentedBar.m in Sources */,
+				CA412B0218D252FE00FCB7CC /* M13ProgressViewRadiative.m in Sources */,
 				CA2FB02D1889946F00BCAEF5 /* SegmentedRingViewController.m in Sources */,
 				CA2FAFFB1889937800BCAEF5 /* M13ProgressViewRing.m in Sources */,
 			);
@@ -841,6 +993,7 @@
 				CA2FB0461889986D00BCAEF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
