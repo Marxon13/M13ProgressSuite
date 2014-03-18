@@ -22,8 +22,6 @@
 @property (nonatomic, assign) CFTimeInterval animationStartTime;
 /**Link to the display to keep animations in sync.*/
 @property (nonatomic, strong) CADisplayLink *displayLink;
-/**Allow us to write to the progress.*/
-@property (nonatomic, readwrite) CGFloat progress;
 /**The layer that contains the progress layer. That also masks the progress layer.*/
 @property (nonatomic, retain) CALayer *progressSuperLayer;
 /**The layer that displays progress in the progress bar.*/
