@@ -90,11 +90,13 @@
     //ProgressLayer
     _progressLayer = [CAShapeLayer layer];
     _progressLayer.fillColor = self.primaryColor.CGColor;
+    _progressLayer.frame = self.bounds;
     [self.layer addSublayer:_progressLayer];
     
     //Backround
     _backgroundLayer = [CAShapeLayer layer];
     _backgroundLayer.fillColor = self.secondaryColor.CGColor;
+    _backgroundLayer.frame = self.bounds;
     [self.layer addSublayer:_backgroundLayer];
     
     //Layout
@@ -302,7 +304,7 @@
     if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
         cornerRadius = _cornerRadius;
     } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-        cornerRadius = self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0;
+        cornerRadius = floorf(self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0);
     }
     //Create the path ref that all the paths will be appended
     CGMutablePathRef pathRef = CGPathCreateMutable();
@@ -312,38 +314,50 @@
         UIBezierPath *path = [UIBezierPath bezierPath];
         //Move to top left of rectangle
         if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionLeftToRight) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, segmentWidth, self.bounds.size.height);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, segmentWidth, self.bounds.size.height);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), (self.bounds.size.height - (2 * cornerRadius)) / 2, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionRightToLeft) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, segmentWidth, self.bounds.size.height);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, segmentWidth, self.bounds.size.height);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, (self.bounds.size.height - (2 * cornerRadius)) / 2, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionBottomToTop) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, self.bounds.size.width, segmentWidth);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, self.bounds.size.width, segmentWidth);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake((self.bounds.size.width - (2 * cornerRadius)) / 2, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionTopToBottom) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), self.bounds.size.width, segmentWidth);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), self.bounds.size.width, segmentWidth);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake((self.bounds.size.width - (2 * cornerRadius)) / 2, (i * (segmentWidth + _segmentSeparation)), 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
         }
@@ -371,7 +385,7 @@
     if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
         cornerRadius = _cornerRadius;
     } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-        cornerRadius = self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0;
+        cornerRadius = floorf(self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0);
     }
     //Create the path ref that all the paths will be appended
     CGMutablePathRef pathRef = CGPathCreateMutable();
@@ -383,36 +397,48 @@
         if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionRightToLeft) {
             if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, segmentWidth, self.bounds.size.height);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, segmentWidth, self.bounds.size.height);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), (self.bounds.size.height - (2 * cornerRadius)) / 2, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionLeftToRight) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, segmentWidth, self.bounds.size.height);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, segmentWidth, self.bounds.size.height);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, (self.bounds.size.height - (2 * cornerRadius)) / 2, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionTopToBottom) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, self.bounds.size.width, segmentWidth);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, self.bounds.size.width, segmentWidth);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake((self.bounds.size.width - (2 * cornerRadius)) / 2, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionBottomToTop) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), self.bounds.size.width, segmentWidth);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), self.bounds.size.width, segmentWidth);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake((self.bounds.size.width - (2 * cornerRadius)) / 2, (i * (segmentWidth + _segmentSeparation)), 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
         }
@@ -440,7 +466,7 @@
     if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
         cornerRadius = _cornerRadius;
     } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-        cornerRadius = self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0;
+        cornerRadius = floorf(self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0);
     }
     //What index will the segments be colored from.
     int numberOfSegmentsToBeColored = _numberOfSegments / 4;
@@ -453,38 +479,50 @@
         UIBezierPath *path = [UIBezierPath bezierPath];
         //Move to top left of rectangle
         if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionLeftToRight) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, segmentWidth, self.bounds.size.height);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, segmentWidth, self.bounds.size.height);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), 0, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake(i * (segmentWidth + _segmentSeparation), (self.bounds.size.height - (2 * cornerRadius)) / 2, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionRightToLeft) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, segmentWidth, self.bounds.size.height);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, segmentWidth, self.bounds.size.height);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 0, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake(self.bounds.size.width - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, (self.bounds.size.height - (2 * cornerRadius)) / 2, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionBottomToTop) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, self.bounds.size.width, segmentWidth);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, self.bounds.size.width, segmentWidth);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(0, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake((self.bounds.size.width - (2 * cornerRadius)) / 2, self.bounds.size.height - (i * (segmentWidth + _segmentSeparation)) - segmentWidth, 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
             
         } else if (_progressDirection == M13ProgressViewSegmentedBarProgressDirectionTopToBottom) {
-            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle || _segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
+            if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRectangle) {
+                CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), self.bounds.size.width, segmentWidth);
+                path = [UIBezierPath bezierPathWithRect:rect];
+            } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
                 CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), self.bounds.size.width, segmentWidth);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-                CGRect rect = CGRectMake(0, (i * (segmentWidth + _segmentSeparation)), 2 * cornerRadius, 2 * cornerRadius);
+                CGRect rect = CGRectMake((self.bounds.size.width - (2 * cornerRadius)) / 2, (i * (segmentWidth + _segmentSeparation)), 2 * cornerRadius, 2 * cornerRadius);
                 path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
             }
         }
