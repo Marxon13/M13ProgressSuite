@@ -449,6 +449,8 @@
 		CA412B0618D2655500FCB7CC /* Finished */ = {
 			isa = PBXGroup;
 			children = (
+				CA2FB01A1889946F00BCAEF5 /* SampleViewController.h */,
+				CA2FB01B1889946F00BCAEF5 /* SampleViewController.m */,
 				CA412B0318D2638E00FCB7CC /* RadiativeViewController.h */,
 				CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */,
 				CA2FB0081889946F00BCAEF5 /* BarViewController.h */,
@@ -469,8 +471,6 @@
 				CA2FB0171889946F00BCAEF5 /* ProgressHUDViewController.m */,
 				CA2FB0181889946F00BCAEF5 /* RingViewController.h */,
 				CA2FB0191889946F00BCAEF5 /* RingViewController.m */,
-				CA2FB01A1889946F00BCAEF5 /* SampleViewController.h */,
-				CA2FB01B1889946F00BCAEF5 /* SampleViewController.m */,
 				CA2FB01C1889946F00BCAEF5 /* SegmentedBarViewController.h */,
 				CA2FB01D1889946F00BCAEF5 /* SegmentedBarViewController.m */,
 				CA2FB01E1889946F00BCAEF5 /* SegmentedRingViewController.h */,

@@ -26,6 +26,7 @@
     UIView *maskView;
     UILabel *statusLabel;
     NSString *optimalStatusString;
+    BOOL onScreen;
 }
 
 #pragma mark Initalization and Setup
@@ -298,16 +299,12 @@
     [self registerForNotificationCenter];
     [self setNeedsLayout];
     [self setNeedsDisplay];
-
-    if (!CGPointEqualToPoint(self.animationPoint, CGPointZero)) {
-      CGRect r = backgroundView.frame;
-      r.origin = CGPointApplyAffineTransform([self convertPoint:self.animationPoint toView:backgroundView], CGAffineTransformMakeTranslation(-r.size.width/3.5, r.size.height/1.25));
-      backgroundView.frame = r;
-    }
+    
+    onScreen = YES;
 
     //Animate the HUD on screen
-    [CATransaction begin];
     CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeAnimation.duration = _animationDuration;
     fadeAnimation.fromValue = [NSNumber numberWithFloat:0.0];
     fadeAnimation.toValue = [NSNumber numberWithFloat:1.0];
     fadeAnimation.removedOnCompletion = YES;
@@ -316,18 +313,29 @@
     self.layer.opacity = 1.0;
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    scaleAnimation.duration = _animationDuration;
     scaleAnimation.fromValue = [NSNumber numberWithFloat:0.0];
     scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
     scaleAnimation.removedOnCompletion = YES;
     
-    [backgroundView.layer addAnimation:scaleAnimation forKey:@"transformAnimation"];
+    CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    positionAnimation.duration = _animationDuration;
+    positionAnimation.fromValue = [NSValue valueWithCGPoint:_animationPoint];
+    positionAnimation.toValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
+    positionAnimation.removedOnCompletion = YES;
     
-    [CATransaction commit];
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.animations = @[scaleAnimation, positionAnimation];
+    animationGroup.duration = _animationDuration;
+    animationGroup.removedOnCompletion = YES;
+    [backgroundView.layer addAnimation:animationGroup forKey:nil];
 }
 
 - (void)hide:(BOOL)animated
 {
     [self unregisterFromNotificationCenter];
+    
+    onScreen = NO;
     
     CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     fadeAnimation.fromValue = [NSNumber numberWithFloat:1.0];
@@ -341,22 +349,18 @@
     scaleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
     scaleAnimation.toValue = [NSNumber numberWithFloat:0.0];
     scaleAnimation.removedOnCompletion = YES;
+
+    CABasicAnimation *frameAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    frameAnimation.fromValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
+    frameAnimation.toValue = [NSValue valueWithCGPoint:_animationPoint];
+    frameAnimation.removedOnCompletion = YES;
+    backgroundView.layer.position = _animationPoint;
     
-    [backgroundView.layer addAnimation:scaleAnimation forKey:@"transformAnimation"];
-
-    if (!CGPointEqualToPoint(self.animationPoint, CGPointZero)) {
-      CGRect r = backgroundView.frame;
-      CGPoint p =CGPointApplyAffineTransform([self convertPoint:self.animationPoint toView:backgroundView], CGAffineTransformMakeTranslation(r.size.width/8.0, r.size.height*1.25));
-
-      CABasicAnimation *frameAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-      frameAnimation.fromValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
-      frameAnimation.toValue = [NSValue valueWithCGPoint:p];
-      frameAnimation.removedOnCompletion = YES;
-      backgroundView.layer.position = p;
-      [backgroundView.layer addAnimation:frameAnimation forKey:@"frameAnimation"];
-    }
-
-    [CATransaction commit];
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.animations = @[scaleAnimation, frameAnimation];
+    animationGroup.duration = _animationDuration;
+    animationGroup.removedOnCompletion = YES;
+    [backgroundView.layer addAnimation:animationGroup forKey:nil];
 }
 
 - (void)dismiss:(BOOL)animated
@@ -546,24 +550,33 @@
         backgroundRect.size.height = temp;
     }
     
-    //Set the frame of the background and its subviews
-    [UIView animateWithDuration:_animationDuration animations:^{
+    if (onScreen) {
+        //Set the frame of the background and its subviews
+        [UIView animateWithDuration:_animationDuration animations:^{
+            backgroundView.frame = CGRectIntegral(backgroundRect);
+            _progressView.frame = CGRectIntegral(progressRect);
+            backgroundView.transform = CGAffineTransformMakeRotation([self angleForDeviceOrientation]);
+            //Fade the label
+            statusLabel.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            if (finished) {
+                //Set the label frame
+                statusLabel.frame = CGRectIntegral(statusRect);
+                statusLabel.text = optimalStatusString;
+                [UIView animateWithDuration:_animationDuration animations:^{
+                    //Show the label
+                    statusLabel.alpha = 1.0;
+                }];
+            }
+        }];
+    } else {
         backgroundView.frame = CGRectIntegral(backgroundRect);
         _progressView.frame = CGRectIntegral(progressRect);
-         backgroundView.transform = CGAffineTransformMakeRotation([self angleForDeviceOrientation]);
+        backgroundView.transform = CGAffineTransformMakeRotation([self angleForDeviceOrientation]);
         //Fade the label
         statusLabel.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            //Set the label frame
-            statusLabel.frame = CGRectIntegral(statusRect);
-            statusLabel.text = optimalStatusString;
-            [UIView animateWithDuration:_animationDuration animations:^{
-                //Show the label
-                statusLabel.alpha = 1.0;
-            }];
-        }
-    }];
+    }
+    
     
 }
 

@@ -44,6 +44,7 @@
     _scrollView.contentSize = CGSizeMake(320, 750);
     HUD = [[M13ProgressHUD alloc] initWithProgressView:[[M13ProgressViewRing alloc] init]];
     HUD.progressViewSize = CGSizeMake(60.0, 60.0);
+    HUD.animationPoint = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 2);
     UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
     [window addSubview:HUD];
     
