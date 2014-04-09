@@ -34,5 +34,7 @@
 - (void)finishProgress;
 /**Remove the progress bar from the display.*/
 - (void)cancelProgress;
+/**Wether or not the progress bar is showing.*/
+- (BOOL)isShowingProgressBar;
 
 @end

@@ -16,6 +16,7 @@ static char progressKey;
 static char progressViewKey;
 static char indeterminateKey;
 static char indeterminateLayerKey;
+static char isShowingProgressKey;
 
 @implementation UINavigationController (M13ProgressViewBar)
 
@@ -104,6 +105,7 @@ static char indeterminateLayerKey;
                     [progressView removeFromSuperview];
                     progressView.alpha = 1;
                     [self setTitle:nil];
+                    [self setIsShowingProgressBar:NO];
                 }];
             }];
         });
@@ -122,6 +124,7 @@ static char indeterminateLayerKey;
                 [progressView removeFromSuperview];
                 progressView.alpha = 1;
                 [self setTitle:nil];
+                [self setIsShowingProgressBar:NO];
             }];
         });
     }
@@ -136,43 +139,76 @@ static char indeterminateLayerKey;
     [UIView animateWithDuration:.1 animations:^{
         progressView.alpha = 1;
     }];
+    
+    [self setIsShowingProgressBar:YES];
 }
 
 - (void)updateProgress
 {
+    [self updateProgressWithInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation];
+}
+
+- (void)updateProgressWithInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
     //Create the progress view if it doesn't exist
 	UIView *progressView = [self getProgressView];
-	if(!progressView)
+    if(!progressView)
 	{
-        float y = self.navigationBar.frame.size.height - 2.5;
-		progressView = [[UIView alloc] initWithFrame:CGRectMake(0, y, 0,  2.5)];
+		progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 2.5)];
 		progressView.backgroundColor = self.navigationBar.tintColor;
         progressView.clipsToBounds = YES;
         [self setProgressView:progressView];
-		[self.navigationBar addSubview:progressView];
 	}
-    if (progressView.superview == nil) {
+    
+    //Calculate the frame of the navigation bar, based off the orientation.
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    CGFloat width = 0.0;
+    CGFloat height = 0.0;
+    //Calculate the width of the screen
+    if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
+        //Use the maximum value
+        width = MAX(screenSize.width, screenSize.height);
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+            height = 32.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
+        } else {
+            height = 44.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
+        }
+    } else {
+        //Use the minimum value
+        width = MIN(screenSize.width, screenSize.height);
+        height = 44.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
+    }
+    
+    //Check if the progress view is in its superview and if we are showing the bar.
+    if (progressView.superview == nil && [self isShowingProgressBar]) {
         [self.navigationBar addSubview:progressView];
     }
     
+    //Layout
     if (![self getIndeterminate]) {
-        //Calculate the width of the progress view
-        float maxWidth = self.navigationBar.frame.size.width;
-        float progressWidth = maxWidth * [self getProgress];
+        //Calculate the width of the progress view;
+        float progressWidth = width * [self getProgress];
         //Set the frame of the progress view
-        CGRect progressFrame = progressView.frame;
-        progressFrame.size.width = progressWidth;
-        progressView.frame = progressFrame;
+        progressView.frame = CGRectMake(0, height - 2.5, progressWidth, 2.5);
     } else {
         //Calculate the width of the progress view
-        float maxWidth = self.navigationBar.frame.size.width;
-        CGRect progressFrame = progressView.frame;
-        progressFrame.size.width = maxWidth;
-        progressView.frame = progressFrame;
+        progressView.frame = CGRectMake(0, height - 2.5, width, 2.5);
     }
+    
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self updateProgressWithInterfaceOrientation:toInterfaceOrientation];
+    [self drawIndeterminateWithInterfaceOrientation:toInterfaceOrientation];
 }
 
 - (void)drawIndeterminate
+{
+    [self drawIndeterminateWithInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation];
+}
+
+- (void)drawIndeterminateWithInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([self getIndeterminate]) {
         //Get the indeterminate layer
@@ -181,6 +217,25 @@ static char indeterminateLayerKey;
             //Create if needed
             indeterminateLayer = [CALayer layer];
             [self setIndeterminateLayer:indeterminateLayer];
+        }
+        
+        //Calculate the frame of the navigation bar, based off the orientation.
+        CGSize screenSize = [UIScreen mainScreen].bounds.size;
+        CGFloat width = 0.0;
+        CGFloat height = 0.0;
+        //Calculate the width of the screen
+        if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
+            //Use the maximum value
+            width = MAX(screenSize.width, screenSize.height);
+            if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+                height = 32.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
+            } else {
+                height = 44.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
+            }
+        } else {
+            //Use the minimum value
+            width = MIN(screenSize.width, screenSize.height);
+            height = 44.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
         }
         
         //Create the pattern image
@@ -217,12 +272,12 @@ static char indeterminateLayerKey;
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         //Set the background of the progress layer
-        indeterminateLayer.backgroundColor = [UIColor colorWithPatternImage:image].CGColor;\
+        indeterminateLayer.backgroundColor = [UIColor colorWithPatternImage:image].CGColor;
         
         //remove any indeterminate layer animations
         [indeterminateLayer removeAllAnimations];
         //Set the indeterminate layer frame and add to the sub view
-        indeterminateLayer.frame = CGRectMake(0, 0, self.navigationBar.frame.size.width + (4 * 2.5), 2.5);
+        indeterminateLayer.frame = CGRectMake(0, 0, width + (4 * 2.5), 2.5);
         UIView *progressView = [self getProgressView];
         [progressView.layer addSublayer:indeterminateLayer];
         //Add the animation
@@ -230,8 +285,8 @@ static char indeterminateLayerKey;
         animation.duration = .1;
         animation.repeatCount = HUGE_VALF;
         animation.removedOnCompletion = YES;
-        animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(- (2 * 2.5) + (self.navigationBar.frame.size.width / 2.0), 2.5 / 2.0)];
-        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(0 + (self.navigationBar.frame.size.width / 2.0), 2.5 / 2.0)];
+        animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(- (2 * 2.5) + (width / 2.0), 2.5 / 2.0)];
+        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(0 + (width / 2.0), 2.5 / 2.0)];
         [indeterminateLayer addAnimation:animation forKey:@"position"];
     } else {
         CALayer *indeterminateLayer = [self getIndeterminateLayer];
@@ -314,15 +369,15 @@ static char indeterminateLayerKey;
     }
 }
 
+- (void)setIsShowingProgressBar:(BOOL)isShowingProgressBar
+{
+    objc_setAssociatedObject(self, &isShowingProgressKey, [NSNumber numberWithBool:isShowingProgressBar], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (CGFloat)getProgress
 {
     NSNumber *number =  objc_getAssociatedObject(self, &progressKey);
     return number.floatValue;
-}
-
-- (void)setAnimationDuration:(CGFloat)animationDuration
-{
-    
 }
 
 - (CGFloat)getAnimationDuration
@@ -361,6 +416,11 @@ static char indeterminateLayerKey;
 - (CALayer *)getIndeterminateLayer
 {
     return objc_getAssociatedObject(self, &indeterminateLayerKey);
+}
+
+- (BOOL)isShowingProgressBar
+{
+    return objc_getAssociatedObject(self, &isShowingProgressKey);
 }
 
 @end
