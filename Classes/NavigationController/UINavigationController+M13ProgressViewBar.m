@@ -247,7 +247,7 @@ static char isShowingProgressKey;
         UIBezierPath *fillPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, stripeWidth * 4.0, stripeWidth * 4.0)];
         [fillPath fill];
         //Draw the stripes
-        [[UIColor whiteColor] setFill];
+        [self.navigationBar.barTintColor setFill];
         for (int i = 0; i < 4; i++) {
             //Create the four inital points of the fill shape
             CGPoint bottomLeft = CGPointMake(-(stripeWidth * 4.0), stripeWidth * 4.0);
