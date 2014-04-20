@@ -384,8 +384,9 @@
 }
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
-    if (_shouldAutorotate) {
-        UIDeviceOrientation deviceOrientation = [notification.object orientation];
+    UIDeviceOrientation deviceOrientation = [notification.object orientation];
+
+    if (_shouldAutorotate && UIDeviceOrientationIsValidInterfaceOrientation(deviceOrientation)) {
         if (UIDeviceOrientationIsPortrait(deviceOrientation)) {
             if (deviceOrientation == UIDeviceOrientationPortraitUpsideDown) {
                 _orientation = UIInterfaceOrientationPortraitUpsideDown;
