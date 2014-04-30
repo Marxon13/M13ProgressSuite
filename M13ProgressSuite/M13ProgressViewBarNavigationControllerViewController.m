@@ -109,5 +109,20 @@
     [self.navigationController cancelProgress];
 }
 
+- (void)primaryColorChanged:(id)sender
+{
+    CGFloat red = (float)arc4random_uniform(256)/255.0;
+    CGFloat green = (float)arc4random_uniform(256)/255.0;
+    CGFloat blue = (float)arc4random_uniform(256)/255.0;
+    [self.navigationController setPrimaryColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0]];
+}
+
+- (void)secondaryColorChanged:(id)sender
+{
+    CGFloat red = (float)arc4random_uniform(256)/255.0;
+    CGFloat green = (float)arc4random_uniform(256)/255.0;
+    CGFloat blue = (float)arc4random_uniform(256)/255.0;
+    [self.navigationController setSecondaryColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0]];
+}
 
 @end

@@ -26,6 +26,8 @@
 - (IBAction)progressChanged:(id)sender;
 - (IBAction)titleChanged:(id)sender;
 - (IBAction)indeterminateChanged:(id)sender;
+- (IBAction)primaryColorChanged:(id)sender;
+- (IBAction)secondaryColorChanged:(id)sender;
 - (IBAction)finish:(id)sender;
 - (IBAction)cancel:(id)sender;
 

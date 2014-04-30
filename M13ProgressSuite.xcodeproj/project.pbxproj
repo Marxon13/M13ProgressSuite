@@ -72,6 +72,8 @@
 		CA412B0518D2638E00FCB7CC /* RadiativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */; };
 		CA66890318CBBD1400827C48 /* M13ProgressViewMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */; };
 		CA66890618CBEF9300827C48 /* MetroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890518CBEF9300827C48 /* MetroViewController.m */; };
+		CA6F31C3190EA88D008D1E64 /* M13ProgressViewLetterpress.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F31C2190EA88D008D1E64 /* M13ProgressViewLetterpress.m */; };
+		CA6F31C7190EBF11008D1E64 /* LetterpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +174,10 @@
 		CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetro.m; path = Classes/ProgressViews/M13ProgressViewMetro.m; sourceTree = "<group>"; };
 		CA66890418CBEF9300827C48 /* MetroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetroViewController.h; sourceTree = "<group>"; };
 		CA66890518CBEF9300827C48 /* MetroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetroViewController.m; sourceTree = "<group>"; };
+		CA6F31C1190EA88D008D1E64 /* M13ProgressViewLetterpress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewLetterpress.h; path = Classes/ProgressViews/M13ProgressViewLetterpress.h; sourceTree = "<group>"; };
+		CA6F31C2190EA88D008D1E64 /* M13ProgressViewLetterpress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewLetterpress.m; path = Classes/ProgressViews/M13ProgressViewLetterpress.m; sourceTree = "<group>"; };
+		CA6F31C5190EBF11008D1E64 /* LetterpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterpressViewController.h; sourceTree = "<group>"; };
+		CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterpressViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +341,7 @@
 				CA2FB007188993BF00BCAEF5 /* Striped Bar */,
 				CA66890018CBBCB800827C48 /* Metro */,
 				CA412AEA18D1F1A400FCB7CC /* Radiative */,
+				CA6F31C4190EA898008D1E64 /* Letterpress */,
 			);
 			name = ProgressViews;
 			sourceTree = "<group>";
@@ -424,6 +431,8 @@
 			isa = PBXGroup;
 			children = (
 				CA412B0618D2655500FCB7CC /* Finished */,
+				CA6F31C5190EBF11008D1E64 /* LetterpressViewController.h */,
+				CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */,
 			);
 			name = "Example View Controllers";
 			sourceTree = "<group>";
@@ -492,6 +501,15 @@
 				CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */,
 			);
 			name = Metro;
+			sourceTree = "<group>";
+		};
+		CA6F31C4190EA898008D1E64 /* Letterpress */ = {
+			isa = PBXGroup;
+			children = (
+				CA6F31C1190EA88D008D1E64 /* M13ProgressViewLetterpress.h */,
+				CA6F31C2190EA88D008D1E64 /* M13ProgressViewLetterpress.m */,
+			);
+			name = Letterpress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,6 +631,8 @@
 			files = (
 				CA2FB02B1889946F00BCAEF5 /* SampleViewController.m in Sources */,
 				CA2FAFF51889937800BCAEF5 /* M13ProgressView.m in Sources */,
+				CA6F31C7190EBF11008D1E64 /* LetterpressViewController.m in Sources */,
+				CA6F31C3190EA88D008D1E64 /* M13ProgressViewLetterpress.m in Sources */,
 				CA2FAFDA1889933F00BCAEF5 /* M13ProgressConsole.m in Sources */,
 				CA2FB0221889946F00BCAEF5 /* BarViewController.m in Sources */,
 				CA2FAFDE1889935400BCAEF5 /* M13ProgressHUD.m in Sources */,

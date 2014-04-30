@@ -17,6 +17,8 @@ static char progressViewKey;
 static char indeterminateKey;
 static char indeterminateLayerKey;
 static char isShowingProgressKey;
+static char primaryColorKey;
+static char secondaryColorKey;
 
 @implementation UINavigationController (M13ProgressViewBar)
 
@@ -156,6 +158,9 @@ static char isShowingProgressKey;
 	{
 		progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 2.5)];
 		progressView.backgroundColor = self.navigationBar.tintColor;
+        if ([self getPrimaryColor]) {
+            progressView.backgroundColor = [self getPrimaryColor];
+        }
         progressView.clipsToBounds = YES;
         [self setProgressView:progressView];
 	}
@@ -243,11 +248,32 @@ static char isShowingProgressKey;
         //Start the image context
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(stripeWidth * 4.0, stripeWidth * 4.0), NO, [UIScreen mainScreen].scale);
         //Fill the background
+        if ([self getPrimaryColor]) {
+            [[self getPrimaryColor] setFill];
+        } else {
         [self.navigationBar.tintColor setFill];
+        }
         UIBezierPath *fillPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, stripeWidth * 4.0, stripeWidth * 4.0)];
         [fillPath fill];
         //Draw the stripes
-        [self.navigationBar.barTintColor setFill];
+        //Set the stripe color
+        if ([self getSecondaryColor]) {
+            [[self getSecondaryColor] setFill];
+        } else {
+            CGFloat red;
+            CGFloat green;
+            CGFloat blue;
+            CGFloat alpha;
+            [self.navigationBar.barTintColor getRed:&red green:&green blue:&blue alpha:&alpha];
+            //System set the tint color to a close to, but not non-zero value for each component. 
+            if (alpha > .05) {
+                [self.navigationBar.barTintColor setFill];
+            } else {
+                [[UIColor whiteColor] setFill];
+            }
+            
+        }
+        
         for (int i = 0; i < 4; i++) {
             //Create the four inital points of the fill shape
             CGPoint bottomLeft = CGPointMake(-(stripeWidth * 4.0), stripeWidth * 4.0);
@@ -421,6 +447,29 @@ static char isShowingProgressKey;
 - (BOOL)isShowingProgressBar
 {
     return objc_getAssociatedObject(self, &isShowingProgressKey);
+}
+
+- (void)setPrimaryColor:(UIColor *)primaryColor
+{
+    objc_setAssociatedObject(self, &primaryColorKey, primaryColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self getProgressView].backgroundColor = primaryColor;
+    [self setIndeterminate:[self getIndeterminate]];
+}
+
+- (UIColor *)getPrimaryColor
+{
+    return objc_getAssociatedObject(self, &primaryColorKey);
+}
+
+- (void)setSecondaryColor:(UIColor *)secondaryColor
+{
+    objc_setAssociatedObject(self, &secondaryColorKey, secondaryColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self setIndeterminate:[self getIndeterminate]];
+}
+
+- (UIColor *)getSecondaryColor
+{
+    return objc_getAssociatedObject(self, &secondaryColorKey);
 }
 
 @end
