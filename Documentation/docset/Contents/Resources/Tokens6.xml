@@ -379,42 +379,6 @@
             <NodeRef refid="6"/>
 		</Token>
 		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewFilteredImage/setProgress:</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewFilteredImage.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewFilteredImage/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewFilteredImage.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewFilteredImage/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewFilteredImage.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
         
 	</File>
 </Tokens>

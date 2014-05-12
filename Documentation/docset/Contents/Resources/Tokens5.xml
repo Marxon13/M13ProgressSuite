@@ -449,42 +449,6 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewBorderedBar/setProgress:</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewBorderedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewBorderedBar/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewBorderedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewBorderedBar/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewBorderedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewBorderedBar/setProgressSuperLayer:</TokenIdentifier>
 			<Abstract type="html">The layer that contains the progress layer. That also masks the progress layer.</Abstract>
 			<DeclaredIn>M13ProgressViewBorderedBar.m</DeclaredIn>

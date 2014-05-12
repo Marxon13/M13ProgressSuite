@@ -47,11 +47,17 @@
 	
 	<option value="//api/name/finishProgress">&nbsp;&nbsp;&nbsp;&nbsp;- finishProgress</option>
 	
+	<option value="//api/name/isShowingProgressBar">&nbsp;&nbsp;&nbsp;&nbsp;- isShowingProgressBar</option>
+	
 	<option value="//api/name/setIndeterminate:">&nbsp;&nbsp;&nbsp;&nbsp;- setIndeterminate:</option>
+	
+	<option value="//api/name/setPrimaryColor:">&nbsp;&nbsp;&nbsp;&nbsp;- setPrimaryColor:</option>
 	
 	<option value="//api/name/setProgress:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setProgress:animated:</option>
 	
 	<option value="//api/name/setProgressTitle:">&nbsp;&nbsp;&nbsp;&nbsp;- setProgressTitle:</option>
+	
+	<option value="//api/name/setSecondaryColor:">&nbsp;&nbsp;&nbsp;&nbsp;- setSecondaryColor:</option>
 	
 	<option value="//api/name/showProgress">&nbsp;&nbsp;&nbsp;&nbsp;- showProgress</option>
 	
@@ -89,11 +95,17 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/finishProgress">finishProgress</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isShowingProgressBar">isShowingProgressBar</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setIndeterminate:">setIndeterminate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setPrimaryColor:">setPrimaryColor:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setProgress:animated:">setProgress:animated:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setProgressTitle:">setProgressTitle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setSecondaryColor:">setSecondaryColor:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showProgress">showProgress</a></span></li>
 	
@@ -180,6 +192,24 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cancelProgress">&ndash;&nbsp;cancelProgress</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isShowingProgressBar">&ndash;&nbsp;isShowingProgressBar</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPrimaryColor:">&ndash;&nbsp;setPrimaryColor:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setSecondaryColor:">&ndash;&nbsp;setSecondaryColor:</a></code>
 	</span>
 	
 	
@@ -273,6 +303,42 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/isShowingProgressBar" title="isShowingProgressBar"></a>
+	<h3 class="subsubtitle method-title">isShowingProgressBar</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wether or not the progress bar is showing.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isShowingProgressBar</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UINavigationController+M13ProgressViewBar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setIndeterminate:" title="setIndeterminate:"></a>
 	<h3 class="subsubtitle method-title">setIndeterminate:</h3>
 	
@@ -294,6 +360,52 @@
 		<dl class="argument-def parameter-def">
 			<dt><em>indeterminate</em></dt>
 			<dd><p>wether or not the progress bar is indeterminate.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UINavigationController+M13ProgressViewBar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setPrimaryColor:" title="setPrimaryColor:"></a>
+	<h3 class="subsubtitle method-title">setPrimaryColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The primary color of the progress bar if you do not want it to be the same as the UINavigationBar&rsquo;s tint color. If set to nil, the UINavigationBar&rsquo;s tint color will be used.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setPrimaryColor:(UIColor *)<em>primaryColor</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>primaryColor</em></dt>
+			<dd><p>The color to set.</p></dd>
 		</dl>
 		
 	</div>
@@ -416,6 +528,52 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/setSecondaryColor:" title="setSecondaryColor:"></a>
+	<h3 class="subsubtitle method-title">setSecondaryColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The secondary color of the progress bar, if nil, the secondary color will be the barTintColor.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setSecondaryColor:(UIColor *)<em>secondaryColor</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>secondaryColor</em></dt>
+			<dd><p>The color to set.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UINavigationController+M13ProgressViewBar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/showProgress" title="showProgress"></a>
 	<h3 class="subsubtitle method-title">showProgress</h3>
 	
@@ -466,7 +624,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Marxon13 Productions (Brandon McQuilkin). All rights reserved. (Last updated: 2014-02-19)</span><br />
+						<p><span class="copyright">&copy; 2014 Marxon13 Productions (Brandon McQuilkin). All rights reserved. (Last updated: 2014-05-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						

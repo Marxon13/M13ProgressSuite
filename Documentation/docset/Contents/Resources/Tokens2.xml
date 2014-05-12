@@ -30,6 +30,38 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/initAndShowWithProgressView:progress:indeterminate:status:mask:inView:</TokenIdentifier>
+			<Abstract type="html">Initalize and show the hud with parameters.</Abstract>
+			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>
+			
+			<Declaration>- (id)initAndShowWithProgressView:(M13ProgressView *)progressView progress:(CGFloat)progress indeterminate:(BOOL)indeterminate status:(NSString *)status mask:(M13ProgressHUDMaskType)maskType inView:(UIView *)view</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>progressView</Name>
+					<Abstract type="html">The progress view to show in the HUD.</Abstract>
+				</Parameter><Parameter>
+					<Name>progress</Name>
+					<Abstract type="html">The progress to display in the progress view.</Abstract>
+				</Parameter><Parameter>
+					<Name>indeterminate</Name>
+					<Abstract type="html">Wether or not the progress view is indeterminate.</Abstract>
+				</Parameter><Parameter>
+					<Name>status</Name>
+					<Abstract type="html">The status to display in the HUD.</Abstract>
+				</Parameter><Parameter>
+					<Name>maskType</Name>
+					<Abstract type="html">The type of mask to use for the HUD.</Abstract>
+				</Parameter><Parameter>
+					<Name>view</Name>
+					<Abstract type="html">The view to show the HUD in.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A instance of M13PRogressHUD</Abstract></ReturnValue>
+			<Anchor>//api/name/initAndShowWithProgressView:progress:indeterminate:status:mask:inView:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressHUD/setProgressView:</TokenIdentifier>
 			<Abstract type="html">The progress view displaied.</Abstract>
 			<DeclaredIn>M13ProgressHUD.h</DeclaredIn>

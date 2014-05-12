@@ -8,7 +8,7 @@
 			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
             
 			
-			<NodeRef refid="13"/>
+			<NodeRef refid="18"/>
 		</Token>
 		
 		
@@ -21,7 +21,7 @@
 			
 			
 			<Anchor>//api/name/showProgress</Anchor>
-            <NodeRef refid="13"/>
+            <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
@@ -41,7 +41,7 @@
 			</Parameters>
 			
 			<Anchor>//api/name/setProgress:animated:</Anchor>
-            <NodeRef refid="13"/>
+            <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
@@ -58,7 +58,7 @@
 			</Parameters>
 			
 			<Anchor>//api/name/setProgressTitle:</Anchor>
-            <NodeRef refid="13"/>
+            <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
@@ -75,7 +75,7 @@
 			</Parameters>
 			
 			<Anchor>//api/name/setIndeterminate:</Anchor>
-            <NodeRef refid="13"/>
+            <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
@@ -87,7 +87,7 @@
 			
 			
 			<Anchor>//api/name/finishProgress</Anchor>
-            <NodeRef refid="13"/>
+            <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
@@ -99,7 +99,53 @@
 			
 			
 			<Anchor>//api/name/cancelProgress</Anchor>
-            <NodeRef refid="13"/>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/isShowingProgressBar</TokenIdentifier>
+			<Abstract type="html">Wether or not the progress bar is showing.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isShowingProgressBar</Declaration>
+			
+			
+			<Anchor>//api/name/isShowingProgressBar</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setPrimaryColor:</TokenIdentifier>
+			<Abstract type="html">The primary color of the progress bar if you do not want it to be the same as the UINavigationBar&apos;s tint color. If set to nil, the UINavigationBar&apos;s tint color will be used.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)setPrimaryColor:(UIColor *)primaryColor</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>primaryColor</Name>
+					<Abstract type="html">The color to set.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setPrimaryColor:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setSecondaryColor:</TokenIdentifier>
+			<Abstract type="html">The secondary color of the progress bar, if nil, the secondary color will be the barTintColor.</Abstract>
+			<DeclaredIn>UINavigationController+M13ProgressViewBar.h</DeclaredIn>
+			
+			<Declaration>- (void)setSecondaryColor:(UIColor *)secondaryColor</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>secondaryColor</Name>
+					<Abstract type="html">The color to set.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setSecondaryColor:</Anchor>
+            <NodeRef refid="18"/>
 		</Token>
 		
         

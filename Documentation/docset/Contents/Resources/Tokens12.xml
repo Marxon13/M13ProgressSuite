@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/M13ProgressViewStripedBar.html">
+	<File path="Classes/M13ProgressViewPie.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/M13ProgressViewStripedBar</TokenIdentifier>
-			<Abstract type="html">A progress bar that is striped, and can animate the stripes if desired.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/M13ProgressViewPie</TokenIdentifier>
+			<Abstract type="html">A progress view that shows progress with a pie chart.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.h</DeclaredIn>
             
 			
 			<NodeRef refid="12"/>
@@ -13,261 +13,45 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setCornerType:</TokenIdentifier>
-			<Abstract type="html">The type of corner to display on the bar.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setBackgroundRingWidth:</TokenIdentifier>
+			<Abstract type="html">The thickness of the border around the pie.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) M13ProgressViewStripedBarCornerType cornerType</Declaration>
+			<Declaration>@property (nonatomic, assign) CGFloat backgroundRingWidth</Declaration>
 			
 			
-			<Anchor>//api/name/cornerType</Anchor>
+			<Anchor>//api/name/backgroundRingWidth</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/cornerType</TokenIdentifier>
-			<Abstract type="html">The type of corner to display on the bar.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/backgroundRingWidth</TokenIdentifier>
+			<Abstract type="html">The thickness of the border around the pie.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) M13ProgressViewStripedBarCornerType cornerType</Declaration>
+			<Declaration>@property (nonatomic, assign) CGFloat backgroundRingWidth</Declaration>
 			
 			
-			<Anchor>//api/name/cornerType</Anchor>
+			<Anchor>//api/name/backgroundRingWidth</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/cornerType</TokenIdentifier>
-			<Abstract type="html">The type of corner to display on the bar.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/backgroundRingWidth</TokenIdentifier>
+			<Abstract type="html">The thickness of the border around the pie.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) M13ProgressViewStripedBarCornerType cornerType</Declaration>
+			<Declaration>@property (nonatomic, assign) CGFloat backgroundRingWidth</Declaration>
 			
 			
-			<Anchor>//api/name/cornerType</Anchor>
+			<Anchor>//api/name/backgroundRingWidth</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setCornerRadius:</TokenIdentifier>
-			<Abstract type="html">The radius of the corner if the corner type is set to rounded rect.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat cornerRadius</Declaration>
-			
-			
-			<Anchor>//api/name/cornerRadius</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/cornerRadius</TokenIdentifier>
-			<Abstract type="html">The radius of the corner if the corner type is set to rounded rect.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat cornerRadius</Declaration>
-			
-			
-			<Anchor>//api/name/cornerRadius</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/cornerRadius</TokenIdentifier>
-			<Abstract type="html">The radius of the corner if the corner type is set to rounded rect.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat cornerRadius</Declaration>
-			
-			
-			<Anchor>//api/name/cornerRadius</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setStripeWidth:</TokenIdentifier>
-			<Abstract type="html">The width of the stripes if shown.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat stripeWidth</Declaration>
-			
-			
-			<Anchor>//api/name/stripeWidth</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/stripeWidth</TokenIdentifier>
-			<Abstract type="html">The width of the stripes if shown.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat stripeWidth</Declaration>
-			
-			
-			<Anchor>//api/name/stripeWidth</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/stripeWidth</TokenIdentifier>
-			<Abstract type="html">The width of the stripes if shown.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat stripeWidth</Declaration>
-			
-			
-			<Anchor>//api/name/stripeWidth</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setAnimateStripes:</TokenIdentifier>
-			<Abstract type="html">Wether or not the stripes are animated.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL animateStripes</Declaration>
-			
-			
-			<Anchor>//api/name/animateStripes</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/animateStripes</TokenIdentifier>
-			<Abstract type="html">Wether or not the stripes are animated.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL animateStripes</Declaration>
-			
-			
-			<Anchor>//api/name/animateStripes</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/animateStripes</TokenIdentifier>
-			<Abstract type="html">Wether or not the stripes are animated.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL animateStripes</Declaration>
-			
-			
-			<Anchor>//api/name/animateStripes</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setShowStripes:</TokenIdentifier>
-			<Abstract type="html">Wether or not to show the stripes.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL showStripes</Declaration>
-			
-			
-			<Anchor>//api/name/showStripes</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/showStripes</TokenIdentifier>
-			<Abstract type="html">Wether or not to show the stripes.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL showStripes</Declaration>
-			
-			
-			<Anchor>//api/name/showStripes</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/showStripes</TokenIdentifier>
-			<Abstract type="html">Wether or not to show the stripes.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL showStripes</Declaration>
-			
-			
-			<Anchor>//api/name/showStripes</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setStripeColor:</TokenIdentifier>
-			<Abstract type="html">The color of the stripes.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) UIColor *stripeColor</Declaration>
-			
-			
-			<Anchor>//api/name/stripeColor</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/stripeColor</TokenIdentifier>
-			<Abstract type="html">The color of the stripes.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) UIColor *stripeColor</Declaration>
-			
-			
-			<Anchor>//api/name/stripeColor</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/stripeColor</TokenIdentifier>
-			<Abstract type="html">The color of the stripes.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) UIColor *stripeColor</Declaration>
-			
-			
-			<Anchor>//api/name/stripeColor</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setBorderWidth:</TokenIdentifier>
-			<Abstract type="html">The width of the border.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat borderWidth</Declaration>
-			
-			
-			<Anchor>//api/name/borderWidth</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/borderWidth</TokenIdentifier>
-			<Abstract type="html">The width of the border.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat borderWidth</Declaration>
-			
-			
-			<Anchor>//api/name/borderWidth</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/borderWidth</TokenIdentifier>
-			<Abstract type="html">The width of the border.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) CGFloat borderWidth</Declaration>
-			
-			
-			<Anchor>//api/name/borderWidth</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setPrimaryColor:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setPrimaryColor:</TokenIdentifier>
 			<Abstract type="html">The primary color of the M13ProgressView.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>- (void)setPrimaryColor:(UIColor *)primaryColor</Declaration>
 			
@@ -277,9 +61,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setSecondaryColor:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setSecondaryColor:</TokenIdentifier>
 			<Abstract type="html">The secondary color of the M13ProgressView.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>- (void)setSecondaryColor:(UIColor *)secondaryColor</Declaration>
 			
@@ -289,9 +73,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setProgress:animated:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setProgress:animated:</TokenIdentifier>
 			<Abstract type="html">Set the progress of the M13ProgressView.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>- (void)setProgress:(CGFloat)progress animated:(BOOL)animated</Declaration>
 			<Parameters>
@@ -309,9 +93,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/performAction:animated:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/performAction:animated:</TokenIdentifier>
 			<Abstract type="html">Perform the given action if defined. Usually showing success or failure.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>- (void)performAction:(M13ProgressViewAction)action animated:(BOOL)animated</Declaration>
 			<Parameters>
@@ -329,9 +113,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setIndeterminate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setIndeterminate:</TokenIdentifier>
 			<Abstract type="html">Wether or not the progress view is indeterminate.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>- (void)setIndeterminate:(BOOL)indeterminate</Declaration>
 			
@@ -341,9 +125,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setAnimationFromValue:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setAnimationFromValue:</TokenIdentifier>
 			<Abstract type="html">The start progress for the progress animation.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGFloat animationFromValue</Declaration>
 			
@@ -353,9 +137,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/animationFromValue</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/animationFromValue</TokenIdentifier>
 			<Abstract type="html">The start progress for the progress animation.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGFloat animationFromValue</Declaration>
 			
@@ -365,9 +149,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/animationFromValue</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/animationFromValue</TokenIdentifier>
 			<Abstract type="html">The start progress for the progress animation.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGFloat animationFromValue</Declaration>
 			
@@ -377,9 +161,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setAnimationToValue:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setAnimationToValue:</TokenIdentifier>
 			<Abstract type="html">The end progress for the progress animation.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGFloat animationToValue</Declaration>
 			
@@ -389,9 +173,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/animationToValue</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/animationToValue</TokenIdentifier>
 			<Abstract type="html">The end progress for the progress animation.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGFloat animationToValue</Declaration>
 			
@@ -401,9 +185,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/animationToValue</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/animationToValue</TokenIdentifier>
 			<Abstract type="html">The end progress for the progress animation.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGFloat animationToValue</Declaration>
 			
@@ -413,9 +197,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setAnimationStartTime:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setAnimationStartTime:</TokenIdentifier>
 			<Abstract type="html">The start time interval for the animaiton.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CFTimeInterval animationStartTime</Declaration>
 			
@@ -425,9 +209,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/animationStartTime</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/animationStartTime</TokenIdentifier>
 			<Abstract type="html">The start time interval for the animaiton.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CFTimeInterval animationStartTime</Declaration>
 			
@@ -437,9 +221,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/animationStartTime</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/animationStartTime</TokenIdentifier>
 			<Abstract type="html">The start time interval for the animaiton.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CFTimeInterval animationStartTime</Declaration>
 			
@@ -449,9 +233,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setDisplayLink:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setDisplayLink:</TokenIdentifier>
 			<Abstract type="html">Link to the display to keep animations in sync.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) CADisplayLink *displayLink</Declaration>
 			
@@ -461,9 +245,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/displayLink</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/displayLink</TokenIdentifier>
 			<Abstract type="html">Link to the display to keep animations in sync.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) CADisplayLink *displayLink</Declaration>
 			
@@ -473,9 +257,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/displayLink</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/displayLink</TokenIdentifier>
 			<Abstract type="html">Link to the display to keep animations in sync.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) CADisplayLink *displayLink</Declaration>
 			
@@ -485,9 +269,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setProgress:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setProgress:</TokenIdentifier>
 			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
 			
@@ -497,9 +281,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/progress</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/progress</TokenIdentifier>
 			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
 			
@@ -509,9 +293,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/progress</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/progress</TokenIdentifier>
 			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
 			
@@ -521,47 +305,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setProgressSuperLayer:</TokenIdentifier>
-			<Abstract type="html">The layer that contains the progress layer. That also masks the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setProgressLayer:</TokenIdentifier>
+			<Abstract type="html">The layer that progress is shown on.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, retain) CALayer *progressSuperLayer</Declaration>
-			
-			
-			<Anchor>//api/name/progressSuperLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/progressSuperLayer</TokenIdentifier>
-			<Abstract type="html">The layer that contains the progress layer. That also masks the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CALayer *progressSuperLayer</Declaration>
-			
-			
-			<Anchor>//api/name/progressSuperLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/progressSuperLayer</TokenIdentifier>
-			<Abstract type="html">The layer that contains the progress layer. That also masks the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CALayer *progressSuperLayer</Declaration>
-			
-			
-			<Anchor>//api/name/progressSuperLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setProgressLayer:</TokenIdentifier>
-			<Abstract type="html">The layer that displays progress in the progress bar.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CALayer *progressLayer</Declaration>
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *progressLayer</Declaration>
 			
 			
 			<Anchor>//api/name/progressLayer</Anchor>
@@ -569,23 +317,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/progressLayer</TokenIdentifier>
-			<Abstract type="html">The layer that displays progress in the progress bar.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/progressLayer</TokenIdentifier>
+			<Abstract type="html">The layer that progress is shown on.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, retain) CALayer *progressLayer</Declaration>
-			
-			
-			<Anchor>//api/name/progressLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/progressLayer</TokenIdentifier>
-			<Abstract type="html">The layer that displays progress in the progress bar.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CALayer *progressLayer</Declaration>
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *progressLayer</Declaration>
 			
 			
 			<Anchor>//api/name/progressLayer</Anchor>
@@ -593,81 +329,21 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setProgressMaskLayer:</TokenIdentifier>
-			<Abstract type="html">The layer that masks the stripes of the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/progressLayer</TokenIdentifier>
+			<Abstract type="html">The layer that progress is shown on.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *progressMaskLayer</Declaration>
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *progressLayer</Declaration>
 			
 			
-			<Anchor>//api/name/progressMaskLayer</Anchor>
+			<Anchor>//api/name/progressLayer</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/progressMaskLayer</TokenIdentifier>
-			<Abstract type="html">The layer that masks the stripes of the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *progressMaskLayer</Declaration>
-			
-			
-			<Anchor>//api/name/progressMaskLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/progressMaskLayer</TokenIdentifier>
-			<Abstract type="html">The layer that masks the stripes of the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *progressMaskLayer</Declaration>
-			
-			
-			<Anchor>//api/name/progressMaskLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setMaskLayer:</TokenIdentifier>
-			<Abstract type="html">The mask layer for the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *maskLayer</Declaration>
-			
-			
-			<Anchor>//api/name/maskLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/maskLayer</TokenIdentifier>
-			<Abstract type="html">The mask layer for the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *maskLayer</Declaration>
-			
-			
-			<Anchor>//api/name/maskLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/maskLayer</TokenIdentifier>
-			<Abstract type="html">The mask layer for the progress layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *maskLayer</Declaration>
-			
-			
-			<Anchor>//api/name/maskLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setBackgroundLayer:</TokenIdentifier>
-			<Abstract type="html">The background layer that displays the border.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setBackgroundLayer:</TokenIdentifier>
+			<Abstract type="html">The layer that the background and indeterminate progress is shown on.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, retain) CAShapeLayer *backgroundLayer</Declaration>
 			
@@ -677,9 +353,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/backgroundLayer</TokenIdentifier>
-			<Abstract type="html">The background layer that displays the border.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/backgroundLayer</TokenIdentifier>
+			<Abstract type="html">The layer that the background and indeterminate progress is shown on.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, retain) CAShapeLayer *backgroundLayer</Declaration>
 			
@@ -689,9 +365,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/backgroundLayer</TokenIdentifier>
-			<Abstract type="html">The background layer that displays the border.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/backgroundLayer</TokenIdentifier>
+			<Abstract type="html">The layer that the background and indeterminate progress is shown on.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, retain) CAShapeLayer *backgroundLayer</Declaration>
 			
@@ -701,11 +377,47 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setIndeterminateLayer:</TokenIdentifier>
-			<Abstract type="html">The layer that is used to animate indeterminate progress.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setIconLayer:</TokenIdentifier>
+			<Abstract type="html">The layer that is used to render icons for success or failure.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, retain) CALayer *indeterminateLayer</Declaration>
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *iconLayer</Declaration>
+			
+			
+			<Anchor>//api/name/iconLayer</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/iconLayer</TokenIdentifier>
+			<Abstract type="html">The layer that is used to render icons for success or failure.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *iconLayer</Declaration>
+			
+			
+			<Anchor>//api/name/iconLayer</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/iconLayer</TokenIdentifier>
+			<Abstract type="html">The layer that is used to render icons for success or failure.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *iconLayer</Declaration>
+			
+			
+			<Anchor>//api/name/iconLayer</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setIndeterminateLayer:</TokenIdentifier>
+			<Abstract type="html">The layer that is used to display the indeterminate view.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *indeterminateLayer</Declaration>
 			
 			
 			<Anchor>//api/name/indeterminateLayer</Anchor>
@@ -713,23 +425,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/indeterminateLayer</TokenIdentifier>
-			<Abstract type="html">The layer that is used to animate indeterminate progress.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/indeterminateLayer</TokenIdentifier>
+			<Abstract type="html">The layer that is used to display the indeterminate view.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, retain) CALayer *indeterminateLayer</Declaration>
-			
-			
-			<Anchor>//api/name/indeterminateLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/indeterminateLayer</TokenIdentifier>
-			<Abstract type="html">The layer that is used to animate indeterminate progress.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CALayer *indeterminateLayer</Declaration>
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *indeterminateLayer</Declaration>
 			
 			
 			<Anchor>//api/name/indeterminateLayer</Anchor>
@@ -737,9 +437,21 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setCurrentAction:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/indeterminateLayer</TokenIdentifier>
+			<Abstract type="html">The layer that is used to display the indeterminate view.</Abstract>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) CAShapeLayer *indeterminateLayer</Declaration>
+			
+			
+			<Anchor>//api/name/indeterminateLayer</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/setCurrentAction:</TokenIdentifier>
 			<Abstract type="html">The action currently being performed.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) M13ProgressViewAction currentAction</Declaration>
 			
@@ -749,9 +461,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/currentAction</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewPie/currentAction</TokenIdentifier>
 			<Abstract type="html">The action currently being performed.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) M13ProgressViewAction currentAction</Declaration>
 			
@@ -761,50 +473,14 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/currentAction</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewPie/currentAction</TokenIdentifier>
 			<Abstract type="html">The action currently being performed.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
+			<DeclaredIn>M13ProgressViewPie.m</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) M13ProgressViewAction currentAction</Declaration>
 			
 			
 			<Anchor>//api/name/currentAction</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/setStripesLayer:</TokenIdentifier>
-			<Abstract type="html">The stripes layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *stripesLayer</Declaration>
-			
-			
-			<Anchor>//api/name/stripesLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewStripedBar/stripesLayer</TokenIdentifier>
-			<Abstract type="html">The stripes layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *stripesLayer</Declaration>
-			
-			
-			<Anchor>//api/name/stripesLayer</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewStripedBar/stripesLayer</TokenIdentifier>
-			<Abstract type="html">The stripes layer.</Abstract>
-			<DeclaredIn>M13ProgressViewStripedBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, retain) CAShapeLayer *stripesLayer</Declaration>
-			
-			
-			<Anchor>//api/name/stripesLayer</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		

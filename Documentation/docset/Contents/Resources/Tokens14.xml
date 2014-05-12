@@ -8,7 +8,7 @@
 			<DeclaredIn>M13ProgressViewRing.h</DeclaredIn>
             
 			
-			<NodeRef refid="9"/>
+			<NodeRef refid="14"/>
 		</Token>
 		
 		
@@ -21,7 +21,7 @@
 			
 			
 			<Anchor>//api/name/backgroundRingWidth</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -33,7 +33,7 @@
 			
 			
 			<Anchor>//api/name/backgroundRingWidth</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -45,7 +45,7 @@
 			
 			
 			<Anchor>//api/name/backgroundRingWidth</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -57,7 +57,7 @@
 			
 			
 			<Anchor>//api/name/progressRingWidth</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -69,7 +69,7 @@
 			
 			
 			<Anchor>//api/name/progressRingWidth</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -81,7 +81,7 @@
 			
 			
 			<Anchor>//api/name/progressRingWidth</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -93,7 +93,7 @@
 			
 			
 			<Anchor>//api/name/showPercentage</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -105,7 +105,7 @@
 			
 			
 			<Anchor>//api/name/showPercentage</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -117,7 +117,7 @@
 			
 			
 			<Anchor>//api/name/showPercentage</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -129,7 +129,7 @@
 			
 			
 			<Anchor>//api/name/setPrimaryColor:</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -141,7 +141,7 @@
 			
 			
 			<Anchor>//api/name/setSecondaryColor:</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -161,7 +161,7 @@
 			</Parameters>
 			
 			<Anchor>//api/name/setProgress:animated:</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -181,7 +181,7 @@
 			</Parameters>
 			
 			<Anchor>//api/name/performAction:animated:</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -193,7 +193,7 @@
 			
 			
 			<Anchor>//api/name/setIndeterminate:</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -205,7 +205,7 @@
 			
 			
 			<Anchor>//api/name/percentageFormatter</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -217,7 +217,7 @@
 			
 			
 			<Anchor>//api/name/percentageFormatter</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -229,7 +229,7 @@
 			
 			
 			<Anchor>//api/name/percentageFormatter</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -241,7 +241,7 @@
 			
 			
 			<Anchor>//api/name/percentageLabel</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -253,7 +253,7 @@
 			
 			
 			<Anchor>//api/name/percentageLabel</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -265,7 +265,7 @@
 			
 			
 			<Anchor>//api/name/percentageLabel</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -277,7 +277,7 @@
 			
 			
 			<Anchor>//api/name/animationFromValue</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -289,7 +289,7 @@
 			
 			
 			<Anchor>//api/name/animationFromValue</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -301,7 +301,7 @@
 			
 			
 			<Anchor>//api/name/animationFromValue</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -313,7 +313,7 @@
 			
 			
 			<Anchor>//api/name/animationToValue</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -325,7 +325,7 @@
 			
 			
 			<Anchor>//api/name/animationToValue</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -337,7 +337,7 @@
 			
 			
 			<Anchor>//api/name/animationToValue</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -349,7 +349,7 @@
 			
 			
 			<Anchor>//api/name/animationStartTime</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -361,7 +361,7 @@
 			
 			
 			<Anchor>//api/name/animationStartTime</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -373,7 +373,7 @@
 			
 			
 			<Anchor>//api/name/animationStartTime</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -385,7 +385,7 @@
 			
 			
 			<Anchor>//api/name/displayLink</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -397,7 +397,7 @@
 			
 			
 			<Anchor>//api/name/displayLink</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -409,43 +409,7 @@
 			
 			
 			<Anchor>//api/name/displayLink</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewRing/setProgress:</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewRing.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewRing/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewRing.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewRing/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewRing.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -457,7 +421,7 @@
 			
 			
 			<Anchor>//api/name/progressLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -469,7 +433,7 @@
 			
 			
 			<Anchor>//api/name/progressLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -481,7 +445,7 @@
 			
 			
 			<Anchor>//api/name/progressLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -493,7 +457,7 @@
 			
 			
 			<Anchor>//api/name/backgroundLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -505,7 +469,7 @@
 			
 			
 			<Anchor>//api/name/backgroundLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -517,7 +481,7 @@
 			
 			
 			<Anchor>//api/name/backgroundLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -529,7 +493,7 @@
 			
 			
 			<Anchor>//api/name/iconLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -541,7 +505,7 @@
 			
 			
 			<Anchor>//api/name/iconLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -553,7 +517,7 @@
 			
 			
 			<Anchor>//api/name/iconLayer</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -565,7 +529,7 @@
 			
 			
 			<Anchor>//api/name/currentAction</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -577,7 +541,7 @@
 			
 			
 			<Anchor>//api/name/currentAction</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
 		<Token>
@@ -589,7 +553,7 @@
 			
 			
 			<Anchor>//api/name/currentAction</Anchor>
-            <NodeRef refid="9"/>
+            <NodeRef refid="14"/>
 		</Token>
 		
         

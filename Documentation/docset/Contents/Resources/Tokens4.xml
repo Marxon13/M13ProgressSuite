@@ -521,42 +521,6 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewBar/setProgress:</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewBar/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/M13ProgressViewBar/progress</TokenIdentifier>
-			<Abstract type="html">Allow us to write to the progress.</Abstract>
-			<DeclaredIn>M13ProgressViewBar.m</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) CGFloat progress</Declaration>
-			
-			
-			<Anchor>//api/name/progress</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/M13ProgressViewBar/setProgressBar:</TokenIdentifier>
 			<Abstract type="html">The view of the progress bar.</Abstract>
 			<DeclaredIn>M13ProgressViewBar.m</DeclaredIn>
