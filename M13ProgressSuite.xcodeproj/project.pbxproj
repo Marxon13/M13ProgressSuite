@@ -431,8 +431,6 @@
 			isa = PBXGroup;
 			children = (
 				CA412B0618D2655500FCB7CC /* Finished */,
-				CA6F31C5190EBF11008D1E64 /* LetterpressViewController.h */,
-				CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */,
 			);
 			name = "Example View Controllers";
 			sourceTree = "<group>";
@@ -458,6 +456,8 @@
 		CA412B0618D2655500FCB7CC /* Finished */ = {
 			isa = PBXGroup;
 			children = (
+				CA6F31C5190EBF11008D1E64 /* LetterpressViewController.h */,
+				CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */,
 				CA2FB01A1889946F00BCAEF5 /* SampleViewController.h */,
 				CA2FB01B1889946F00BCAEF5 /* SampleViewController.m */,
 				CA412B0318D2638E00FCB7CC /* RadiativeViewController.h */,
@@ -556,7 +556,7 @@
 		CA2FAF901889907300BCAEF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Brandon McQuilkin";
 				TargetAttributes = {
 					CA2FAFBB1889907300BCAEF5 = {
@@ -726,7 +726,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -766,7 +765,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -825,7 +823,6 @@
 		CA2FAFD11889907300BCAEF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/M13ProgressSuite.app/M13ProgressSuite";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -848,7 +845,6 @@
 		CA2FAFD21889907300BCAEF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/M13ProgressSuite.app/M13ProgressSuite";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

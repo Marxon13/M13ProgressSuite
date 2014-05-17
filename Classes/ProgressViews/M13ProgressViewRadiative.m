@@ -167,24 +167,20 @@
 
 - (void)animateProgress:(CADisplayLink *)displayLink
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         CGFloat dt = (displayLink.timestamp - _animationStartTime) / self.animationDuration;
         if (dt >= 1.0) {
             //Order is important! Otherwise concurrency will cause errors, because setProgress: will detect an animation in progress and try to stop it by itself. Once over one, set to actual progress amount. Animation is over.
             [self.displayLink removeFromRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
             self.displayLink = nil;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [super setProgress:_animationToValue animated:NO];
-                [self setNeedsDisplay];
-            });
+            [super setProgress:_animationToValue animated:NO];
+            [self setNeedsDisplay];
             return;
         }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //Set progress
-            [super setProgress:_animationFromValue + dt * (_animationToValue - _animationFromValue) animated:YES];
-            [self setNeedsDisplay];
-        });
+        //Set progress
+        [super setProgress:_animationFromValue + dt * (_animationToValue - _animationFromValue) animated:YES];
+        [self setNeedsDisplay];
         
     });
 }
