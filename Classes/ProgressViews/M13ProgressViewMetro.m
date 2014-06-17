@@ -204,7 +204,7 @@
         //Create the path
         animationPath = [UIBezierPath bezierPath];
         [animationPath moveToPoint:CGPointMake(-_dotSize.width, self.bounds.size.height / 2)];
-        [animationPath addLineToPoint:CGPointMake(self.bounds.size.width + _dotSize.width, self.bounds.size.width / 2)];
+        [animationPath addLineToPoint:CGPointMake(self.bounds.size.width + _dotSize.width, self.bounds.size.height / 2)];
     }
     [self stopAnimating];
     [self beginAnimating];
