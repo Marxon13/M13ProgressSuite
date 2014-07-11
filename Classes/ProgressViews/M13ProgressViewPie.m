@@ -47,6 +47,8 @@
     BOOL _backgroundRingWidthOverriden;
 }
 
+@dynamic progress;
+
 #pragma mark Initalization and setup
 
 - (id)init

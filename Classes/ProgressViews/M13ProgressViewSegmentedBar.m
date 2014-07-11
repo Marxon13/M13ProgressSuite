@@ -40,6 +40,8 @@
     NSTimer *indeterminateTimer;
 }
 
+@dynamic progress;
+
 #pragma mark Initalization and setup
 
 - (id)init
