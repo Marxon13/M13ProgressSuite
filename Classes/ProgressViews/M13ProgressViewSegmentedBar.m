@@ -36,7 +36,7 @@
 
 @implementation M13ProgressViewSegmentedBar
 {
-    int indeterminateIndex;
+    NSInteger indeterminateIndex;
     NSTimer *indeterminateTimer;
 }
 
@@ -467,7 +467,7 @@
         cornerRadius = floorf(self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0);
     }
     //What index will the segments be colored from.
-    int numberOfSegmentsToBeColored = _numberOfSegments / 4;
+    NSInteger numberOfSegmentsToBeColored = _numberOfSegments / 4;
     //Create the path ref that all the paths will be appended
     CGMutablePathRef progressPathRef = CGPathCreateMutable();
     CGMutablePathRef backgroundPathRef = CGPathCreateMutable();
