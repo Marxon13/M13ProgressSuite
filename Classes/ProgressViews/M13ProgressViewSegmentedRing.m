@@ -52,6 +52,8 @@
     CGFloat _segmentSeparationInnerAngle;
 }
 
+@dynamic progress;
+
 #pragma mark Initalization and setup
 
 - (id)init

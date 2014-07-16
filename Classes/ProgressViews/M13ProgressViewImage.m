@@ -32,6 +32,8 @@
 
 @implementation M13ProgressViewImage
 
+@dynamic progress;
+
 #pragma mark Initalization and setup
 
 - (id)init
