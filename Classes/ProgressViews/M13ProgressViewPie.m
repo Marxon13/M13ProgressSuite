@@ -145,6 +145,7 @@
     _backgroundLayer.lineWidth = _backgroundRingWidth;
     _backgroundRingWidthOverriden = YES;
     [self setNeedsDisplay];
+    [self invalidateIntrinsicContentSize];
 }
 
 #pragma mark Actions
@@ -341,6 +342,16 @@
     
     //Redraw
     [self setNeedsDisplay];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    if (!_backgroundRingWidthOverriden) {
+        //Based on scale
+        return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
+    } else {
+        return CGSizeMake(2 * _backgroundRingWidth, 2 * _backgroundRingWidth);
+    }
 }
 
 - (void)setFrame:(CGRect)frame

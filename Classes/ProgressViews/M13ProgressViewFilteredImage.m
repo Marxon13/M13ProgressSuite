@@ -161,6 +161,11 @@
     _progressView.frame = self.bounds;
 }
 
+- (CGSize)intrinsicContentSize
+{
+    return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
+}
+
 #pragma mark Drawing
 
 - (void)drawRect:(CGRect)rect

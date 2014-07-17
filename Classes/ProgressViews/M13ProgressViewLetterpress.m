@@ -108,7 +108,6 @@
     _springDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(rotateWithDisplayLink:)];
     [_springDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:(id)kCFRunLoopCommonModes];
     
-    
 }
 
 - (void)setFrame:(CGRect)frame
@@ -127,6 +126,12 @@
     [letterpressView setNeedsDisplay];
 }
 
+- (CGSize)intrinsicContentSize
+{
+    //Everything is based on scale. No minimum size.
+    return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
+}
+
 #pragma mark - Properties
 
 - (void)setNumberOfGridPoints:(CGPoint)numberOfGridPoints
@@ -143,6 +148,11 @@
 
 - (void)setPointSpacing:(CGFloat)pointSpacing
 {
+    if (pointSpacing > 1) {
+        pointSpacing = 1;
+    } else if (pointSpacing < 0) {
+        pointSpacing = 0;
+    }
     _pointSpacing = pointSpacing;
     [self setNeedsDisplay];
 }
@@ -263,7 +273,7 @@
             //Calculat the rect of the point
             pointRect.size = pointSize;
             pointRect.origin = CGPointMake(pointSize.width * x, pointSize.height * y);
-            pointRect = CGRectInset(pointRect, _progressView.pointSpacing, _progressView.pointSpacing);
+            pointRect = CGRectInset(pointRect, pointSize.width * _progressView.pointSpacing, pointSize.height * _progressView.pointSpacing);
             
             //Set the fill color
             if (index < indexToFillTo) {
@@ -284,5 +294,7 @@
         }
     }
 }
+
+
 
 @end

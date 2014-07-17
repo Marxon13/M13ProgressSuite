@@ -376,6 +376,12 @@
     [super setFrame:frame];
 }
 
+- (CGSize)intrinsicContentSize
+{
+    //This progress view scales
+    return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
+}
+
 #pragma mark Drawing
 
 - (void)drawRect:(CGRect)rect

@@ -221,6 +221,12 @@
     }
 }
 
+- (CGSize)intrinsicContentSize
+{
+    //The width and height should be set with constraints. Can't think of a good way to figure out the minimum size with the point and scale based size calculations.
+    return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
+}
+
 #pragma mark Drawing
 
 - (void)drawRect:(CGRect)rect

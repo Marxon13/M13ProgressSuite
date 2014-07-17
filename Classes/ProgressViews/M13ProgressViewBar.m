@@ -182,8 +182,7 @@
     [self setNeedsDisplay];
     //Update strokeWidth
     _progressLayer.lineWidth = progressBarThickness;
-    //Update the corner radius
-    
+    [self invalidateIntrinsicContentSize];
 }
 
 #pragma mark Actions
@@ -532,6 +531,26 @@
     //Set the progress layer frame
     _progressLayer.frame = _progressBar.bounds;
     
+}
+
+- (CGSize)intrinsicContentSize
+{
+    CGFloat labelProgressBufferDistance = _progressBarThickness * 4;
+    
+    //Progress bar thickness is the only non-scale based size parameter.
+    if (_progressDirection == M13ProgressViewBarProgressDirectionBottomToTop || _progressDirection == M13ProgressViewBarProgressDirectionTopToBottom) {
+        if (_percentagePosition == M13ProgressViewBarPercentagePositionTop || _percentagePosition == M13ProgressViewBarPercentagePositionBottom) {
+            return CGSizeMake(_progressBarThickness, labelProgressBufferDistance);
+        } else {
+            return CGSizeMake(_progressBarThickness + labelProgressBufferDistance, UIViewNoIntrinsicMetric);
+        }
+    } else {
+        if (_percentagePosition == M13ProgressViewBarPercentagePositionTop || _percentagePosition == M13ProgressViewBarPercentagePositionBottom) {
+            return CGSizeMake(UIViewNoIntrinsicMetric, _progressBarThickness + labelProgressBufferDistance);
+        } else {
+            return CGSizeMake(labelProgressBufferDistance, _progressBarThickness);
+        }
+    }
 }
 
 - (CGFloat)maximumFontSizeThatFitsInRect:(CGRect)frame

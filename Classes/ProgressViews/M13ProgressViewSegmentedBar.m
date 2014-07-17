@@ -272,6 +272,11 @@
 
 }
 
+- (CGSize)intrinsicContentSize
+{
+    return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
+}
+
 #pragma mark Drawing
 
 - (NSInteger)numberOfFullSegments

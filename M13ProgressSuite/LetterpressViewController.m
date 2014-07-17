@@ -59,7 +59,7 @@
         _progressView.pointSpacing = 0.0;
     } else {
         _progressView.pointShape = M13ProgressViewLetterpressPointShapeSquare;
-        _progressView.pointSpacing = 2.0;
+        _progressView.pointSpacing = .15;
     }
 }
 

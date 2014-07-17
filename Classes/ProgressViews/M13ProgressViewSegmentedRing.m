@@ -159,6 +159,7 @@
     _progressRingWidthOverriden = YES;
     [self updateAngles];
     [self setNeedsDisplay];
+    [self invalidateIntrinsicContentSize];
 }
 
 - (void)setShowPercentage:(BOOL)showPercentage
@@ -389,6 +390,14 @@
     
     //Redraw
     [self setNeedsDisplay];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    //This might need a little more fine tuning.
+    CGFloat base = _progressRingWidth * 2;
+
+    return CGSizeMake(base, base);
 }
 
 - (void)setFrame:(CGRect)frame

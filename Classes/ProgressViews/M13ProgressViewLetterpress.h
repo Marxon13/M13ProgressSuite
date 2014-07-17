@@ -24,7 +24,7 @@ typedef enum {
  */
 @property (nonatomic, assign) M13ProgressViewLetterpressPointShape pointShape;
 /**
- The amount of space between the grid points.
+ The amount of space between the grid points, as a percentage of the point's size.
  */
 @property (nonatomic, assign) CGFloat pointSpacing;
 /**

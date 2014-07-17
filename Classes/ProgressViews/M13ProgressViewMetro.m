@@ -213,6 +213,15 @@
 - (void)setNumberOfDots:(NSUInteger)numberOfDots
 {
     _numberOfDots = numberOfDots;
+    [self invalidateIntrinsicContentSize];
+    [self stopAnimating];
+    [self beginAnimating];
+}
+
+- (void)setDotSize:(CGSize)dotSize
+{
+    _dotSize = dotSize;
+    [self invalidateIntrinsicContentSize];
     [self stopAnimating];
     [self beginAnimating];
 }
@@ -285,7 +294,16 @@
         }
         pastIndexToHighlightTo = indexToHighlightTo;
     }
-    
+}
+
+- (CGSize)intrinsicContentSize
+{
+    //No real constraint on size.
+    if (_animationShape == M13ProgressViewMetroAnimationShapeEllipse || _animationShape == M13ProgressViewMetroAnimationShapeRectangle) {
+        return CGSizeMake(3 * _dotSize.width, 3 * _dotSize.height);
+    } else {
+        return CGSizeMake(_dotSize.width * _numberOfDots, _dotSize.height);
+    }
 }
 
 #pragma mark Animation
