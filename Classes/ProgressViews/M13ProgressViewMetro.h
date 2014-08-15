@@ -15,7 +15,7 @@ typedef enum {
 } M13ProgressViewMetroAnimationShape;
 
 /**The layer that the `M13ProgressViewMetro` animates.*/
-@interface M13ProgressViewMetroDot : CALayer <NSCopying>
+@interface M13ProgressViewMetroDot : CALayer
 
 /**Wether or not the dot is highlighted. The dot becomes highlighted to show progress.*/
 @property (nonatomic, assign) BOOL highlighted;
