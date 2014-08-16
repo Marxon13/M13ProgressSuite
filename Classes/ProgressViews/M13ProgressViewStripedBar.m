@@ -39,7 +39,7 @@
 /**The action currently being performed.*/
 @property (nonatomic, assign) M13ProgressViewAction currentAction;
 /**The stripes layer.*/
-@property (nonatomic, retain) CAShapeLayer *stripesLayer;
+@property (nonatomic, retain) CALayer *stripesLayer;
 @end
 
 @implementation M13ProgressViewStripedBar
