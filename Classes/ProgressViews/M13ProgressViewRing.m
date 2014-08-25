@@ -147,7 +147,7 @@
 {
     _backgroundRingWidth = backgroundRingWidth;
     _backgroundLayer.lineWidth = _backgroundRingWidth;
-    _progressRingWidthOverriden = YES;
+    _backgroundRingWidthOverriden = YES;
     [self setNeedsDisplay];
 }
 
