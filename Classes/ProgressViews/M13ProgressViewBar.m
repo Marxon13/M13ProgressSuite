@@ -615,6 +615,8 @@
             [path addLineToPoint:CGPointMake(_progressBarThickness / 2.0, _progressLayer.frame.size.height * self.progress)];
             [_progressLayer setPath:path.CGPath];
         }
+    } else {
+        [_progressLayer setPath:nil];
     }
 }
 
