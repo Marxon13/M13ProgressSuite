@@ -789,7 +789,7 @@
 {
     for (id view in self.subviews) {
         //If the subview is a progress HUD return it.
-        if ([[view class] isSubclassOfClass:[M13ProgressView class]]) {
+        if ([[view class] isSubclassOfClass:[M13ProgressHUD class]]) {
             return view;
         }
     }
