@@ -62,7 +62,6 @@
 		CA2FB02C1889946F00BCAEF5 /* SegmentedBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB01D1889946F00BCAEF5 /* SegmentedBarViewController.m */; };
 		CA2FB02D1889946F00BCAEF5 /* SegmentedRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB01F1889946F00BCAEF5 /* SegmentedRingViewController.m */; };
 		CA2FB02E1889946F00BCAEF5 /* StripedBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0211889946F00BCAEF5 /* StripedBarViewController.m */; };
-		CA2FB032188994B700BCAEF5 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB031188994B700BCAEF5 /* UIImage+ImageEffects.m */; };
 		CA2FB0361889952E00BCAEF5 /* Galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA2FB0341889952E00BCAEF5 /* Galaxy.jpg */; };
 		CA2FB0371889952E00BCAEF5 /* Striped_apple_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2FB0351889952E00BCAEF5 /* Striped_apple_logo.png */; };
 		CA2FB03A1889974600BCAEF5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB0391889974600BCAEF5 /* Accelerate.framework */; };
@@ -70,6 +69,7 @@
 		CA2FB03E1889975A00BCAEF5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB03D1889975A00BCAEF5 /* QuartzCore.framework */; };
 		CA412B0218D252FE00FCB7CC /* M13ProgressViewRadiative.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0118D252FE00FCB7CC /* M13ProgressViewRadiative.m */; };
 		CA412B0518D2638E00FCB7CC /* RadiativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */; };
+		CA42BE291A12A92F0018E53E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42BE281A12A92F0018E53E /* UIImage+ImageEffects.m */; };
 		CA66890318CBBD1400827C48 /* M13ProgressViewMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */; };
 		CA66890618CBEF9300827C48 /* MetroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890518CBEF9300827C48 /* MetroViewController.m */; };
 		CA6F31C3190EA88D008D1E64 /* M13ProgressViewLetterpress.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F31C2190EA88D008D1E64 /* M13ProgressViewLetterpress.m */; };
@@ -159,8 +159,6 @@
 		CA2FB01F1889946F00BCAEF5 /* SegmentedRingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedRingViewController.m; sourceTree = "<group>"; };
 		CA2FB0201889946F00BCAEF5 /* StripedBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StripedBarViewController.h; sourceTree = "<group>"; };
 		CA2FB0211889946F00BCAEF5 /* StripedBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StripedBarViewController.m; sourceTree = "<group>"; };
-		CA2FB030188994B700BCAEF5 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Classes/HUD/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		CA2FB031188994B700BCAEF5 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Classes/HUD/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		CA2FB0341889952E00BCAEF5 /* Galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Galaxy.jpg; path = M13ProgressSuite/Galaxy.jpg; sourceTree = "<group>"; };
 		CA2FB0351889952E00BCAEF5 /* Striped_apple_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Striped_apple_logo.png; path = M13ProgressSuite/Striped_apple_logo.png; sourceTree = "<group>"; };
 		CA2FB0391889974600BCAEF5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -170,6 +168,8 @@
 		CA412B0118D252FE00FCB7CC /* M13ProgressViewRadiative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewRadiative.m; path = Classes/ProgressViews/M13ProgressViewRadiative.m; sourceTree = "<group>"; };
 		CA412B0318D2638E00FCB7CC /* RadiativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadiativeViewController.h; sourceTree = "<group>"; };
 		CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadiativeViewController.m; sourceTree = "<group>"; };
+		CA42BE271A12A92F0018E53E /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Classes/HUD/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		CA42BE281A12A92F0018E53E /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Classes/HUD/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		CA66890118CBBD1400827C48 /* M13ProgressViewMetro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetro.h; path = Classes/ProgressViews/M13ProgressViewMetro.h; sourceTree = "<group>"; };
 		CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetro.m; path = Classes/ProgressViews/M13ProgressViewMetro.m; sourceTree = "<group>"; };
 		CA66890418CBEF9300827C48 /* MetroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetroViewController.h; sourceTree = "<group>"; };
@@ -317,8 +317,8 @@
 		CA2FAFDF1889935700BCAEF5 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				CA2FB030188994B700BCAEF5 /* UIImage+ImageEffects.h */,
-				CA2FB031188994B700BCAEF5 /* UIImage+ImageEffects.m */,
+				CA42BE271A12A92F0018E53E /* UIImage+ImageEffects.h */,
+				CA42BE281A12A92F0018E53E /* UIImage+ImageEffects.m */,
 				CA2FAFDC1889935400BCAEF5 /* M13ProgressHUD.h */,
 				CA2FAFDD1889935400BCAEF5 /* M13ProgressHUD.m */,
 			);
@@ -648,7 +648,6 @@
 				CA2FAFFE1889937800BCAEF5 /* M13ProgressViewStripedBar.m in Sources */,
 				CA66890618CBEF9300827C48 /* MetroViewController.m in Sources */,
 				CA2FAFFA1889937800BCAEF5 /* M13ProgressViewPie.m in Sources */,
-				CA2FB032188994B700BCAEF5 /* UIImage+ImageEffects.m in Sources */,
 				CA2FAFD71889933200BCAEF5 /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				CA2FB0281889946F00BCAEF5 /* PieViewController.m in Sources */,
 				CA2FB0261889946F00BCAEF5 /* ImageViewController.m in Sources */,
@@ -662,6 +661,7 @@
 				CA2FAFF71889937800BCAEF5 /* M13ProgressViewBorderedBar.m in Sources */,
 				CA2FB02E1889946F00BCAEF5 /* StripedBarViewController.m in Sources */,
 				CA2FAFFC1889937800BCAEF5 /* M13ProgressViewSegmentedBar.m in Sources */,
+				CA42BE291A12A92F0018E53E /* UIImage+ImageEffects.m in Sources */,
 				CA412B0218D252FE00FCB7CC /* M13ProgressViewRadiative.m in Sources */,
 				CA2FB02D1889946F00BCAEF5 /* SegmentedRingViewController.m in Sources */,
 				CA2FAFFB1889937800BCAEF5 /* M13ProgressViewRing.m in Sources */,

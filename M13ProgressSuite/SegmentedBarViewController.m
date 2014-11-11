@@ -153,4 +153,53 @@
     }
 }
 
+- (void)colorizeChanged:(id)sender
+{
+    if (_colorizeSwitch.on) {
+        NSArray *foregroundColors = @[[UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:0.12 green:0.98 blue:0.33 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.96 blue:0.32 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.96 blue:0.32 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.96 blue:0.32 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.96 blue:0.32 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.12 blue:0.12 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.12 blue:0.12 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.12 blue:0.12 alpha:1],
+                                      [UIColor colorWithRed:1 green:0.12 blue:0.12 alpha:1]];
+        
+        NSArray *backgroundColors = @[[UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.07 green:0.44 blue:0.14 alpha:1],
+                                      [UIColor colorWithRed:0.82 green:0.79 blue:0.25 alpha:1],
+                                      [UIColor colorWithRed:0.82 green:0.79 blue:0.25 alpha:1],
+                                      [UIColor colorWithRed:0.82 green:0.79 blue:0.25 alpha:1],
+                                      [UIColor colorWithRed:0.82 green:0.79 blue:0.25 alpha:1],
+                                      [UIColor colorWithRed:0.69 green:0.07 blue:0.1 alpha:1],
+                                      [UIColor colorWithRed:0.69 green:0.07 blue:0.1 alpha:1],
+                                      [UIColor colorWithRed:0.69 green:0.07 blue:0.1 alpha:1],
+                                      [UIColor colorWithRed:0.69 green:0.07 blue:0.1 alpha:1]];
+        
+        _progressViewHorizontal.primaryColors = foregroundColors;
+        _progressViewHorizontal.secondaryColors = backgroundColors;
+        _progressViewVertical.primaryColors = foregroundColors;
+        _progressViewVertical.secondaryColors = backgroundColors;
+    } else {
+        _progressViewHorizontal.primaryColors = nil;
+        _progressViewHorizontal.secondaryColors = nil;
+        _progressViewVertical.primaryColors = nil;
+        _progressViewVertical.secondaryColors = nil;
+    }
+}
+
 @end

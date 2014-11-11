@@ -45,5 +45,12 @@ typedef enum {
 @property (nonatomic, retain) UIColor *successColor;
 /**The color the bar changes to for the failure action.*/
 @property (nonatomic, retain) UIColor *failureColor;
+/**The array of UIColors that the segments will be colored with. 
+ @note Each index in the array coresponds to a single segment. If there are more indicies then segments, not all colors will be used. If there are less indicies than segments, the colors will be looped. If nil, then a solid fill will be used.*/
+@property (nonatomic, retain) NSArray *primaryColors;
+/**The array of UIColors that the segment's backgrounds will be colored with.
+ @note Each index in the array coresponds to a single segment. If there are more indicies then segments, not all colors will be used. If there are less indicies than segments, the colors will be looped. If nil, then a solid fill will be used.*/
+@property (nonatomic, retain) NSArray *secondaryColors;
+
 
 @end

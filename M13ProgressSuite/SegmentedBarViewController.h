@@ -22,6 +22,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *animateButton;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *iconControl;
 @property (nonatomic, retain) IBOutlet UISwitch *indeterminateSwitch;
+@property (nonatomic, retain) IBOutlet UISwitch *colorizeSwitch;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *directionControl;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *shapeControl;
 
@@ -31,5 +32,6 @@
 - (IBAction)indeterminateChanged:(id)sender;
 - (IBAction)directioChanged:(id)sender;
 - (IBAction)shapeChanged:(id)sender;
+- (IBAction)colorizeChanged:(id)sender;
 
 @end
