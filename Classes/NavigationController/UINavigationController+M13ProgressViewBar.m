@@ -443,7 +443,7 @@ static char secondaryColorKey;
 
 - (BOOL)isShowingProgressBar
 {
-    return objc_getAssociatedObject(self, &isShowingProgressKey);
+    return [objc_getAssociatedObject(self, &isShowingProgressKey) boolValue];
 }
 
 - (void)setPrimaryColor:(UIColor *)primaryColor
