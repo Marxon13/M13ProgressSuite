@@ -754,6 +754,9 @@
     //Draw the snapshot view into a UIImage
     UIGraphicsBeginImageContextWithOptions(snapshotView.bounds.size, YES, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
+    if (!context) {
+        return nil;
+    }
     CGContextTranslateCTM(context, viewRect.origin.x, viewRect.origin.y);
     BOOL result = [self.superview drawViewHierarchyInRect:viewRect afterScreenUpdates:YES];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "M13ProgressSuite"
-  s.version      = "1.2.6"
+  s.version      = "1.2.7"
   s.summary      = "A suite containing many tools to display progress information on iOS."
 
   s.description  = <<-DESC
@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   s.platform     = :ios, '7.0'
 
-  s.source = { :git => "https://github.com/Marxon13/M13ProgressSuite.git", :tag => "v1.2.6"}
+  s.source = { :git => "https://github.com/Marxon13/M13ProgressSuite.git", :tag => "v1.2.7"}
 
   s.source_files  = 'Classes/*/*'
 
