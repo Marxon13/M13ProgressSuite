@@ -49,7 +49,7 @@ static char secondaryColorKey;
     if (animated == NO) {
         if (displayLink) {
             //Kill running animations
-            [displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+            [displayLink invalidate];
             [self setDisplayLink:nil];
         }
         [self setProgress:progress];
@@ -59,7 +59,7 @@ static char secondaryColorKey;
         [self setAnimationToValue:progress];
         if (!displayLink) {
             //Create and setup the display link
-            [displayLink removeFromRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
+            [displayLink invalidate];
             displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(animateProgress:)];
             [self setDisplayLink:displayLink];
             [displayLink addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
@@ -75,7 +75,7 @@ static char secondaryColorKey;
         CGFloat dt = (displayLink.timestamp - [self getAnimationStartTime]) / [self getAnimationDuration];
         if (dt >= 1.0) {
             //Order is important! Otherwise concurrency will cause errors, because setProgress: will detect an animation in progress and try to stop it by itself. Once over one, set to actual progress amount. Animation is over.
-            [displayLink removeFromRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
+            [displayLink invalidate];
             [self setDisplayLink:nil];
             [self setProgress:[self getAnimationToValue]];
             return;
