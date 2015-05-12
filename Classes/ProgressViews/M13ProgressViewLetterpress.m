@@ -231,7 +231,7 @@
         [view setTransform:CGAffineTransformMakeRotation(rotation * M_PI / 180)];
 		
         //If we are slowing down, animate to a new angle.
-		if (fabsf(velocity) < 1) {
+		if (fabs(velocity) < 1) {
             restRotation += (arc4random() & 2 ? 90 : -90);
         }
 	}
