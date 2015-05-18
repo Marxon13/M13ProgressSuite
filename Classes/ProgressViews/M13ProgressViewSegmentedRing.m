@@ -138,7 +138,8 @@
 - (void)setPrimaryColor:(UIColor *)primaryColor
 {
     [super setPrimaryColor:primaryColor];
-    _progressLayer.strokeColor = self.primaryColor.CGColor;
+    _progressLayer.strokeColor = [[UIColor clearColor] CGColor];
+    _progressLayer.fillColor = self.primaryColor.CGColor;
     _iconLayer.fillColor = self.primaryColor.CGColor;
     [self setNeedsDisplay];
 }
