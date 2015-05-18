@@ -31,8 +31,6 @@ typedef enum {
  @param action The action to perform.
  @param animated Wether or not to animate the change*/
 - (void)performAction:(M13ProgressViewAction)action animated:(BOOL)animated;
-/**All subclasses must respond to NSCopying.*/
-- (id)copy;
 
 @end
 

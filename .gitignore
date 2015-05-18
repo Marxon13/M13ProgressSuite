@@ -1,10 +1,63 @@
+#####
+# OS X temporary files that should never be committed
+.DS_Store
+*.swp
+*.lock
+profile
 
-M13ProgressSuite.xcodeproj/xcuserdata/Hani.xcuserdatad/xcschemes/Documentation.xcscheme
+####
+# Xcode temporary files that should never be committed
+*~.nib
 
-M13ProgressSuite.xcodeproj/xcuserdata/Hani.xcuserdatad/xcschemes/M13ProgressSuite.xcscheme
+####
+# Xcode build files
+DerivedData/
+build/
+Builds/
 
-M13ProgressSuite.xcodeproj/xcuserdata/Hani.xcuserdatad/xcschemes/xcschememanagement.plist
+#####
+# Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
 
-M13ProgressSuite.xcworkspace/xcshareddata/M13ProgressSuite.xccheckout
+####
+# Xcode 4 - semi-personal settings, often included in workspaces
+xcuserdata
 
-M13ProgressSuite.xcworkspace/xcuserdata/Hani.xcuserdatad/UserInterfaceState.xcuserstate
+####
+# XCode 4 workspaces - more detailed
+!xcshareddata
+!default.xcworkspace
+*.xcworkspacedata
+
+####
+# XCode 4 build-schemes
+!xcschemes
+
+####
+# Xcode 4 - Deprecated classes
+*.moved-aside
+
+####
+# Xcode 5 -  Source Control files
+*.xccheckout
+
+####
+# AppCode
+.idea/
+
+####
+# Other Xcode files
+profile
+*.hmap
+*.ipa
+
+####
+# CocoaPods
+Pods/
