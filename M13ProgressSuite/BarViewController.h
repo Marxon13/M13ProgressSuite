@@ -23,6 +23,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *animateButton;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *iconControl;
 @property (nonatomic, retain) IBOutlet UISwitch *indeterminateSwitch;
+@property (nonatomic, retain) IBOutlet UISwitch *cornerRadiusSwitch;
 @property (nonatomic, retain) IBOutlet UISwitch *showPercentageSwitch;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *positionControl;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *directionControl;
@@ -31,6 +32,7 @@
 - (IBAction)progressChanged:(id)sender;
 - (IBAction)iconChanged:(id)sender;
 - (IBAction)indeterminateChanged:(id)sender;
+- (IBAction)cornerRadiusChanged:(id)sender;
 - (IBAction)showPercentage:(id)sender;
 - (IBAction)percentagePositionChangeed:(id)sender;
 - (IBAction)directioChanged:(id)sender;

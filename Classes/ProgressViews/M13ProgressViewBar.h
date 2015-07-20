@@ -35,6 +35,8 @@ typedef enum {
 @property (nonatomic, assign) M13ProgressViewBarProgressDirection progressDirection;
 /**The thickness of the progress bar.*/
 @property (nonatomic, assign) CGFloat progressBarThickness;
+/**The corner radius of the progress bar.*/
+@property (nonatomic, assign) CGFloat progressBarCornerRadius;
 /**@name Actions*/
 /**The color the bar changes to for the success action.*/
 @property (nonatomic, retain) UIColor *successColor;
