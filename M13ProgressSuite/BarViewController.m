@@ -38,6 +38,10 @@
     //Set the percentage position
     _progressViewVertical.percentagePosition = M13ProgressViewBarPercentagePositionTop;
     _progressViewHorizontal.percentagePosition = M13ProgressViewBarPercentagePositionTop;
+    
+    // Remove corner radius
+    _progressViewVertical.progressBarCornerRadius = 0.0;
+    _progressViewHorizontal.progressBarCornerRadius = 0.0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,6 +94,12 @@
 {
     [_progressViewHorizontal setIndeterminate:_indeterminateSwitch.on];
     [_progressViewVertical setIndeterminate:_indeterminateSwitch.on];
+}
+
+- (IBAction)cornerRadiusChanged:(id)sender
+{
+    [_progressViewHorizontal setProgressBarCornerRadius:_cornerRadiusSwitch.on ? _progressViewHorizontal.progressBarThickness / 2.0 : 0.0];
+    [_progressViewVertical setProgressBarCornerRadius:_cornerRadiusSwitch.on ? _progressViewVertical.progressBarThickness / 2.0 : 0.0];
 }
 
 - (void)animateProgress:(id)sender

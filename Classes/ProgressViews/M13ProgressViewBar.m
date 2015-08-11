@@ -76,6 +76,7 @@
     self.animationDuration = .3;
     _progressDirection = M13ProgressViewBarProgressDirectionLeftToRight;
     _progressBarThickness = 2;
+    _progressBarCornerRadius = _progressBarThickness / 2.0;
     _percentagePosition = M13ProgressViewBarPercentagePositionRight;
     _showPercentage = YES;
     
@@ -92,7 +93,7 @@
     //Progress View
     _progressBar = [[UIView alloc] init];
     _progressBar.backgroundColor = self.secondaryColor;
-    _progressBar.layer.cornerRadius = _progressBarThickness / 2.0;
+    _progressBar.layer.cornerRadius = _progressBarCornerRadius;
     _progressBar.clipsToBounds = YES;
     [self addSubview:_progressBar];
     
@@ -115,7 +116,7 @@
     //IndeterminateLayer
     _indeterminateLayer = [CALayer layer];
     _indeterminateLayer.backgroundColor = self.primaryColor.CGColor;
-    _indeterminateLayer.cornerRadius = _progressBarThickness / 2.0;
+    _indeterminateLayer.cornerRadius = _progressBarCornerRadius;
     _indeterminateLayer.opacity = 0;
     [_progressBar.layer addSublayer:_indeterminateLayer];
     
@@ -182,6 +183,19 @@
     [self setNeedsDisplay];
     //Update strokeWidth
     _progressLayer.lineWidth = progressBarThickness;
+    [self invalidateIntrinsicContentSize];
+}
+
+- (void)setProgressBarCornerRadius:(CGFloat)progressBarCornerRadius
+{
+    _progressBarCornerRadius = progressBarCornerRadius;
+    
+    // Update the layer size
+    [self setNeedsDisplay];
+    
+    // Update corner radius for layers
+    _progressBar.layer.cornerRadius = _progressBarCornerRadius;
+    _indeterminateLayer.cornerRadius = _progressBarCornerRadius;
     [self invalidateIntrinsicContentSize];
 }
 
