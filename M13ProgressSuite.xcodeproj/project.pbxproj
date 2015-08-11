@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		CA1C945E18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */; };
 		CA2FAF9C1889907300BCAEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9B1889907300BCAEF5 /* Foundation.framework */; };
 		CA2FAF9E1889907300BCAEF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9D1889907300BCAEF5 /* CoreGraphics.framework */; };
 		CA2FAFA01889907300BCAEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9F1889907300BCAEF5 /* UIKit.framework */; };
@@ -36,19 +35,6 @@
 		CA2FAFC01889907300BCAEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9F1889907300BCAEF5 /* UIKit.framework */; };
 		CA2FAFC81889907300BCAEF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAFC61889907300BCAEF5 /* InfoPlist.strings */; };
 		CA2FAFCA1889907300BCAEF5 /* M13ProgressSuiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFC91889907300BCAEF5 /* M13ProgressSuiteTests.m */; };
-		CA2FAFD71889933200BCAEF5 /* UINavigationController+M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFD61889933200BCAEF5 /* UINavigationController+M13ProgressViewBar.m */; };
-		CA2FAFDA1889933F00BCAEF5 /* M13ProgressConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFD91889933F00BCAEF5 /* M13ProgressConsole.m */; };
-		CA2FAFDE1889935400BCAEF5 /* M13ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFDD1889935400BCAEF5 /* M13ProgressHUD.m */; };
-		CA2FAFF51889937800BCAEF5 /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE21889937800BCAEF5 /* M13ProgressView.m */; };
-		CA2FAFF61889937800BCAEF5 /* M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE41889937800BCAEF5 /* M13ProgressViewBar.m */; };
-		CA2FAFF71889937800BCAEF5 /* M13ProgressViewBorderedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE61889937800BCAEF5 /* M13ProgressViewBorderedBar.m */; };
-		CA2FAFF81889937800BCAEF5 /* M13ProgressViewFilteredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE81889937800BCAEF5 /* M13ProgressViewFilteredImage.m */; };
-		CA2FAFF91889937800BCAEF5 /* M13ProgressViewImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFEA1889937800BCAEF5 /* M13ProgressViewImage.m */; };
-		CA2FAFFA1889937800BCAEF5 /* M13ProgressViewPie.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFEC1889937800BCAEF5 /* M13ProgressViewPie.m */; };
-		CA2FAFFB1889937800BCAEF5 /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFEE1889937800BCAEF5 /* M13ProgressViewRing.m */; };
-		CA2FAFFC1889937800BCAEF5 /* M13ProgressViewSegmentedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFF01889937800BCAEF5 /* M13ProgressViewSegmentedBar.m */; };
-		CA2FAFFD1889937800BCAEF5 /* M13ProgressViewSegmentedRing.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFF21889937800BCAEF5 /* M13ProgressViewSegmentedRing.m */; };
-		CA2FAFFE1889937800BCAEF5 /* M13ProgressViewStripedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFF41889937800BCAEF5 /* M13ProgressViewStripedBar.m */; };
 		CA2FB0221889946F00BCAEF5 /* BarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0091889946F00BCAEF5 /* BarViewController.m */; };
 		CA2FB0231889946F00BCAEF5 /* BorderedBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB00B1889946F00BCAEF5 /* BorderedBarViewController.m */; };
 		CA2FB0241889946F00BCAEF5 /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB00D1889946F00BCAEF5 /* ConsoleViewController.m */; };
@@ -67,13 +53,48 @@
 		CA2FB03A1889974600BCAEF5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB0391889974600BCAEF5 /* Accelerate.framework */; };
 		CA2FB03C1889975400BCAEF5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB03B1889975400BCAEF5 /* CoreImage.framework */; };
 		CA2FB03E1889975A00BCAEF5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB03D1889975A00BCAEF5 /* QuartzCore.framework */; };
-		CA412B0218D252FE00FCB7CC /* M13ProgressViewRadiative.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0118D252FE00FCB7CC /* M13ProgressViewRadiative.m */; };
 		CA412B0518D2638E00FCB7CC /* RadiativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */; };
-		CA42BE291A12A92F0018E53E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42BE281A12A92F0018E53E /* UIImage+ImageEffects.m */; };
-		CA66890318CBBD1400827C48 /* M13ProgressViewMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */; };
 		CA66890618CBEF9300827C48 /* MetroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890518CBEF9300827C48 /* MetroViewController.m */; };
-		CA6F31C3190EA88D008D1E64 /* M13ProgressViewLetterpress.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F31C2190EA88D008D1E64 /* M13ProgressViewLetterpress.m */; };
 		CA6F31C7190EBF11008D1E64 /* LetterpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */; };
+		FB2A7BE11B793E5600FE4E4A /* M13ProgressSuiteFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FB2A7BE01B793E5600FE4E4A /* M13ProgressSuiteFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7BF31B793E5600FE4E4A /* M13ProgressSuiteFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2A7BDC1B793E5600FE4E4A /* M13ProgressSuiteFramework.framework */; };
+		FB2A7BF41B793E5600FE4E4A /* M13ProgressSuiteFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB2A7BDC1B793E5600FE4E4A /* M13ProgressSuiteFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB2A7BFC1B793E6B00FE4E4A /* M13ProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFE11889937800BCAEF5 /* M13ProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7BFD1B793E6B00FE4E4A /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE21889937800BCAEF5 /* M13ProgressView.m */; };
+		FB2A7BFE1B793E6B00FE4E4A /* M13ProgressViewBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFE31889937800BCAEF5 /* M13ProgressViewBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7BFF1B793E6B00FE4E4A /* M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE41889937800BCAEF5 /* M13ProgressViewBar.m */; };
+		FB2A7C001B793E6B00FE4E4A /* M13ProgressViewBorderedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFE51889937800BCAEF5 /* M13ProgressViewBorderedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C011B793E6B00FE4E4A /* M13ProgressViewBorderedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE61889937800BCAEF5 /* M13ProgressViewBorderedBar.m */; };
+		FB2A7C021B793E6B00FE4E4A /* M13ProgressViewFilteredImage.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFE71889937800BCAEF5 /* M13ProgressViewFilteredImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C031B793E6B00FE4E4A /* M13ProgressViewFilteredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFE81889937800BCAEF5 /* M13ProgressViewFilteredImage.m */; };
+		FB2A7C041B793E6B00FE4E4A /* M13ProgressViewImage.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFE91889937800BCAEF5 /* M13ProgressViewImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C051B793E6B00FE4E4A /* M13ProgressViewImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFEA1889937800BCAEF5 /* M13ProgressViewImage.m */; };
+		FB2A7C061B793E6B00FE4E4A /* M13ProgressViewPie.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFEB1889937800BCAEF5 /* M13ProgressViewPie.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C071B793E6B00FE4E4A /* M13ProgressViewPie.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFEC1889937800BCAEF5 /* M13ProgressViewPie.m */; };
+		FB2A7C081B793E6B00FE4E4A /* M13ProgressViewRing.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFED1889937800BCAEF5 /* M13ProgressViewRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C091B793E6B00FE4E4A /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFEE1889937800BCAEF5 /* M13ProgressViewRing.m */; };
+		FB2A7C0A1B793E6B00FE4E4A /* M13ProgressViewSegmentedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFEF1889937800BCAEF5 /* M13ProgressViewSegmentedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C0B1B793E6B00FE4E4A /* M13ProgressViewSegmentedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFF01889937800BCAEF5 /* M13ProgressViewSegmentedBar.m */; };
+		FB2A7C0C1B793E6B00FE4E4A /* M13ProgressViewSegmentedRing.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFF11889937800BCAEF5 /* M13ProgressViewSegmentedRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C0D1B793E6B00FE4E4A /* M13ProgressViewSegmentedRing.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFF21889937800BCAEF5 /* M13ProgressViewSegmentedRing.m */; };
+		FB2A7C0E1B793E6B00FE4E4A /* M13ProgressViewStripedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFF31889937800BCAEF5 /* M13ProgressViewStripedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C0F1B793E6B00FE4E4A /* M13ProgressViewStripedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFF41889937800BCAEF5 /* M13ProgressViewStripedBar.m */; };
+		FB2A7C101B793E6B00FE4E4A /* M13ProgressViewMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = CA66890118CBBD1400827C48 /* M13ProgressViewMetro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C111B793E6B00FE4E4A /* M13ProgressViewMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890218CBBD1400827C48 /* M13ProgressViewMetro.m */; };
+		FB2A7C121B793E6B00FE4E4A /* M13ProgressViewMetroDotPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = CA1C945C18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C131B793E6B00FE4E4A /* M13ProgressViewMetroDotPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */; };
+		FB2A7C141B793E6B00FE4E4A /* M13ProgressViewRadiative.h in Headers */ = {isa = PBXBuildFile; fileRef = CA412B0018D252FE00FCB7CC /* M13ProgressViewRadiative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C151B793E6B00FE4E4A /* M13ProgressViewRadiative.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0118D252FE00FCB7CC /* M13ProgressViewRadiative.m */; };
+		FB2A7C161B793E6B00FE4E4A /* M13ProgressViewLetterpress.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6F31C1190EA88D008D1E64 /* M13ProgressViewLetterpress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C171B793E6B00FE4E4A /* M13ProgressViewLetterpress.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F31C2190EA88D008D1E64 /* M13ProgressViewLetterpress.m */; };
+		FB2A7C181B793E6B00FE4E4A /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = CA42BE271A12A92F0018E53E /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C191B793E6B00FE4E4A /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42BE281A12A92F0018E53E /* UIImage+ImageEffects.m */; };
+		FB2A7C1A1B793E6B00FE4E4A /* M13ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFDC1889935400BCAEF5 /* M13ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C1B1B793E6B00FE4E4A /* M13ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFDD1889935400BCAEF5 /* M13ProgressHUD.m */; };
+		FB2A7C1C1B793E6B00FE4E4A /* M13ProgressConsole.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFD81889933F00BCAEF5 /* M13ProgressConsole.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C1D1B793E6B00FE4E4A /* M13ProgressConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFD91889933F00BCAEF5 /* M13ProgressConsole.m */; };
+		FB2A7C1E1B793E6B00FE4E4A /* UINavigationController+M13ProgressViewBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2FAFD51889933200BCAEF5 /* UINavigationController+M13ProgressViewBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2A7C1F1B793E6B00FE4E4A /* UINavigationController+M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFD61889933200BCAEF5 /* UINavigationController+M13ProgressViewBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +105,28 @@
 			remoteGlobalIDString = CA2FAF971889907300BCAEF5;
 			remoteInfo = M13ProgressSuite;
 		};
+		FB2A7BF11B793E5600FE4E4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2FAF901889907300BCAEF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB2A7BDB1B793E5600FE4E4A;
+			remoteInfo = M13ProgressSuiteFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB2A7BFA1B793E5600FE4E4A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FB2A7BF41B793E5600FE4E4A /* M13ProgressSuiteFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CA1C945C18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetroDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.h; sourceTree = "<group>"; };
@@ -178,6 +220,9 @@
 		CA6F31C2190EA88D008D1E64 /* M13ProgressViewLetterpress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewLetterpress.m; path = Classes/ProgressViews/M13ProgressViewLetterpress.m; sourceTree = "<group>"; };
 		CA6F31C5190EBF11008D1E64 /* LetterpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterpressViewController.h; sourceTree = "<group>"; };
 		CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterpressViewController.m; sourceTree = "<group>"; };
+		FB2A7BDC1B793E5600FE4E4A /* M13ProgressSuiteFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M13ProgressSuiteFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2A7BDF1B793E5600FE4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB2A7BE01B793E5600FE4E4A /* M13ProgressSuiteFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M13ProgressSuiteFramework.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2FAF9E1889907300BCAEF5 /* CoreGraphics.framework in Frameworks */,
+				FB2A7BF31B793E5600FE4E4A /* M13ProgressSuiteFramework.framework in Frameworks */,
 				CA2FB03E1889975A00BCAEF5 /* QuartzCore.framework in Frameworks */,
 				CA2FB03C1889975400BCAEF5 /* CoreImage.framework in Frameworks */,
 				CA2FB03A1889974600BCAEF5 /* Accelerate.framework in Frameworks */,
@@ -204,6 +250,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB2A7BD81B793E5600FE4E4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -211,9 +264,10 @@
 			isa = PBXGroup;
 			children = (
 				CA2FAFD31889924500BCAEF5 /* Classes */,
-				CA2FAFA11889907300BCAEF5 /* M13ProgressSuite */,
 				CA2FB033188994E200BCAEF5 /* Images */,
+				CA2FAFA11889907300BCAEF5 /* M13ProgressSuite */,
 				CA2FAFC31889907300BCAEF5 /* M13ProgressSuiteTests */,
+				FB2A7BDD1B793E5600FE4E4A /* M13ProgressSuiteFramework */,
 				CA2FAF9A1889907300BCAEF5 /* Frameworks */,
 				CA2FAF991889907300BCAEF5 /* Products */,
 			);
@@ -224,6 +278,7 @@
 			children = (
 				CA2FAF981889907300BCAEF5 /* M13ProgressSuite.app */,
 				CA2FAFBC1889907300BCAEF5 /* M13ProgressSuiteTests.xctest */,
+				FB2A7BDC1B793E5600FE4E4A /* M13ProgressSuiteFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -512,7 +567,53 @@
 			name = Letterpress;
 			sourceTree = "<group>";
 		};
+		FB2A7BDD1B793E5600FE4E4A /* M13ProgressSuiteFramework */ = {
+			isa = PBXGroup;
+			children = (
+				FB2A7BE01B793E5600FE4E4A /* M13ProgressSuiteFramework.h */,
+				FB2A7BDE1B793E5600FE4E4A /* Supporting Files */,
+			);
+			path = M13ProgressSuiteFramework;
+			sourceTree = "<group>";
+		};
+		FB2A7BDE1B793E5600FE4E4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB2A7BDF1B793E5600FE4E4A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FB2A7BD91B793E5600FE4E4A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2A7BE11B793E5600FE4E4A /* M13ProgressSuiteFramework.h in Headers */,
+				FB2A7BFC1B793E6B00FE4E4A /* M13ProgressView.h in Headers */,
+				FB2A7BFE1B793E6B00FE4E4A /* M13ProgressViewBar.h in Headers */,
+				FB2A7C001B793E6B00FE4E4A /* M13ProgressViewBorderedBar.h in Headers */,
+				FB2A7C021B793E6B00FE4E4A /* M13ProgressViewFilteredImage.h in Headers */,
+				FB2A7C041B793E6B00FE4E4A /* M13ProgressViewImage.h in Headers */,
+				FB2A7C061B793E6B00FE4E4A /* M13ProgressViewPie.h in Headers */,
+				FB2A7C081B793E6B00FE4E4A /* M13ProgressViewRing.h in Headers */,
+				FB2A7C0A1B793E6B00FE4E4A /* M13ProgressViewSegmentedBar.h in Headers */,
+				FB2A7C0C1B793E6B00FE4E4A /* M13ProgressViewSegmentedRing.h in Headers */,
+				FB2A7C0E1B793E6B00FE4E4A /* M13ProgressViewStripedBar.h in Headers */,
+				FB2A7C101B793E6B00FE4E4A /* M13ProgressViewMetro.h in Headers */,
+				FB2A7C121B793E6B00FE4E4A /* M13ProgressViewMetroDotPolygon.h in Headers */,
+				FB2A7C141B793E6B00FE4E4A /* M13ProgressViewRadiative.h in Headers */,
+				FB2A7C161B793E6B00FE4E4A /* M13ProgressViewLetterpress.h in Headers */,
+				FB2A7C181B793E6B00FE4E4A /* UIImage+ImageEffects.h in Headers */,
+				FB2A7C1A1B793E6B00FE4E4A /* M13ProgressHUD.h in Headers */,
+				FB2A7C1C1B793E6B00FE4E4A /* M13ProgressConsole.h in Headers */,
+				FB2A7C1E1B793E6B00FE4E4A /* UINavigationController+M13ProgressViewBar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CA2FAF971889907300BCAEF5 /* M13ProgressSuite */ = {
@@ -522,10 +623,12 @@
 				CA2FAF941889907300BCAEF5 /* Sources */,
 				CA2FAF951889907300BCAEF5 /* Frameworks */,
 				CA2FAF961889907300BCAEF5 /* Resources */,
+				FB2A7BFA1B793E5600FE4E4A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FB2A7BF21B793E5600FE4E4A /* PBXTargetDependency */,
 			);
 			name = M13ProgressSuite;
 			productName = M13ProgressSuite;
@@ -550,6 +653,24 @@
 			productReference = CA2FAFBC1889907300BCAEF5 /* M13ProgressSuiteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FB2A7BDB1B793E5600FE4E4A /* M13ProgressSuiteFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB2A7BF91B793E5600FE4E4A /* Build configuration list for PBXNativeTarget "M13ProgressSuiteFramework" */;
+			buildPhases = (
+				FB2A7BD71B793E5600FE4E4A /* Sources */,
+				FB2A7BD81B793E5600FE4E4A /* Frameworks */,
+				FB2A7BD91B793E5600FE4E4A /* Headers */,
+				FB2A7BDA1B793E5600FE4E4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = M13ProgressSuiteFramework;
+			productName = M13ProgressSuiteFramework;
+			productReference = FB2A7BDC1B793E5600FE4E4A /* M13ProgressSuiteFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -561,6 +682,9 @@
 				TargetAttributes = {
 					CA2FAFBB1889907300BCAEF5 = {
 						TestTargetID = CA2FAF971889907300BCAEF5;
+					};
+					FB2A7BDB1B793E5600FE4E4A = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -579,6 +703,7 @@
 			targets = (
 				CA2FAF971889907300BCAEF5 /* M13ProgressSuite */,
 				CA2FAFBB1889907300BCAEF5 /* M13ProgressSuiteTests */,
+				FB2A7BDB1B793E5600FE4E4A /* M13ProgressSuiteFramework */,
 				CA2FB0431889986D00BCAEF5 /* Documentation */,
 			);
 		};
@@ -606,6 +731,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB2A7BDA1B793E5600FE4E4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -630,41 +762,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2FB02B1889946F00BCAEF5 /* SampleViewController.m in Sources */,
-				CA2FAFF51889937800BCAEF5 /* M13ProgressView.m in Sources */,
 				CA6F31C7190EBF11008D1E64 /* LetterpressViewController.m in Sources */,
-				CA6F31C3190EA88D008D1E64 /* M13ProgressViewLetterpress.m in Sources */,
-				CA2FAFDA1889933F00BCAEF5 /* M13ProgressConsole.m in Sources */,
 				CA2FB0221889946F00BCAEF5 /* BarViewController.m in Sources */,
-				CA2FAFDE1889935400BCAEF5 /* M13ProgressHUD.m in Sources */,
 				CA2FB0271889946F00BCAEF5 /* M13ProgressViewBarNavigationControllerViewController.m in Sources */,
 				CA412B0518D2638E00FCB7CC /* RadiativeViewController.m in Sources */,
 				CA2FB0291889946F00BCAEF5 /* ProgressHUDViewController.m in Sources */,
 				CA2FB02A1889946F00BCAEF5 /* RingViewController.m in Sources */,
-				CA2FAFF81889937800BCAEF5 /* M13ProgressViewFilteredImage.m in Sources */,
-				CA2FAFFD1889937800BCAEF5 /* M13ProgressViewSegmentedRing.m in Sources */,
-				CA2FAFF91889937800BCAEF5 /* M13ProgressViewImage.m in Sources */,
-				CA66890318CBBD1400827C48 /* M13ProgressViewMetro.m in Sources */,
 				CA2FB02C1889946F00BCAEF5 /* SegmentedBarViewController.m in Sources */,
-				CA2FAFFE1889937800BCAEF5 /* M13ProgressViewStripedBar.m in Sources */,
 				CA66890618CBEF9300827C48 /* MetroViewController.m in Sources */,
-				CA2FAFFA1889937800BCAEF5 /* M13ProgressViewPie.m in Sources */,
-				CA2FAFD71889933200BCAEF5 /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				CA2FB0281889946F00BCAEF5 /* PieViewController.m in Sources */,
 				CA2FB0261889946F00BCAEF5 /* ImageViewController.m in Sources */,
-				CA2FAFF61889937800BCAEF5 /* M13ProgressViewBar.m in Sources */,
 				CA2FB0231889946F00BCAEF5 /* BorderedBarViewController.m in Sources */,
 				CA2FAFAC1889907300BCAEF5 /* AppDelegate.m in Sources */,
 				CA2FAFA81889907300BCAEF5 /* main.m in Sources */,
 				CA2FB0251889946F00BCAEF5 /* FilteredImageViewController.m in Sources */,
-				CA1C945E18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m in Sources */,
 				CA2FB0241889946F00BCAEF5 /* ConsoleViewController.m in Sources */,
-				CA2FAFF71889937800BCAEF5 /* M13ProgressViewBorderedBar.m in Sources */,
 				CA2FB02E1889946F00BCAEF5 /* StripedBarViewController.m in Sources */,
-				CA2FAFFC1889937800BCAEF5 /* M13ProgressViewSegmentedBar.m in Sources */,
-				CA42BE291A12A92F0018E53E /* UIImage+ImageEffects.m in Sources */,
-				CA412B0218D252FE00FCB7CC /* M13ProgressViewRadiative.m in Sources */,
 				CA2FB02D1889946F00BCAEF5 /* SegmentedRingViewController.m in Sources */,
-				CA2FAFFB1889937800BCAEF5 /* M13ProgressViewRing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +790,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB2A7BD71B793E5600FE4E4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2A7BFD1B793E6B00FE4E4A /* M13ProgressView.m in Sources */,
+				FB2A7BFF1B793E6B00FE4E4A /* M13ProgressViewBar.m in Sources */,
+				FB2A7C011B793E6B00FE4E4A /* M13ProgressViewBorderedBar.m in Sources */,
+				FB2A7C031B793E6B00FE4E4A /* M13ProgressViewFilteredImage.m in Sources */,
+				FB2A7C051B793E6B00FE4E4A /* M13ProgressViewImage.m in Sources */,
+				FB2A7C071B793E6B00FE4E4A /* M13ProgressViewPie.m in Sources */,
+				FB2A7C091B793E6B00FE4E4A /* M13ProgressViewRing.m in Sources */,
+				FB2A7C0B1B793E6B00FE4E4A /* M13ProgressViewSegmentedBar.m in Sources */,
+				FB2A7C0D1B793E6B00FE4E4A /* M13ProgressViewSegmentedRing.m in Sources */,
+				FB2A7C0F1B793E6B00FE4E4A /* M13ProgressViewStripedBar.m in Sources */,
+				FB2A7C111B793E6B00FE4E4A /* M13ProgressViewMetro.m in Sources */,
+				FB2A7C131B793E6B00FE4E4A /* M13ProgressViewMetroDotPolygon.m in Sources */,
+				FB2A7C151B793E6B00FE4E4A /* M13ProgressViewRadiative.m in Sources */,
+				FB2A7C171B793E6B00FE4E4A /* M13ProgressViewLetterpress.m in Sources */,
+				FB2A7C191B793E6B00FE4E4A /* UIImage+ImageEffects.m in Sources */,
+				FB2A7C1B1B793E6B00FE4E4A /* M13ProgressHUD.m in Sources */,
+				FB2A7C1D1B793E6B00FE4E4A /* M13ProgressConsole.m in Sources */,
+				FB2A7C1F1B793E6B00FE4E4A /* UINavigationController+M13ProgressViewBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -683,6 +822,11 @@
 			isa = PBXTargetDependency;
 			target = CA2FAF971889907300BCAEF5 /* M13ProgressSuite */;
 			targetProxy = CA2FAFC11889907300BCAEF5 /* PBXContainerItemProxy */;
+		};
+		FB2A7BF21B793E5600FE4E4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB2A7BDB1B793E5600FE4E4A /* M13ProgressSuiteFramework */;
+			targetProxy = FB2A7BF11B793E5600FE4E4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -802,6 +946,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "M13ProgressSuite/M13ProgressSuite-Prefix.pch";
 				INFOPLIST_FILE = "M13ProgressSuite/M13ProgressSuite-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -815,6 +960,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "M13ProgressSuite/M13ProgressSuite-Prefix.pch";
 				INFOPLIST_FILE = "M13ProgressSuite/M13ProgressSuite-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -874,6 +1020,61 @@
 			};
 			name = Release;
 		};
+		FB2A7BF51B793E5600FE4E4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = M13ProgressSuiteFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB2A7BF61B793E5600FE4E4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = M13ProgressSuiteFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -912,6 +1113,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FB2A7BF91B793E5600FE4E4A /* Build configuration list for PBXNativeTarget "M13ProgressSuiteFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2A7BF51B793E5600FE4E4A /* Debug */,
+				FB2A7BF61B793E5600FE4E4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
