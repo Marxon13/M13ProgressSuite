@@ -163,7 +163,13 @@ static char secondaryColorKey;
 	}
     
     //Calculate the frame of the navigation bar, based off the orientation.
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    UIView *topView = self.topViewController.view;
+    CGSize screenSize;
+    if (topView) {
+        screenSize = topView.bounds.size;
+    } else {
+        screenSize = [UIScreen mainScreen].bounds.size;
+    }
     CGFloat width = 0.0;
     CGFloat height = 0.0;
     //Calculate the width of the screen
