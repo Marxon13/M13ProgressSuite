@@ -129,6 +129,26 @@ static char secondaryColorKey;
     }
 }
 
+#pragma mark Orientation
+
+- (UIInterfaceOrientation)currentDeviceOrientation
+{
+    UIInterfaceOrientation orientation;
+
+    //Define "M13_APP_EXTENSIONS" Preprocessor Macro for App Extension target
+#if defined(M13_APP_EXTENSIONS)
+    if ([UIScreen mainScreen].bounds.size.width < [UIScreen mainScreen].bounds.size.height) {
+        orientation = UIInterfaceOrientationPortrait;
+    } else {
+        orientation = UIInterfaceOrientationLandscapeLeft;
+    }
+#else
+    orientation = [UIApplication sharedApplication].statusBarOrientation;
+#endif
+  
+  return orientation;
+}
+
 #pragma mark Drawing
 
 - (void)showProgress
@@ -144,7 +164,7 @@ static char secondaryColorKey;
 
 - (void)updateProgress
 {
-    [self updateProgressWithInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation];
+    [self updateProgressWithInterfaceOrientation:[self currentDeviceOrientation]];
 }
 
 - (void)updateProgressWithInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -213,7 +233,7 @@ static char secondaryColorKey;
 
 - (void)drawIndeterminate
 {
-    [self drawIndeterminateWithInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation];
+    [self drawIndeterminateWithInterfaceOrientation:[self currentDeviceOrientation]];
 }
 
 - (void)drawIndeterminateWithInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
