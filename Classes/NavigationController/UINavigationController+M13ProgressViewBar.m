@@ -250,20 +250,13 @@ static char secondaryColorKey;
         //Calculate the frame of the navigation bar, based off the orientation.
         CGSize screenSize = [UIScreen mainScreen].bounds.size;
         CGFloat width = 0.0;
-        CGFloat height = 0.0;
         //Calculate the width of the screen
         if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
             //Use the maximum value
             width = MAX(screenSize.width, screenSize.height);
-            if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-                height = 32.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
-            } else {
-                height = 44.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
-            }
         } else {
             //Use the minimum value
             width = MIN(screenSize.width, screenSize.height);
-            height = 44.0; //Hate hardcoding values, but autolayout doesn't work, and cant retreive the new height until after the animation completes.
         }
         
         //Create the pattern image
