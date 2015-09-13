@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKQ-OS-lJW">
+                                <rect key="frame" x="20" y="198" width="560" height="204"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M13ProgressSuite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="R2X-cj-ulz">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A collection of classes that relay progress information for iOS applications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="QjS-xv-slZ">
+                                        <rect key="frame" x="0.0" y="68" width="560" height="58"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="68" width="360" height="29"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bar" translatesAutoresizingMaskIntoConstraints="NO" id="Xk5-iF-892">
+                                        <rect key="frame" x="0.0" y="134" width="560" height="70"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="zR6-Un-lC4"/>
+                                        </constraints>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="105" width="360" height="70"/>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="QjS-xv-slZ" firstAttribute="top" secondItem="R2X-cj-ulz" secondAttribute="bottom" constant="8" id="6fu-CI-AaJ"/>
+                                    <constraint firstItem="QjS-xv-slZ" firstAttribute="top" secondItem="R2X-cj-ulz" secondAttribute="bottom" constant="8" id="7S0-Mk-UV2"/>
+                                    <constraint firstItem="R2X-cj-ulz" firstAttribute="top" secondItem="RKQ-OS-lJW" secondAttribute="top" id="8f7-oD-46n"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xk5-iF-892" secondAttribute="trailing" id="QuB-bV-0qo"/>
+                                    <constraint firstAttribute="trailing" secondItem="R2X-cj-ulz" secondAttribute="trailing" id="TH8-fi-ZOW"/>
+                                    <constraint firstItem="QjS-xv-slZ" firstAttribute="leading" secondItem="RKQ-OS-lJW" secondAttribute="leading" id="dy9-uY-A1o"/>
+                                    <constraint firstItem="Xk5-iF-892" firstAttribute="leading" secondItem="RKQ-OS-lJW" secondAttribute="leading" id="ga0-q2-P52"/>
+                                    <constraint firstItem="Xk5-iF-892" firstAttribute="top" secondItem="QjS-xv-slZ" secondAttribute="bottom" constant="8" id="iTD-FN-oQt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xk5-iF-892" secondAttribute="bottom" id="lAW-v8-AsM"/>
+                                    <constraint firstItem="R2X-cj-ulz" firstAttribute="leading" secondItem="RKQ-OS-lJW" secondAttribute="leading" id="sSb-2x-nFI"/>
+                                    <constraint firstAttribute="trailing" secondItem="QjS-xv-slZ" secondAttribute="trailing" id="x40-Of-caE"/>
+                                </constraints>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="99" width="560" height="204"/>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="213" width="360" height="175"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RKQ-OS-lJW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="V0F-zQ-gGR"/>
+                            <constraint firstItem="RKQ-OS-lJW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="cOb-gy-ZzH"/>
+                            <constraint firstItem="RKQ-OS-lJW" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="tH4-Zq-kCO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bar" width="1830" height="270"/>
+    </resources>
+</document>

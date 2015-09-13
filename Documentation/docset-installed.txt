@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/Brandon/Library/Developer/Shared/Documentation/DocSets/com.BrandonMcQuilkin.M13ProgressSuite.docset
-Time: 2014-05-12 13:29:03 +0000

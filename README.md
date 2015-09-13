@@ -1,104 +1,26 @@
 <img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/M13ProgressSuiteBanner.png">
+
+2.0.0
+=====
+
+The 2.0.0 update is coming! Now that I have some time, I'll be updating M13ProgressSuite to Swift. Along with the conversion, I'll be making some updates under the hood to make M13ProgressSuite more reliable. Interface Builder support is also on its way. Even though I have time to do this update, I don't have unlimited time to work on the library. So all fixes and feature requests that are not pull requests will be added to version 2.0.0. I've published the base project, as all that needs to happen now is converting the individual progress views to swift. If anyone wants to lend a hand that would be greatly appreciated.
+
+Thanks,
+Brandon
+
 M13ProgressSuite
 ================
 
-A set of classes used to display progress information to users on iOS.
+A collection of easy to use progress views for iOS applications. The collection includes progress views of many types (bar, ring, etc.), an UINavigationBar with progress bar, and a HUD overlay. Everything in the collection is easily styled through code or Interface Builder, and is simple to update. 
 
-Includes:
+Checkout the [M13ProgressSuite website](marxon13.github.io/M13ProgressSuite) to see more examples and documentation.
+
+Features:
 ---------
-* A interchangeable set of progress view of diffrent styles. All the progress views are based on the same superclass, allowing any of them to be switched with any other easily.
-* A progress bar for UINavigationBar that works like Apple's Messages app. It also has the added feature of having an indeterminate style.
-* A HUD overlay that works over any UIView. Uses the M13ProgressView class to allow easy customizablility of the progress view.
-* A progress view that is styled like terminal.
-* Complete documentation of each class.
-
-UINavigationController (M13ProgressViewBar)
----------------------
-Adds a progress bar to the UINavigationController's UINavigationBar. The progress bar is controlled through the UINavigationController. 
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/UINavigationBar.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/UINavigationBarIndeterminate.gif">
-
-
-M13ProgressHUD
----------------
-A customizable HUD that displays progress, and status information to the user. It uses the M13ProgressView class to allow easy changing of the progress view style.
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/HUDBasic.gif">
-
-
-M13ProgressConsole
-------------------
-A progress view styled like Terminal on OS X.
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ConsolePercent.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ConsoleDots.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ConsoleDotsRaise.gif">
-
-M13ProgressViews
-----------------
-A set of progess view based off of the same superclass. Allowing easy switching between progress view. Each progress view has success and failure actions, an indeterminate mode, and appearance customization features.
-
-***Bar***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Bar.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/BarIndeterminate.gif">
-
-***Bordered Bar***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/BorderedBar.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/BorderedIndeterminate.gif">
-
-***Filtered Image***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/FilteredImage.gif">
-
-***Image***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Image.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/ImageHidden.gif">
-
-***Pie***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Pie.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/PieIndeterminate.gif">
-
-***Ring***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Ring.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/RingIndeterminate.gif">
-
-**Segmented Bar***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedBar.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedBarIndeterminate.gif">
-
-***Segmented Ring***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedRing.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedRingStraight.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/SegmentedRingIndeterminate.gif">
-
-***Striped Bar***
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/Striped.gif">
-
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/StripedIndeterminate.gif">
-
-Known Bugs:
-------------
-* When the HUD is set to apply the iOS 7 style blur to the HUD background, it doesn't work. The screenshot of the superview is not taken in the proper CGRect. It seems to work when the mask type is set to iOS 7 Blur, I beleive it is because the CGRectOrigin is {0, 0}.
+* All progress views inherit from the same base class, making it easy to use multiple kinds of progress views in a project, or swap kinds of progress views.
+* The progress views have a determinate state, indeterminate state, success state, and failure state.
+* All the progress views are IBDesignable.
+* It is very easy to make custom progress views, as the base class handles the grunt work of the animation. Just write the code to display a specific progress value, as well as the indeterminate, success and failure states.
 
 Contact Me:
 -------------
@@ -108,7 +30,7 @@ License:
 --------
 MIT License
 
-> Copyright (c) 2013 Brandon McQuilkin
+> Copyright (c) 2015 Brandon McQuilkin
 > 
 > Permission is hereby granted, free of charge, to any person obtaining 
 >a copy of this software and associated documentation files (the  
