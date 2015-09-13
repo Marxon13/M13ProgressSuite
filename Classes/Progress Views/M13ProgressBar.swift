@@ -57,6 +57,39 @@ public class M13ProgressBar: M13ProgressView {
         }
     }
     
+    /**
+    The secondary color of the progress view.
+    */
+    override public var secondaryColor: UIColor {
+        didSet {
+            layer.backgroundColor = secondaryColor.CGColor
+        }
+    }
+    
+    /**
+    The primary color when the progress view is in the success state.
+    */
+    override public var successColor: UIColor {
+        didSet {
+            if state == M13ProgressViewState.Success {
+                progressLayer.backgroundColor = successColor.CGColor
+                indeterminateLayer.backgroundColor = successColor.CGColor
+            }
+        }
+    }
+    
+    /**
+    The primary color when the progress view is in the failure state.
+    */
+    override public var failureColor: UIColor {
+        didSet {
+            if state == M13ProgressViewState.Failure {
+                progressLayer.backgroundColor = failureColor.CGColor
+                indeterminateLayer.backgroundColor = failureColor.CGColor
+            }
+        }
+    }
+    
     //-------------------------------
     // MARK: Properties
     //-------------------------------
