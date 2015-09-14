@@ -208,7 +208,7 @@
                                     <constraint firstAttribute="height" constant="21" id="Zrz-Tw-IEH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOi-SA-kHP">
@@ -248,14 +248,14 @@
                                 <rect key="frame" x="20" y="157" width="111" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uz0-0D-1jM">
                                 <rect key="frame" x="20" y="225" width="45" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="llb-Dm-Ya6">
@@ -277,7 +277,7 @@
                                 <rect key="frame" x="20" y="290" width="114" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="jEG-KI-vqq">
@@ -294,7 +294,7 @@
                                 <rect key="frame" x="20" y="357" width="146" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-yH-3hm">
@@ -367,6 +367,216 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naV-Bp-yW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-45" y="815"/>
+        </scene>
+        <!--Bordered Progress Bar-->
+        <scene sceneID="E3m-9X-xRx">
+            <objects>
+                <viewController storyboardIdentifier="BorderedBarExample" id="D5P-Pq-QzL" customClass="BorderedProgressBarExampleViewController" customModule="M13ProgressSuite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RAh-DB-ouN"/>
+                        <viewControllerLayoutGuide type="bottom" id="giV-La-17Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9hv-kb-3Sz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5u-b2-Ysd" customClass="M13BorderedProgressBar" customModule="M13ProgressSuite" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="10"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="pqy-WZ-KQQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcl-5O-5ep" customClass="M13BorderedProgressBar" customModule="M13ProgressSuite" customModuleProvider="target">
+                                <rect key="frame" x="570" y="90" width="10" height="502"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="1vN-gz-5G8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIh-aA-wJ5">
+                                <rect key="frame" x="20" y="90" width="542" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QdV-9k-iVQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pge-kK-ICz">
+                                <rect key="frame" x="505" y="119" width="57" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="5uz-7U-jky"/>
+                                    <constraint firstAttribute="height" constant="30" id="tMZ-rT-qf0"/>
+                                </constraints>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateProgress:" destination="D5P-Pq-QzL" eventType="touchUpInside" id="0ca-QI-OpB"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-db-c4C">
+                                <rect key="frame" x="38" y="119" width="461" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tni-g9-FDg"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateProgress:" destination="D5P-Pq-QzL" eventType="valueChanged" id="O69-Ov-lbP"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YNi-Ob-2ro">
+                                <rect key="frame" x="40" y="186" width="51" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="KoL-AC-0c1"/>
+                                    <constraint firstAttribute="height" constant="31" id="kNl-st-KC7"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateIndeterminate:" destination="D5P-Pq-QzL" eventType="valueChanged" id="qnP-i5-xRN"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indeterminate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxs-rz-2wX">
+                                <rect key="frame" x="20" y="157" width="111" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO9-KI-rgY">
+                                <rect key="frame" x="20" y="225" width="45" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="naP-xU-VHr">
+                                <rect key="frame" x="20" y="254" width="542" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ciN-Ud-Ntp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Success"/>
+                                    <segment title="Failure"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateState:" destination="D5P-Pq-QzL" eventType="valueChanged" id="evq-cy-bU8"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corner Radius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSo-Bg-x50">
+                                <rect key="frame" x="20" y="290" width="114" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yum-DP-UMI">
+                                <rect key="frame" x="38" y="319" width="526" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DmC-oq-q3r"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateCornerRadius:" destination="D5P-Pq-QzL" eventType="valueChanged" id="wkT-kd-QuX"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Direction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0C-8f-YRt">
+                                <rect key="frame" x="20" y="357" width="146" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kXr-FG-kkG">
+                                <rect key="frame" x="20" y="386" width="542" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="bp3-Lk-rU4"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="→ / ↑ "/>
+                                    <segment title="← / ↓"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateDirection:" destination="D5P-Pq-QzL" eventType="valueChanged" id="4Ha-si-rHC"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.92941176469999998" green="0.74117647060000003" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dcl-5O-5ep" firstAttribute="leading" secondItem="Yum-DP-UMI" secondAttribute="trailing" constant="8" id="0gp-J3-6VV"/>
+                            <constraint firstItem="Pge-kK-ICz" firstAttribute="top" secondItem="RIh-aA-wJ5" secondAttribute="bottom" constant="8" id="1Gx-I1-2Xj"/>
+                            <constraint firstItem="hxs-rz-2wX" firstAttribute="top" secondItem="IGL-db-c4C" secondAttribute="bottom" constant="8" id="1qr-0W-LS7"/>
+                            <constraint firstItem="NSo-Bg-x50" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="3EJ-w6-zLS"/>
+                            <constraint firstItem="kXr-FG-kkG" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="6gw-ve-rzZ"/>
+                            <constraint firstItem="IGL-db-c4C" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" constant="20" id="Cw3-we-P57"/>
+                            <constraint firstItem="dcl-5O-5ep" firstAttribute="top" secondItem="a5u-b2-Ysd" secondAttribute="bottom" constant="8" id="Dfb-4Y-GoM"/>
+                            <constraint firstItem="hxs-rz-2wX" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="Egn-g8-Yl7"/>
+                            <constraint firstItem="YNi-Ob-2ro" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" constant="20" id="Et4-gI-zz3"/>
+                            <constraint firstItem="naP-xU-VHr" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="FQE-tF-JDM"/>
+                            <constraint firstItem="dcl-5O-5ep" firstAttribute="leading" secondItem="RIh-aA-wJ5" secondAttribute="trailing" constant="8" id="G67-Qs-T9r"/>
+                            <constraint firstItem="naP-xU-VHr" firstAttribute="top" secondItem="DO9-KI-rgY" secondAttribute="bottom" constant="8" id="GNy-uF-mvi"/>
+                            <constraint firstItem="dcl-5O-5ep" firstAttribute="leading" secondItem="Pge-kK-ICz" secondAttribute="trailing" constant="8" id="HKp-AJ-aSG"/>
+                            <constraint firstItem="Yum-DP-UMI" firstAttribute="top" secondItem="NSo-Bg-x50" secondAttribute="bottom" constant="8" id="Iop-Bd-ah5"/>
+                            <constraint firstItem="NSo-Bg-x50" firstAttribute="top" secondItem="naP-xU-VHr" secondAttribute="bottom" constant="8" id="KjY-FI-I1B"/>
+                            <constraint firstItem="YNi-Ob-2ro" firstAttribute="top" secondItem="hxs-rz-2wX" secondAttribute="bottom" constant="8" id="Koo-Sg-m6s"/>
+                            <constraint firstItem="Pge-kK-ICz" firstAttribute="leading" secondItem="IGL-db-c4C" secondAttribute="trailing" constant="8" id="NUX-z2-u7W"/>
+                            <constraint firstItem="kXr-FG-kkG" firstAttribute="top" secondItem="q0C-8f-YRt" secondAttribute="bottom" constant="8" id="Nhk-PU-bsI"/>
+                            <constraint firstItem="q0C-8f-YRt" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="Od7-pq-lDN"/>
+                            <constraint firstItem="dcl-5O-5ep" firstAttribute="leading" secondItem="naP-xU-VHr" secondAttribute="trailing" constant="8" id="OgI-aX-w4C"/>
+                            <constraint firstItem="a5u-b2-Ysd" firstAttribute="trailing" secondItem="9hv-kb-3Sz" secondAttribute="trailingMargin" id="PCv-NX-VO9"/>
+                            <constraint firstItem="Pge-kK-ICz" firstAttribute="leading" secondItem="IGL-db-c4C" secondAttribute="trailing" constant="8" id="RCJ-wr-O3x"/>
+                            <constraint firstItem="q0C-8f-YRt" firstAttribute="top" secondItem="Yum-DP-UMI" secondAttribute="bottom" constant="8" id="RJH-Nm-Ooa"/>
+                            <constraint firstItem="RIh-aA-wJ5" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="TvN-VL-h3I"/>
+                            <constraint firstItem="IGL-db-c4C" firstAttribute="top" secondItem="RIh-aA-wJ5" secondAttribute="bottom" constant="8" id="Xkw-Ft-Znx"/>
+                            <constraint firstItem="YNi-Ob-2ro" firstAttribute="top" secondItem="hxs-rz-2wX" secondAttribute="bottom" constant="8" id="ZfR-eN-U9q"/>
+                            <constraint firstItem="giV-La-17Y" firstAttribute="top" secondItem="dcl-5O-5ep" secondAttribute="bottom" constant="8" id="Zy4-k1-rAV"/>
+                            <constraint firstItem="Yum-DP-UMI" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" constant="20" id="aAb-M2-9Sf"/>
+                            <constraint firstItem="DO9-KI-rgY" firstAttribute="top" secondItem="YNi-Ob-2ro" secondAttribute="bottom" constant="8" id="cab-B3-U3G"/>
+                            <constraint firstItem="dcl-5O-5ep" firstAttribute="trailing" secondItem="9hv-kb-3Sz" secondAttribute="trailingMargin" id="dKW-zC-fSw"/>
+                            <constraint firstItem="DO9-KI-rgY" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="fNl-R1-Q0p"/>
+                            <constraint firstItem="a5u-b2-Ysd" firstAttribute="top" secondItem="RAh-DB-ouN" secondAttribute="bottom" constant="8" id="l4V-7C-CxW"/>
+                            <constraint firstItem="dcl-5O-5ep" firstAttribute="leading" secondItem="kXr-FG-kkG" secondAttribute="trailing" constant="8" id="mZu-Ha-fNt"/>
+                            <constraint firstItem="RIh-aA-wJ5" firstAttribute="top" secondItem="a5u-b2-Ysd" secondAttribute="bottom" constant="8" id="q3F-7I-dTn"/>
+                            <constraint firstItem="a5u-b2-Ysd" firstAttribute="leading" secondItem="9hv-kb-3Sz" secondAttribute="leadingMargin" id="wnZ-Zb-Svs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bordered Progress Bar" id="1OB-TD-TA4"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="horizontalProgressView" destination="a5u-b2-Ysd" id="p3N-73-mSC"/>
+                        <outlet property="indeterminateSwitch" destination="YNi-Ob-2ro" id="reW-50-1mw"/>
+                        <outlet property="progressButton" destination="Pge-kK-ICz" id="eXf-oD-9lr"/>
+                        <outlet property="progressSlider" destination="IGL-db-c4C" id="asx-hN-qNI"/>
+                        <outlet property="stateControl" destination="naP-xU-VHr" id="UDD-xi-9Lk"/>
+                        <outlet property="verticalProgressView" destination="dcl-5O-5ep" id="gPy-ac-agU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmU-GX-BkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="815"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
