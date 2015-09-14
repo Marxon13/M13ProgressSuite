@@ -192,7 +192,7 @@ public class M13ProgressBar: M13ProgressView {
         // Set the progress and indeterminate animations.
         weak var weakSelf: M13ProgressBar? = self;
         progressUpdate = {() -> Void in
-            
+
             if let weakSelf = weakSelf {
                 // Get the frame of the progress layer
                 var progressFrame: CGRect = CGRectZero
@@ -372,14 +372,16 @@ public class M13ProgressBar: M13ProgressView {
         return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric)
     }
     
-    public override func setNeedsLayout() {
-        super.setNeedsLayout()
+    public override func layoutSubviews() {
+        super.layoutSubviews()
         //Update the corner radius
         var appropiateCornerRadius: CGFloat = frame.size.width < frame.size.height ? frame.size.width / 2.0 : frame.size.height / 2.0
         appropiateCornerRadius = appropiateCornerRadius > cornerRadius ? cornerRadius : appropiateCornerRadius
         layer.cornerRadius = appropiateCornerRadius
         progressLayer.cornerRadius = appropiateCornerRadius
         indeterminateLayer.cornerRadius = appropiateCornerRadius
+        //Update progress frame
+        progressUpdate?()
     }
     
     //-------------------------------
