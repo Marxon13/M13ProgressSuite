@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C88840C61BBF17C700DA8B78 /* M13ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */; settings = {ASSET_TAGS = (); }; };
+		C88840C81BBF17D000DA8B78 /* CircularRingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CA27D1461BA1F65C0065D9E5 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27D1451BA1F65C0065D9E5 /* SplitViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CA92C82B1BA3906C009F3A19 /* M13ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */; settings = {ASSET_TAGS = (); }; };
 		CA92C82D1BA390D2009F3A19 /* M13ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */; settings = {ASSET_TAGS = (); }; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressRing.swift; path = "Classes/Progress Views/M13ProgressRing.swift"; sourceTree = SOURCE_ROOT; };
+		C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRingExampleViewController.swift; sourceTree = "<group>"; };
 		CA27D1451BA1F65C0065D9E5 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressView.swift; sourceTree = "<group>"; };
 		CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressBar.swift; path = "Classes/Progress Views/M13ProgressBar.swift"; sourceTree = SOURCE_ROOT; };
@@ -65,6 +69,7 @@
 				CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */,
 				CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */,
 				CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */,
+				C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */,
 			);
 			name = "Progress Views";
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			children = (
 				CA92C8311BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift */,
 				CA92C8391BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift */,
+				C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */,
 			);
 			name = "Progress View Controllers";
 			sourceTree = "<group>";
@@ -191,8 +197,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88840C61BBF17C700DA8B78 /* M13ProgressRing.swift in Sources */,
 				CAD9FDC61BA0A13000E5CB05 /* DetailViewController.swift in Sources */,
 				CA92C8371BA5F43F009F3A19 /* M13BorderedProgressBar.swift in Sources */,
+				C88840C81BBF17D000DA8B78 /* CircularRingExampleViewController.swift in Sources */,
 				CA92C82B1BA3906C009F3A19 /* M13ProgressView.swift in Sources */,
 				CAD9FDC41BA0A13000E5CB05 /* MasterViewController.swift in Sources */,
 				CA92C83A1BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift in Sources */,
