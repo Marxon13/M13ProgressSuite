@@ -106,12 +106,12 @@ public class M13ProgressBar: M13ProgressView {
     /**
     The layer that makes up the progress bar.
     */
-    private var progressLayer: CALayer = CALayer()
+    internal var progressLayer: CALayer = CALayer()
     
     /**
     The layer that makes up the indeterminate progress bar.
     */
-    private var indeterminateLayer: CAShapeLayer = CAShapeLayer()
+    internal var indeterminateLayer: CAShapeLayer = CAShapeLayer()
     
     override public var indeterminate: Bool {
         didSet {
@@ -236,8 +236,7 @@ public class M13ProgressBar: M13ProgressView {
                 let barLength: CGFloat = horizontallyTraveling ? weakSelf.frame.size.width * 0.2 : weakSelf.frame.size.height * 0.2
                 
                 let totalTravelDistance: CGFloat = horizontallyTraveling ? weakSelf.frame.size.width + (2.0 * barLength) : weakSelf.frame.size.height + (2.0 * barLength)
-                let totalTravelTime: NSTimeInterval = weakSelf.animationDuration * 6.0
-                let totalAnimationFrames: CGFloat = CGFloat(totalTravelTime) / CGFloat(frameDuration)
+                let totalAnimationFrames: CGFloat = CGFloat(weakSelf.indeterminateAnimationDuration) / CGFloat(frameDuration)
                 let travelDelta: CGFloat = totalTravelDistance / totalAnimationFrames
                 
                 // Set the new frame of the bar: either move it by the travel delta, or move it back to the begining.

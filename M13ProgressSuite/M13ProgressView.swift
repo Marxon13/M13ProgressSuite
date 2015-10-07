@@ -83,6 +83,11 @@ public class M13ProgressView: UIView {
     @IBInspectable public var animationDuration: NSTimeInterval = 0.3
     
     /**
+    The duration of the indeterminate animation loop in seconds.
+    */
+    @IBInspectable public var indeterminateAnimationDuration: NSTimeInterval = 2.0
+    
+    /**
     The progress displayed by the progress view.
     */
     @IBInspectable public private(set) var progress: CGFloat = 0.0 
