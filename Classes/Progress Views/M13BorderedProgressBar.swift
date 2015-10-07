@@ -206,6 +206,56 @@ public class M13BorderedProgressBar: M13ProgressView {
     }
     
     //-------------------------------
+    // MARK: Actions
+    //-------------------------------
+    
+    public override func setState(state: M13ProgressViewState, animated: Bool) {
+        super.setState(state, animated: animated)
+        
+        if !animated {
+            switch state {
+            case .Normal:
+                borderView.layer.borderColor = tintColor.CGColor
+                progressBar.setState(state, animated: false)
+                break
+            case .Success:
+                borderView.layer.borderColor = successColor.CGColor
+                progressBar.setState(state, animated: false)
+                break
+            case .Failure:
+                borderView.layer.borderColor = failureColor.CGColor
+                progressBar.setState(state, animated: false)
+                break
+            }
+        } else {
+            let colorAnimation: CABasicAnimation = CABasicAnimation(keyPath: "borderColor")
+            colorAnimation.fromValue = borderView.layer.borderColor!
+            colorAnimation.fillMode = kCAFillModeForwards
+            colorAnimation.removedOnCompletion = false
+            colorAnimation.duration = animationDuration
+            
+            var toColor: UIColor = tintColor
+            switch state {
+            case .Normal:
+                toColor = tintColor
+                break
+            case .Success:
+                toColor = successColor
+                break
+            case .Failure:
+                toColor = failureColor
+                break
+            }
+            
+            colorAnimation.toValue = toColor.CGColor
+            borderView.layer.addAnimation(colorAnimation, forKey: "borderColor")
+            progressBar.setState(state, animated: true)
+            borderView.layer.borderColor = toColor.CGColor
+        }
+    }
+
+    
+    //-------------------------------
     // MARK: Other
     //-------------------------------
     
