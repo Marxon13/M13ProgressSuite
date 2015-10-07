@@ -24,6 +24,7 @@ public class M13BorderedProgressBar: M13ProgressView {
     @IBInspectable public var cornerRadius: CGFloat = CGFloat.max {
         didSet {
             progressBar.cornerRadius = cornerRadius
+            setNeedsLayout()
         }
     }
     
