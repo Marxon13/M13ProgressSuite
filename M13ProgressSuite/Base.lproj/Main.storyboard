@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -592,6 +592,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-p2-d2G" customClass="M13ProgressRing" customModule="M13ProgressSuite" customModuleProvider="target">
                                 <rect key="frame" x="200" y="72" width="200" height="200"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="hzA-VK-yPb"/>
@@ -613,6 +614,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCP-4P-YHd">
                                 <rect key="frame" x="20" y="330" width="80" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="0Nh-Gd-Der"/>
                                     <constraint firstAttribute="height" constant="21" id="h2U-q0-LSa"/>
@@ -625,6 +627,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-tI-gjp">
                                 <rect key="frame" x="503" y="323" width="77" height="28"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="IzH-07-FtO"/>
                                     <constraint firstAttribute="width" constant="77" id="uQU-gY-08w"/>
@@ -637,6 +640,7 @@
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="flw-zc-TXV">
                                 <rect key="frame" x="18" y="359" width="564" height="31"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wWq-kP-gvh"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="zTI-dP-YEt"/>
@@ -647,6 +651,7 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indeterminate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upe-A9-vK1">
                                 <rect key="frame" x="20" y="402" width="111" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="IWc-QV-nv8"/>
                                     <constraint firstAttribute="height" constant="21" id="t2g-ik-tab"/>
@@ -657,6 +662,7 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Va3-Gk-lCf">
                                 <rect key="frame" x="276" y="397" width="51" height="31"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="YwM-Am-Yo6"/>
                                     <constraint firstAttribute="width" constant="49" id="u40-yt-GQp"/>
@@ -667,6 +673,7 @@
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dws-Mg-TfS">
                                 <rect key="frame" x="20" y="441" width="93" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="2W8-NA-DAC"/>
                                     <constraint firstAttribute="height" constant="21" id="2bd-jx-dp4"/>
@@ -677,6 +684,7 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cnI-Cx-2Ny">
                                 <rect key="frame" x="276" y="436" width="51" height="31"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="A1b-ia-bwC"/>
                                     <constraint firstAttribute="width" constant="49" id="fG2-Cm-Ulo"/>
@@ -687,6 +695,7 @@
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWW-Ee-Qmr">
                                 <rect key="frame" x="20" y="470" width="49" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="QGK-s3-NUn"/>
                                     <constraint firstAttribute="height" constant="21" id="jO5-9Z-ySy"/>
@@ -697,6 +706,7 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AOF-JX-9rG">
                                 <rect key="frame" x="20" y="499" width="554" height="29"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Mtq-12-zsE"/>
                                 </constraints>
@@ -711,6 +721,7 @@
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Direction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMl-rK-ACY">
                                 <rect key="frame" x="20" y="535" width="146" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="52n-b0-Bfz"/>
                                     <constraint firstAttribute="width" constant="146" id="zr1-VE-Cgy"/>
@@ -721,18 +732,20 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xl0-ke-MTa">
                                 <rect key="frame" x="20" y="564" width="560" height="29"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="d1q-8o-1ag"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="⤾"/>
-                                    <segment title="⤿"/>
+                                    <segment title="⃕"/>
+                                    <segment title="⃔"/>
                                 </segments>
                                 <connections>
                                     <action selector="updateDirection:" destination="m8Z-A0-lfl" eventType="valueChanged" id="McW-UN-2cP"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.92941176469999998" green="0.74117647060000003" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
