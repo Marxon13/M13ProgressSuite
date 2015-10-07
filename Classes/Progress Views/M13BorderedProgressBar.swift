@@ -9,7 +9,7 @@
 import UIKit
 
 /**
-A basic progress bar with a border around it.
+A wrapper around M13ProgressBar that adds a border around the bar.
 */
 @IBDesignable
 public class M13BorderedProgressBar: M13ProgressView {
@@ -41,18 +41,12 @@ public class M13BorderedProgressBar: M13ProgressView {
     */
     @IBInspectable public var borderPadding: CGFloat = 1.0
     
-    /**
-    The secondary color of the progress view.
-    */
     override public var secondaryColor: UIColor {
         didSet {
             progressBar.secondaryColor = secondaryColor
         }
     }
     
-    /**
-    The primary color when the progress view is in the success state.
-    */
     override public var successColor: UIColor {
         didSet {
             progressBar.successColor = successColor
@@ -62,9 +56,6 @@ public class M13BorderedProgressBar: M13ProgressView {
         }
     }
     
-    /**
-    The primary color when the progress view is in the failure state.
-    */
     override public var failureColor: UIColor {
         didSet {
             progressBar.failureColor = failureColor
@@ -81,7 +72,23 @@ public class M13BorderedProgressBar: M13ProgressView {
     /**
     The progress bar that displays the progress.
     */
-    private var progressBar: M13ProgressBar = M13ProgressBar()
+    public var progressBar: M13ProgressBar = M13ProgressBar() {
+        willSet(newValue) {
+            // Remove the current progress bar from the view.
+            progressBar.removeFromSuperview()
+        }
+        didSet(oldValue) {
+            // Set the current parameters
+            progressBar.cornerRadius = cornerRadius
+            progressBar.secondaryColor = secondaryColor
+            progressBar.successColor = successColor
+            progressBar.failureColor = failureColor
+            progressBar.progressDirection = progressDirection
+            progressBar.indeterminate = indeterminate
+            // Add the new progress bar to the view.
+            addSubview(progressBar)
+        }
+    }
     
     
     /**
