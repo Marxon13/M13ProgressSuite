@@ -31,7 +31,7 @@ class MasterViewController: UITableViewController {
         ProgressSection(sectionTitle: "Circular Progress Indicators", progressCells: [
             ProgressCell(cellTitle: "Pie", cellDetail: nil, representedViewControllerIdentifier: "CircularPieExample"),
             ProgressCell(cellTitle: "Ring", cellDetail: nil, representedViewControllerIdentifier: "CircularRingExample"),
-            ProgressCell(cellTitle: "Segmented Ring", cellDetail: nil, representedViewControllerIdentifier: "Segmented Ring Example")
+            ProgressCell(cellTitle: "Segmented Ring", cellDetail: nil, representedViewControllerIdentifier: "CircularSegmentedRingExample")
             ]),
         ProgressSection(sectionTitle: "Image Based Progress Bars", progressCells: [
             ProgressCell(cellTitle: "Filtered Image", cellDetail: "(CIFilters)", representedViewControllerIdentifier: "FilteredImageExample"),

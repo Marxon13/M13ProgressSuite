@@ -15,56 +15,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 import UIKit
 
 /**
-The possible directions a progress ring can travel in.
-
-- Clockwise: The progress ring will travel clockwise as the progress nears completion.
-- CounterClockwise: The progress ring will travel counter-clockwise as the progress nears completion.
-*/
-public enum M13ProgressRingProgressDirection: Int, RawRepresentable {
-    /// The progress ring will travel clockwise as the progress nears completion.
-    case Clockwise
-    /// The progress ring will travel counter-clockwise as the progress nears completion.
-    case CounterClockwise
-}
-
-/**
 A progress view stylized similarly to the iOS 7 App store progress view.
 */
 @IBDesignable
-public class M13ProgressRing: M13ProgressView {
+public class M13ProgressRing: M13ProgressCircular {
     
     //-------------------------------
     // MARK: Properties
     //-------------------------------
     
-    /**
-    The direction the progress bar travels in as the progress nears completion.
-    */
-    @IBInspectable public var progressDirection: M13ProgressRingProgressDirection = .Clockwise {
-        didSet {
-            progressUpdate?()
-        }
-    }
-    
     @IBInspectable public var percentage: Bool = false {
         didSet {
-            // Show the label if not already.
-            if percentage && percentageLabel.superview == nil {
-                addSubview(percentageLabel)
-            }
-            
-            // Hide the label if not already
-            if !percentage && percentageLabel.superview != nil {
-                percentageLabel.removeFromSuperview()
-            }
-            
-            setNeedsLayout()
-            progressUpdate?()
-        }
-    }
-    
-    @IBInspectable public var backgroundRingWidth :Int = 0 {
-        didSet {
+            percentageLabel.hidden = !percentage
             setNeedsLayout()
             progressUpdate?()
         }
@@ -81,87 +43,33 @@ public class M13ProgressRing: M13ProgressView {
     // MARK: Property Overrides
     //-------------------------------
     
-    /**
-    The secondary color of the progress view.
-    */
-    override public var secondaryColor: UIColor {
-        didSet {
-            indeterminateLayer.strokeColor = secondaryColor.CGColor
-        }
-    }
-    
-    /**
-    The primary color when the progress view is in the success state.
-    */
-    override public var successColor: UIColor {
-        didSet {
-            if state == .Success {
-                iconLayer.fillColor = successColor.CGColor
-            }
-        }
-    }
-    
-    /**
-    The primary color when the progress view is in the failure state.
-    */
-    override public var failureColor: UIColor {
-        didSet {
-            if state == .Failure {
-                iconLayer.fillColor = failureColor.CGColor
-            }
-        }
-    }
-    
     override public var indeterminate: Bool {
         didSet {
-            // Add the indeterminate layer.
+            let tmp = indeterminate
+            super.indeterminate = tmp
             if indeterminate {
-                hidePercentage()
-                progressLayer.removeFromSuperlayer()
-                if indeterminateLayer.superlayer == nil {
-                    layer.addSublayer(indeterminateLayer)
-                }
+                progressLayer.hidden = true
+                percentageLabel.hidden = true
+            } else {
+                progressLayer.hidden = false
+                percentageLabel.hidden = !percentage
             }
             
-            // Add the progress layer.
-            if !indeterminate && progressLayer.superlayer == nil {
-                layer.addSublayer(progressLayer)
-            }
+            setNeedsLayout()
+            progressUpdate?()
         }
     }
     
     //-------------------------------
-    // MARK: Layers
-    //-------------------------------
-    
-    /**
-    The layer that makes up the progress ring.
-    */
-    private var progressLayer: CAShapeLayer = CAShapeLayer()
-    
-    /**
-    The layer that makes up the indeterminate ring, and the background for the progress ring.
-    */
-    private var indeterminateLayer: CAShapeLayer = CAShapeLayer()
-    
-    /**
-    The layer that is used to render icons for success or failure.
-    */
-    private var iconLayer: CAShapeLayer = CAShapeLayer()
-    
-    //-------------------------------
-    // MARK: Private Variables
+    // MARK: Protected Variables
     //-------------------------------
     
     /** The number formatter to display the progress percentage. */
-    private var percentageFormatter: NSNumberFormatter!
+    internal var percentageFormatter: NSNumberFormatter!
     /** The label that shows the percentage. */
-    private var percentageLabel: UILabel!
-    /** The starting angle for drawing the indeterminate animation ring. */
-    private var indeterminateAnimationAngle :CGFloat = 0
+    internal var percentageLabel: UILabel!
     /** Ring widths after validation and bounds adjustments */
-    private var adjustedBackgroundRingWidth :CGFloat = 0
-    private var adjustedProgressRingWidth :CGFloat = 0
+    internal var adjustedProgressRingWidth :CGFloat = 0
 
     //-------------------------------
     // MARK: Initalization
@@ -173,16 +81,8 @@ public class M13ProgressRing: M13ProgressView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        if aDecoder.containsValueForKey("progressDirection") {
-            if let direction = M13ProgressRingProgressDirection(rawValue: aDecoder.decodeIntegerForKey("progressDirection")) {
-                progressDirection = direction
-            }
-        }
         if aDecoder.containsValueForKey("percentage") {
             percentage = aDecoder.decodeBoolForKey("percentage")
-        }
-        if aDecoder.containsValueForKey("backgroundRingWidth") {
-            backgroundRingWidth = aDecoder.decodeIntegerForKey("backgroundRingWidth")
         }
         if aDecoder.containsValueForKey("progressRingWidth") {
             progressRingWidth = aDecoder.decodeIntegerForKey("progressRingWidth")
@@ -197,70 +97,32 @@ public class M13ProgressRing: M13ProgressView {
         sharedSetup()
     }
     
-    private func sharedSetup() {
+    internal override func sharedSetup() {
+        super.sharedSetup()
+        
         // Set the defaults.
         self.clipsToBounds = false
         layer.backgroundColor = UIColor.clearColor().CGColor
         
+        // Set up the indeterminate layer
+        indeterminateLayer.strokeColor = secondaryColor.CGColor
+        indeterminateLayer.fillColor = nil
+        
+        // Set up the progress layer
+        progressLayer.strokeColor = tintColor.CGColor
+        progressLayer.fillColor = nil
+
+        adjustProgressRingWidth()
+        
         // Set up the number formatter
         percentageFormatter = NSNumberFormatter()
         percentageFormatter.numberStyle = .PercentStyle
-                
-        // Set up the indeterminate layer
-        indeterminateLayer = CAShapeLayer()
-        indeterminateLayer.backgroundColor = UIColor.clearColor().CGColor
-        indeterminateLayer.strokeColor = secondaryColor.CGColor
-        indeterminateLayer.fillColor = nil
-        indeterminateLayer.lineCap = kCALineCapRound
-        
-        // Set up the progress layer
-        progressLayer = CAShapeLayer()
-        progressLayer.backgroundColor = UIColor.clearColor().CGColor
-        progressLayer.strokeColor = tintColor.CGColor
-        progressLayer.fillColor = nil
-        progressLayer.lineCap = kCALineCapButt
-
-        adjustRingWidths()
-        
-        // Set up the icon layer
-        iconLayer = CAShapeLayer()
-        iconLayer.backgroundColor = UIColor.clearColor().CGColor
-        iconLayer.strokeColor = nil
-        iconLayer.fillColor = nil
-        iconLayer.lineCap = kCALineCapButt
         
         // Set the percentage label
         percentageLabel = UILabel(frame: self.bounds)
         percentageLabel.textAlignment = .Center
         percentageLabel.contentMode = .Center
         self.addSubview(percentageLabel)
-        
-        // Disable default animations
-        progressLayer.actions = [
-            "frame": NSNull(),
-            "anchorPoint": NSNull(),
-            "bounds": NSNull(),
-            "position": NSNull(),
-        ]
-        indeterminateLayer.actions = [
-            "frame": NSNull(),
-            "anchorPoint": NSNull(),
-            "bounds": NSNull(),
-            "position": NSNull(),
-        ]
-        iconLayer.actions = [
-            "frame": NSNull(),
-            "anchorPoint": NSNull(),
-            "bounds": NSNull(),
-            "position": NSNull(),
-        ]
-        
-        // Add the layers
-        layer.addSublayer(indeterminateLayer)
-        if !indeterminate {
-            layer.addSublayer(progressLayer)
-        }
-        layer.addSublayer(iconLayer)
         
         // Set the progress animation.
         weak var weakSelf: M13ProgressRing? = self
@@ -269,9 +131,7 @@ public class M13ProgressRing: M13ProgressView {
             if let retainedSelf = weakSelf {
                 
                 // Create parameters to draw ring
-                let minSize = min(retainedSelf.bounds.size.width, retainedSelf.bounds.size.height)
                 let clockwise = (retainedSelf.progressDirection == .Clockwise)
-                let center = CGPointMake(self.bounds.size.width / 2.0, retainedSelf.bounds.size.height / 2.0)
                 var startAngle = CGFloat(-M_PI_2)
                 var endAngle = startAngle + (2.0 * CGFloat(M_PI) * retainedSelf.progress)
                 if !clockwise {
@@ -282,16 +142,14 @@ public class M13ProgressRing: M13ProgressView {
                 }
                 
                 // Draw background
-                let radius1 = (minSize - retainedSelf.adjustedBackgroundRingWidth) / 2.0
-                let path1 = UIBezierPath()
-                path1.addArcWithCenter(center, radius: radius1, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: true)
-                retainedSelf.indeterminateLayer.path = path1.CGPath
+                retainedSelf.drawBackground()
 
                 // Draw progress ring
-                let radius2 = (minSize - retainedSelf.adjustedProgressRingWidth) / 2.0
-                let path2 = UIBezierPath()
-                path2.addArcWithCenter(center, radius: radius2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-                retainedSelf.progressLayer.path = path2.CGPath
+                let center = retainedSelf.centerOfCircle()
+                let radius = retainedSelf.maxRadius() - retainedSelf.adjustedProgressRingWidth / 2.0
+                let path = UIBezierPath()
+                path.addArcWithCenter(center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+                retainedSelf.progressLayer.path = path.CGPath
                 
                 // Draw percentage
                 if retainedSelf.percentage && retainedSelf.state == .Normal {
@@ -310,8 +168,6 @@ public class M13ProgressRing: M13ProgressView {
                 // Create parameters to draw progress
                 let startAngle = CGFloat(retainedSelf.indeterminateAnimationAngle)
                 let endAngle = startAngle + CGFloat(M_PI) * 2.0 * 0.8  // 80% of a circle
-                let center = CGPointMake(self.bounds.size.width / 2.0, retainedSelf.bounds.size.width / 2.0)
-                let radius = (retainedSelf.bounds.size.width - retainedSelf.adjustedBackgroundRingWidth) / 2.0
                 
                 let deltaAngle = CGFloat(frameDuration * 2.0 * M_PI)
                 if retainedSelf.progressDirection == .CounterClockwise {
@@ -323,26 +179,19 @@ public class M13ProgressRing: M13ProgressView {
                 }
                 
                 // Draw path
+                let center = retainedSelf.centerOfCircle()
+                let radius = retainedSelf.maxRadius() - retainedSelf.adjustedBackgroundRingWidth / 2.0
                 let path = UIBezierPath()
                 path.addArcWithCenter(center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-                
-                // Set the path
                 retainedSelf.indeterminateLayer.path = path.CGPath
             }
         }
     }
     
     public override func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeInteger(progressDirection.rawValue, forKey: "progressDirection")
         aCoder.encodeBool(percentage, forKey: "percentage")
-        aCoder.encodeInteger(backgroundRingWidth, forKey: "backgroundRingWidth")
         aCoder.encodeInteger(progressRingWidth, forKey: "progressRingWidth")
         super.encodeWithCoder(aCoder)
-    }
-    
-    public override func prepareForInterfaceBuilder() {
-        sharedSetup()
-        super.prepareForInterfaceBuilder()
     }
     
     //-------------------------------
@@ -365,7 +214,7 @@ public class M13ProgressRing: M13ProgressView {
             hidePercentage()
             drawSuccess()
             toColor1 = successColor
-            if (indeterminate) {
+            if indeterminate {
                 toColor2 = successColor
             }
             break
@@ -373,14 +222,14 @@ public class M13ProgressRing: M13ProgressView {
             hidePercentage()
             drawFailure()
             toColor1 = failureColor
-            if (indeterminate) {
+            if indeterminate {
                 toColor2 = failureColor
             }
             break
         }
         
         if !animated {
-            progressLayer.backgroundColor = toColor1.CGColor
+            progressLayer.strokeColor = toColor1.CGColor
             indeterminateLayer.strokeColor = toColor2.CGColor
         } else {
             let colorAnimation1: CABasicAnimation = CABasicAnimation(keyPath: "strokeColor")
@@ -412,14 +261,10 @@ public class M13ProgressRing: M13ProgressView {
     // MARK: Layout
     //-------------------------------
     
-    public override func intrinsicContentSize() -> CGSize {
-        return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric)
-    }
-    
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        adjustRingWidths()
+        adjustProgressRingWidth()
 
         // Percentage label
         if percentage {
@@ -432,15 +277,8 @@ public class M13ProgressRing: M13ProgressView {
         progressUpdate?()
     }
     
-    public func adjustRingWidths()
+    public func adjustProgressRingWidth()
     {
-        if backgroundRingWidth > 0 {
-            adjustedBackgroundRingWidth = CGFloat(backgroundRingWidth)
-        } else {
-            adjustedBackgroundRingWidth = max(self.bounds.size.width * 0.025, 1.0)
-        }
-        indeterminateLayer.lineWidth = adjustedBackgroundRingWidth
-        
         if progressRingWidth > 0 {
             adjustedProgressRingWidth = CGFloat(progressRingWidth)
         } else {
@@ -450,86 +288,15 @@ public class M13ProgressRing: M13ProgressView {
     }
     
     //-------------------------------
-    // MARK: Icons
+    // MARK: Draw Functions
     //-------------------------------
-    
-    private func drawSuccess()
-    {
-        // Draw relative to a base size and percentage, that way the check can be drawn for any size.
-        let radius = self.frame.size.width / 2.0
-        let size = radius * 0.3
-        
-        // Create the path for the Checkmark
-        let path = UIBezierPath()
-        path.moveToPoint(CGPointMake(0, 0))
-        path.addLineToPoint(CGPointMake(0, size * 2))
-        path.addLineToPoint(CGPointMake(size * 3, size * 2))
-        path.addLineToPoint(CGPointMake(size * 3, size))
-        path.addLineToPoint(CGPointMake(size, size))
-        path.addLineToPoint(CGPointMake(size, 0))
-        path.closePath()
-        
-        // Rotate it through -45 degrees...
-        path.applyTransform(CGAffineTransformMakeRotation(CGFloat(-M_PI_4)))
-        
-        // Center it
-        path.applyTransform(CGAffineTransformMakeTranslation(radius * 0.46, radius * 1.02))
-        
-        // Set path and fill color
-        iconLayer.path = path.CGPath
-        iconLayer.fillColor = successColor.CGColor
-    }
-    
-    private func drawFailure()
-    {
-        // Calculate the size of the X
-        let radius = self.frame.size.width / 2.0
-        let size = radius * 0.3
-        
-        // Create the path for the X
-        let path = UIBezierPath()
-        path.moveToPoint(CGPointMake(size, 0))
-        path.addLineToPoint(CGPointMake(2 * size, 0))
-        path.addLineToPoint(CGPointMake(2 * size, size))
-        path.addLineToPoint(CGPointMake(3 * size, size))
-        path.addLineToPoint(CGPointMake(3 * size, 2 * size))
-        path.addLineToPoint(CGPointMake(2 * size, 2 * size))
-        path.addLineToPoint(CGPointMake(2 * size, 3 * size))
-        path.addLineToPoint(CGPointMake(size, 3 * size))
-        path.addLineToPoint(CGPointMake(size, 2 * size))
-        path.addLineToPoint(CGPointMake(0, 2 * size))
-        path.addLineToPoint(CGPointMake(0, size))
-        path.addLineToPoint(CGPointMake(size, size))
-        path.closePath()
-        
-        // Center it
-        path.applyTransform(CGAffineTransformMakeTranslation(radius - (1.5 * size), radius - (1.5 * size)))
-        
-        // Rotate path
-        let a = CGFloat(cos(M_PI_4))
-        let b = CGFloat(sin(M_PI_4))
-        let c = CGFloat(-sin(M_PI_4))
-        let d = CGFloat(cos(M_PI_4))
-        let tx = radius * CGFloat(1 - cos(M_PI_4) + sin(M_PI_4))
-        let ty = radius * CGFloat(1 - sin(M_PI_4) - cos(M_PI_4))
-        path.applyTransform(CGAffineTransformMake(a, b, c, d, tx, ty))
-        
-        // Set path and fill color
-        iconLayer.path = path.CGPath
-        iconLayer.fillColor = failureColor.CGColor
-    }
-    
-    private func hideIcon()
-    {
-        iconLayer.path = nil
-    }
-    
-    private func drawPercentage()
+
+    public func drawPercentage()
     {
         percentageLabel.text = percentageFormatter.stringFromNumber(self.progress)
     }
     
-    private func hidePercentage()
+    public func hidePercentage()
     {
         percentageLabel.text = ""
     }
@@ -540,6 +307,7 @@ public class M13ProgressRing: M13ProgressView {
     
     public override func tintColorDidChange() {
         super.tintColorDidChange()
+        progressLayer.fillColor = nil
         progressLayer.strokeColor = tintColor.CGColor
         percentageLabel.textColor = tintColor
     }

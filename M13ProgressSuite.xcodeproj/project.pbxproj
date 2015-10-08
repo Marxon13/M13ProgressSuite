@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8016FD31BC1C77400A6E276 /* CircularPieExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8016FD21BC1C77400A6E276 /* CircularPieExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C8016FD51BC1C77E00A6E276 /* M13ProgressPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */; settings = {ASSET_TAGS = (); }; };
 		C88840C61BBF17C700DA8B78 /* M13ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */; settings = {ASSET_TAGS = (); }; };
 		C88840C81BBF17D000DA8B78 /* CircularRingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C8A7D1961BC2F69A00B2500F /* M13ProgressSegmentedRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */; settings = {ASSET_TAGS = (); }; };
+		C8A7D1981BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7D1971BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C8C0AB8C1BC2D37100BD2B45 /* M13ProgressCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */; settings = {ASSET_TAGS = (); }; };
 		CA27D1461BA1F65C0065D9E5 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27D1451BA1F65C0065D9E5 /* SplitViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CA92C82B1BA3906C009F3A19 /* M13ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */; settings = {ASSET_TAGS = (); }; };
 		CA92C82D1BA390D2009F3A19 /* M13ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */; settings = {ASSET_TAGS = (); }; };
@@ -25,8 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8016FD21BC1C77400A6E276 /* CircularPieExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularPieExampleViewController.swift; sourceTree = "<group>"; };
+		C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressPie.swift; path = "Classes/Progress Views/M13ProgressPie.swift"; sourceTree = SOURCE_ROOT; };
 		C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressRing.swift; path = "Classes/Progress Views/M13ProgressRing.swift"; sourceTree = SOURCE_ROOT; };
 		C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRingExampleViewController.swift; sourceTree = "<group>"; };
+		C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressSegmentedRing.swift; path = "Classes/Progress Views/M13ProgressSegmentedRing.swift"; sourceTree = SOURCE_ROOT; };
+		C8A7D1971BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSegmentedRingExampleViewController.swift; sourceTree = "<group>"; };
+		C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressCircular.swift; path = "Classes/Progress Views/M13ProgressCircular.swift"; sourceTree = SOURCE_ROOT; };
 		CA27D1451BA1F65C0065D9E5 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressView.swift; sourceTree = "<group>"; };
 		CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressBar.swift; path = "Classes/Progress Views/M13ProgressBar.swift"; sourceTree = SOURCE_ROOT; };
@@ -69,7 +79,10 @@
 				CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */,
 				CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */,
 				CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */,
+				C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */,
+				C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */,
 				C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */,
+				C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */,
 			);
 			name = "Progress Views";
 			sourceTree = "<group>";
@@ -96,7 +109,9 @@
 			children = (
 				CA92C8311BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift */,
 				CA92C8391BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift */,
+				C8016FD21BC1C77400A6E276 /* CircularPieExampleViewController.swift */,
 				C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */,
+				C8A7D1971BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift */,
 			);
 			name = "Progress View Controllers";
 			sourceTree = "<group>";
@@ -197,13 +212,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8016FD51BC1C77E00A6E276 /* M13ProgressPie.swift in Sources */,
 				C88840C61BBF17C700DA8B78 /* M13ProgressRing.swift in Sources */,
 				CAD9FDC61BA0A13000E5CB05 /* DetailViewController.swift in Sources */,
 				CA92C8371BA5F43F009F3A19 /* M13BorderedProgressBar.swift in Sources */,
 				C88840C81BBF17D000DA8B78 /* CircularRingExampleViewController.swift in Sources */,
+				C8A7D1961BC2F69A00B2500F /* M13ProgressSegmentedRing.swift in Sources */,
 				CA92C82B1BA3906C009F3A19 /* M13ProgressView.swift in Sources */,
+				C8A7D1981BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift in Sources */,
 				CAD9FDC41BA0A13000E5CB05 /* MasterViewController.swift in Sources */,
 				CA92C83A1BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift in Sources */,
+				C8016FD31BC1C77400A6E276 /* CircularPieExampleViewController.swift in Sources */,
+				C8C0AB8C1BC2D37100BD2B45 /* M13ProgressCircular.swift in Sources */,
 				CAD9FDC21BA0A13000E5CB05 /* AppDelegate.swift in Sources */,
 				CA92C8321BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift in Sources */,
 				CA27D1461BA1F65C0065D9E5 /* SplitViewController.swift in Sources */,
