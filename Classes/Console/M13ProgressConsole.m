@@ -65,7 +65,7 @@
     _progressType = M13ProgressConsoleProgressTypePercentage;
     _maskType = M13ProgressConsoleMaskTypeSolidColor;
     _maskColor = [UIColor colorWithWhite:0.0 alpha:0.75];
-    self.font = [UIFont systemFontOfSize:14.0];
+    self.font = [UIFont systemFontOfSize:14.0 ];
     self.textColor = [UIColor whiteColor];
     self.backgroundColor = [UIColor blackColor];
     _showCursor = YES;
