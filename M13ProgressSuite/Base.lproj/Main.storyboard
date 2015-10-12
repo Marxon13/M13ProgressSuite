@@ -1001,7 +1001,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8X5-Rg-3xK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="2176"/>
+            <point key="canvasLocation" x="-45" y="2181"/>
         </scene>
         <!--Circular Segmented Ring-->
         <scene sceneID="6Nl-fw-TJv">
@@ -1240,7 +1240,284 @@
             </objects>
             <point key="canvasLocation" x="603" y="1516"/>
         </scene>
+        <!--Grayscale Image-->
+        <scene sceneID="jFM-eW-chL">
+            <objects>
+                <viewController storyboardIdentifier="GreyscaleImageExample" id="YfQ-ZA-Wm6" customClass="GreyscaleImageExampleViewController" customModule="M13ProgressSuite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nE5-An-1YD"/>
+                        <viewControllerLayoutGuide type="bottom" id="KHm-W0-l3z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pJt-vg-MUX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDc-j5-6eS" customClass="M13ProgressImage" customModule="M13ProgressSuite" customModuleProvider="target">
+                                <rect key="frame" x="163" y="72" width="275" height="275"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="50G-er-ARa"/>
+                                    <constraint firstAttribute="height" constant="275" id="byu-du-HEQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="indeterminate" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="progressImage" value="StripedAppleLogo"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jt-ov-SQw">
+                                <rect key="frame" x="20" y="421" width="80" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AGM-PA-9vu"/>
+                                    <constraint firstAttribute="height" constant="21" id="vrh-aT-Vrc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WpV-by-dES">
+                                <rect key="frame" x="18" y="450" width="564" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="l99-Wf-m1w"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateProgress:" destination="YfQ-ZA-Wm6" eventType="valueChanged" id="1CO-V0-95p"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgy-MZ-Akd">
+                                <rect key="frame" x="503" y="417" width="77" height="28"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="fbg-nn-hlC"/>
+                                    <constraint firstAttribute="height" constant="28" id="ywb-d7-F0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateProgress:" destination="YfQ-ZA-Wm6" eventType="touchUpInside" id="s7G-rA-spy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBo-wT-mwV">
+                                <rect key="frame" x="20" y="501" width="97" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="gUa-v8-kAK"/>
+                                    <constraint firstAttribute="height" constant="21" id="iff-aK-ZxU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bVX-oq-krc">
+                                <rect key="frame" x="163" y="496" width="51" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Dty-Nu-Lrl"/>
+                                    <constraint firstAttribute="width" constant="49" id="JSN-xe-xSd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateBackgroundSwitch:" destination="YfQ-ZA-Wm6" eventType="valueChanged" id="Sp7-c2-mbj"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Direction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQE-cH-h1q">
+                                <rect key="frame" x="20" y="535" width="146" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="JSc-D5-yW9"/>
+                                    <constraint firstAttribute="height" constant="21" id="qRq-Be-9Xs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LE2-P6-Tmb">
+                                <rect key="frame" x="20" y="564" width="560" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ZTx-OF-BtA"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="→"/>
+                                    <segment title="↑"/>
+                                    <segment title="←"/>
+                                    <segment title="↓"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateDirection:" destination="YfQ-ZA-Wm6" eventType="valueChanged" id="jew-CR-D5k"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.92941176469999998" green="0.74117647060000003" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sQE-cH-h1q" firstAttribute="leading" secondItem="pJt-vg-MUX" secondAttribute="leadingMargin" id="1rh-3H-Kug"/>
+                            <constraint firstItem="WpV-by-dES" firstAttribute="top" secondItem="8Jt-ov-SQw" secondAttribute="bottom" constant="8" id="25B-kY-PoT"/>
+                            <constraint firstItem="LE2-P6-Tmb" firstAttribute="top" secondItem="sQE-cH-h1q" secondAttribute="bottom" constant="8" id="2r1-iF-RJn"/>
+                            <constraint firstItem="tgy-MZ-Akd" firstAttribute="trailing" secondItem="pJt-vg-MUX" secondAttribute="trailingMargin" id="B0z-24-uFw"/>
+                            <constraint firstItem="QDc-j5-6eS" firstAttribute="top" secondItem="nE5-An-1YD" secondAttribute="bottom" constant="8" id="D1V-fc-xcb"/>
+                            <constraint firstItem="WpV-by-dES" firstAttribute="leading" secondItem="pJt-vg-MUX" secondAttribute="leadingMargin" id="F5a-4g-OW3"/>
+                            <constraint firstItem="KHm-W0-l3z" firstAttribute="top" secondItem="LE2-P6-Tmb" secondAttribute="bottom" constant="8" id="H9u-89-lRy"/>
+                            <constraint firstItem="bVX-oq-krc" firstAttribute="top" secondItem="WpV-by-dES" secondAttribute="bottom" constant="16" id="NRt-Q4-qFI"/>
+                            <constraint firstItem="8Jt-ov-SQw" firstAttribute="leading" secondItem="pJt-vg-MUX" secondAttribute="leadingMargin" id="NvH-FC-nj3"/>
+                            <constraint firstItem="bVX-oq-krc" firstAttribute="centerY" secondItem="FBo-wT-mwV" secondAttribute="centerY" id="Rad-cr-e9u"/>
+                            <constraint firstItem="QDc-j5-6eS" firstAttribute="centerX" secondItem="pJt-vg-MUX" secondAttribute="centerX" id="VpF-JW-d0a"/>
+                            <constraint firstItem="FBo-wT-mwV" firstAttribute="leading" secondItem="pJt-vg-MUX" secondAttribute="leadingMargin" id="YRY-hl-xhj"/>
+                            <constraint firstItem="LE2-P6-Tmb" firstAttribute="top" secondItem="bVX-oq-krc" secondAttribute="bottom" constant="37" id="aTh-Te-whx"/>
+                            <constraint firstItem="tgy-MZ-Akd" firstAttribute="centerY" secondItem="8Jt-ov-SQw" secondAttribute="centerY" id="mfR-0z-pRH"/>
+                            <constraint firstItem="LE2-P6-Tmb" firstAttribute="trailing" secondItem="pJt-vg-MUX" secondAttribute="trailingMargin" id="o93-OP-tzp"/>
+                            <constraint firstItem="WpV-by-dES" firstAttribute="trailing" secondItem="pJt-vg-MUX" secondAttribute="trailingMargin" id="wS1-hg-X9y"/>
+                            <constraint firstItem="bVX-oq-krc" firstAttribute="leading" secondItem="FBo-wT-mwV" secondAttribute="trailing" constant="46" id="x8n-Bs-eYC"/>
+                            <constraint firstItem="LE2-P6-Tmb" firstAttribute="leading" secondItem="pJt-vg-MUX" secondAttribute="leadingMargin" id="x99-bu-dYt"/>
+                            <constraint firstItem="LE2-P6-Tmb" firstAttribute="top" secondItem="sQE-cH-h1q" secondAttribute="bottom" constant="8" id="yqb-3o-pIm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grayscale Image" id="rs1-QD-UdF"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="directionControl" destination="LE2-P6-Tmb" id="mJO-AN-DBA"/>
+                        <outlet property="imageProgressView" destination="QDc-j5-6eS" id="thh-Mb-EP9"/>
+                        <outlet property="progressButton" destination="tgy-MZ-Akd" id="zp1-eE-fmU"/>
+                        <outlet property="progressSlider" destination="WpV-by-dES" id="7sI-1L-4BV"/>
+                        <outlet property="showBackgroundSwitch" destination="bVX-oq-krc" id="A9A-MY-QCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pW3-1Z-HUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="2841"/>
+        </scene>
+        <!--Filtered Image-->
+        <scene sceneID="3bo-fO-RzU">
+            <objects>
+                <viewController storyboardIdentifier="FilteredImageExample" id="vjR-Qc-cGi" customClass="FilteredImageExampleViewController" customModule="M13ProgressSuite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CFf-OR-qkS"/>
+                        <viewControllerLayoutGuide type="bottom" id="2BU-yf-LEP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZUj-d4-Ahb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9B0-D8-RZW" customClass="M13ProgressFilteredImage" customModule="M13ProgressSuite" customModuleProvider="target">
+                                <rect key="frame" x="163" y="72" width="275" height="275"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="Op5-Nv-E14"/>
+                                    <constraint firstAttribute="width" constant="275" id="w3n-TC-RTX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="indeterminate" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="progressImage" value="StripedAppleLogo"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcK-1W-OBk">
+                                <rect key="frame" x="20" y="421" width="80" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pkb-S5-u5f"/>
+                                    <constraint firstAttribute="width" constant="80" id="h3v-0u-9G1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aRn-Xn-jl5">
+                                <rect key="frame" x="18" y="450" width="564" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="URL-KM-R6F"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateProgress:" destination="vjR-Qc-cGi" eventType="valueChanged" id="mML-Tx-7gr"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcO-rj-WuB">
+                                <rect key="frame" x="503" y="417" width="77" height="28"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="EkO-a7-WON"/>
+                                    <constraint firstAttribute="height" constant="28" id="fAl-Oz-4df"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateProgress:" destination="vjR-Qc-cGi" eventType="touchUpInside" id="sei-89-8lF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-qu-7Is">
+                                <rect key="frame" x="20" y="535" width="46" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="DZe-AO-zPa"/>
+                                    <constraint firstAttribute="height" constant="21" id="SN9-mX-U0k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="470-aw-GhY">
+                                <rect key="frame" x="20" y="564" width="560" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="0em-DK-VDP"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Blur"/>
+                                    <segment title="Light Tunnel"/>
+                                    <segment title="Sepia Tone"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateFilter:" destination="vjR-Qc-cGi" eventType="valueChanged" id="vuw-9e-BOx"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.92941176469999998" green="0.74117647060000003" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uEc-qu-7Is" firstAttribute="leading" secondItem="ZUj-d4-Ahb" secondAttribute="leadingMargin" id="1Ki-ok-i4g"/>
+                            <constraint firstItem="9B0-D8-RZW" firstAttribute="centerX" secondItem="ZUj-d4-Ahb" secondAttribute="centerX" id="1MM-ub-3RJ"/>
+                            <constraint firstItem="aRn-Xn-jl5" firstAttribute="leading" secondItem="ZUj-d4-Ahb" secondAttribute="leadingMargin" id="1Yy-VC-c3P"/>
+                            <constraint firstItem="470-aw-GhY" firstAttribute="leading" secondItem="ZUj-d4-Ahb" secondAttribute="leadingMargin" id="Asb-gs-X8F"/>
+                            <constraint firstItem="9B0-D8-RZW" firstAttribute="top" secondItem="CFf-OR-qkS" secondAttribute="bottom" constant="8" id="CzY-Wy-P5u"/>
+                            <constraint firstItem="aRn-Xn-jl5" firstAttribute="top" secondItem="BcK-1W-OBk" secondAttribute="bottom" constant="8" id="HtK-LU-uWn"/>
+                            <constraint firstItem="BcK-1W-OBk" firstAttribute="leading" secondItem="ZUj-d4-Ahb" secondAttribute="leadingMargin" id="Lc7-gd-bYR"/>
+                            <constraint firstItem="2BU-yf-LEP" firstAttribute="top" secondItem="470-aw-GhY" secondAttribute="bottom" constant="8" id="Qsb-pe-mrk"/>
+                            <constraint firstItem="470-aw-GhY" firstAttribute="trailing" secondItem="ZUj-d4-Ahb" secondAttribute="trailingMargin" id="S3D-Ai-h1c"/>
+                            <constraint firstItem="IcO-rj-WuB" firstAttribute="centerY" secondItem="BcK-1W-OBk" secondAttribute="centerY" id="T5r-GA-dLb"/>
+                            <constraint firstItem="470-aw-GhY" firstAttribute="top" secondItem="uEc-qu-7Is" secondAttribute="bottom" constant="8" id="fdX-5u-sJv"/>
+                            <constraint firstItem="aRn-Xn-jl5" firstAttribute="trailing" secondItem="ZUj-d4-Ahb" secondAttribute="trailingMargin" id="fiW-XF-MdR"/>
+                            <constraint firstItem="IcO-rj-WuB" firstAttribute="trailing" secondItem="ZUj-d4-Ahb" secondAttribute="trailingMargin" id="hV6-pY-Zmp"/>
+                            <constraint firstItem="uEc-qu-7Is" firstAttribute="top" secondItem="aRn-Xn-jl5" secondAttribute="bottom" constant="55" id="pTx-Gg-dTN"/>
+                            <constraint firstItem="470-aw-GhY" firstAttribute="top" secondItem="uEc-qu-7Is" secondAttribute="bottom" constant="8" id="z2C-Mg-Ngs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filtered Image" id="237-6D-69u"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="filterControl" destination="470-aw-GhY" id="pFd-N7-48d"/>
+                        <outlet property="imageProgressView" destination="9B0-D8-RZW" id="4Ti-dR-KcV"/>
+                        <outlet property="progressButton" destination="IcO-rj-WuB" id="Sas-Mr-e1d"/>
+                        <outlet property="progressSlider" destination="aRn-Xn-jl5" id="ZoB-3W-M6k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sd2-HL-qAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="2841"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="StripedAppleLogo" width="480" height="480"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
