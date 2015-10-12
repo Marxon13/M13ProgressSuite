@@ -8,6 +8,24 @@ The 2.0.0 update is coming! Now that I have some time, I'll be updating M13Progr
 Thanks,
 Brandon
 
+TODO
+====
+
+**Overall**
+- Support NSCoding protocol on all classes.
+- Support NSCopying protocol on all classes
+- Add animations and transitions for all possible visual changes that would be user-visible.
+
+**Ring**
+- New symbols for "x" and "check"
+- Add stroke animation for x and "check" when shown, fade when hide.
+- Add boolean to set the bar background color to the tint color instead of secondary.
+- Multistage animation for indeterminate transition.
+    - Decrease width of progress bar.
+    - Animate in the gap in the progress background.
+    - Start rotating the progress background.
+    - When finished, complete a revolution before closing the gap.
+
 M13ProgressSuite
 ================
 
