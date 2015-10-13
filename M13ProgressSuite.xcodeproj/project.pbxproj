@@ -54,6 +54,7 @@
 		CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13BorderedProgressBar.swift; path = "Classes/Progress Views/M13BorderedProgressBar.swift"; sourceTree = SOURCE_ROOT; };
 		CA92C8391BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedProgressBarExampleViewController.swift; sourceTree = "<group>"; };
 		CAA870DC1BCC207000D0FC28 /* M13HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13HUDController.swift; path = Classes/HUD/M13HUDController.swift; sourceTree = SOURCE_ROOT; };
+		CAA870EE1BCD80F700D0FC28 /* M13ProgressSuite.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = M13ProgressSuite.podspec; sourceTree = "<group>"; };
 		CAD9FDBE1BA0A13000E5CB05 /* M13ProgressSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD9FDC11BA0A13000E5CB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAD9FDC31BA0A13000E5CB05 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 			children = (
 				CAD9FDC01BA0A13000E5CB05 /* M13ProgressSuite */,
 				CAD9FDBF1BA0A13000E5CB05 /* Products */,
+				CAA870EE1BCD80F700D0FC28 /* M13ProgressSuite.podspec */,
 			);
 			sourceTree = "<group>";
 		};

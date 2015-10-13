@@ -29,7 +29,7 @@ s.platform     = :ios, '8.0'
 
 s.source = { :git => "https://github.com/Marxon13/M13ProgressSuite.git", :tag => "v2.0.0"}
 
-s.source_files  = 'Classes/*/*'
+s.source_files  = 'Classes/**/*'
 
 s.frameworks = 'Foundation', 'UIKit', 'QuartzCore', 'CoreImage', 'Accelerate', 'CoreGraphics'
 
