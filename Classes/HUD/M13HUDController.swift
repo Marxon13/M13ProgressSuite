@@ -99,6 +99,8 @@ public class M13HUDController: UIViewController {
     */
     public var messagePosition: M13HUDStatusTextPosition = M13HUDStatusTextPosition.BelowProgress
     
+    
+    
     //-------------------------------
     // MARK: Properties
     //-------------------------------
@@ -107,6 +109,16 @@ public class M13HUDController: UIViewController {
     The message to the user.
     */
     public var message: String?
+    
+    /**
+    The view that contains the background view and the content view.
+    */
+    public let containerView: UIView = UIView()
+    
+    /**
+    The view that is the background view. Add any background content to this view.
+    */
+    public let backgroundView: UIView = UIView()
     
     //-------------------------------
     // MARK: Initalization
@@ -129,10 +141,85 @@ public class M13HUDController: UIViewController {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        sharedSetup()
     }
     
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        sharedSetup()
+    }
+    
+    private func sharedSetup() {
+        // Present over a full screen, as this has the posibility of being semi-transparent.
+        modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+        
+        // Add the necessary views
+        view.addSubview(containerView)
+        containerView.addSubview(backgroundView)
+        
+        var constraints: [NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat("H:|[backgroundView]|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: ["backgroundView": backgroundView])
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:|[backgroundView]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["backgroundView": backgroundView])
+        NSLayoutConstraint.activateConstraints(constraints)
+    }
+    
+    //-------------------------------
+    // MARK: Initalization Presets
+    //-------------------------------
+    
+    private func setupPresetBackground(backgroundStyle: M13HUDBackgroundStyle) {
+        switch(backgroundStyle) {
+        case .SolidColor:
+            backgroundView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
+            break
+        case .LightVisualEffectView:
+            setupBackgroundViewWithVisualEffectView(UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Light)))
+            break
+        case .ExtraLightVisualEffectView:
+            setupBackgroundViewWithVisualEffectView(UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)))
+            break
+        case .DarkVisualEffectView:
+            setupBackgroundViewWithVisualEffectView(UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark)))
+            break
+        case .LightVibrantVisualEffectView:
+            setupBackgroundViewWithVisualEffectView(UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: UIBlurEffect(style: UIBlurEffectStyle.Light))))
+            break
+        case .ExtraLightVibrantVisualEffectView:
+            setupBackgroundViewWithVisualEffectView(UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: UIBlurEffect(style: UIBlurEffectStyle.ExtraLight))))
+            break
+        case .DarkVibrantVisualEffectView:
+            setupBackgroundViewWithVisualEffectView(UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: UIBlurEffect(style: UIBlurEffectStyle.Dark))))
+            break
+        case .None:
+            // Do nothing
+            break
+        }
+    }
+    
+    private func setupBackgroundViewWithVisualEffectView(view: UIVisualEffectView) {
+        backgroundView.addSubview(view)
+        var constraints: [NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: ["view": view])
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["view": view])
+        NSLayoutConstraint.activateConstraints(constraints)
+    }
+    
+    private func setupConstraintsForOverlayStyle(style: M13HUDOverlayStyle) {
+        switch(style) {
+        case .FullScreen:
+            
+            break
+        case .Rect:
+            
+            break
+        case .SquareRect:
+            
+            break
+        case .RoundedRect:
+            
+            break
+        case .RoundedSquareRect:
+            
+            break
+        }
     }
     
     //-------------------------------

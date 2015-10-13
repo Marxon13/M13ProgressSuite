@@ -88,14 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */,
-				CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */,
-				CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */,
-				C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */,
-				C859FAD81BCACCBD0033D54F /* M13ProgressImage.swift */,
-				C89A5FA21BCB57F1000DDB42 /* M13ProgressFilteredImage.swift */,
-				C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */,
-				C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */,
-				C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */,
+				CAA870E01BCC2D1600D0FC28 /* Bars */,
+				CAA870E11BCC2D2200D0FC28 /* Circular */,
+				CAA870E21BCC2D2D00D0FC28 /* Image */,
 			);
 			name = "Progress Views";
 			sourceTree = "<group>";
@@ -123,6 +118,35 @@
 				CAA870DC1BCC207000D0FC28 /* M13HUDController.swift */,
 			);
 			name = HUD;
+			sourceTree = "<group>";
+		};
+		CAA870E01BCC2D1600D0FC28 /* Bars */ = {
+			isa = PBXGroup;
+			children = (
+				CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */,
+				CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */,
+			);
+			name = Bars;
+			sourceTree = "<group>";
+		};
+		CAA870E11BCC2D2200D0FC28 /* Circular */ = {
+			isa = PBXGroup;
+			children = (
+				C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */,
+				C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */,
+				C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */,
+				C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */,
+			);
+			name = Circular;
+			sourceTree = "<group>";
+		};
+		CAA870E21BCC2D2D00D0FC28 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C859FAD81BCACCBD0033D54F /* M13ProgressImage.swift */,
+				C89A5FA21BCB57F1000DDB42 /* M13ProgressFilteredImage.swift */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 		CAB8C8301BA23F1B00C8FE72 /* Progress View Controllers */ = {
