@@ -180,6 +180,7 @@ public class M13ProgressView: UIView {
         super.init(frame: frame)
     }
     
+    
     public override func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(secondaryColor, forKey: "secondaryColor")
         aCoder.encodeObject(successColor, forKey: "successColor")
