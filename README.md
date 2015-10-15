@@ -11,13 +11,32 @@ Brandon
 TODO
 ====
 
+**Repo**
+- Update readme to include small gifs.
+- Add .io site for complete example list and property examples, with images of what property changes will do.
+- Add generated documentation to .io site.
+- Add CI service.
+- Add direction and ideas list to .io site.
+
 **Overall**
 - Support NSCoding protocol on all classes.
-- Support NSCopying protocol on all classes
+- Support NSCopying protocol on all classes.
 - Add animations and transitions for all possible visual changes that would be user-visible.
+- Move icon generation into own class. Pass draw rect for icon, size of icon. Make it easier to override with custom icons. 
+- New icons that fit iOS 7+ style.
+- Add optional animation completion blocks to setState and setProgress.
+- Possibly move some requirements from M13ProgressView class / subclasses to protocols. Like some shared requirements for the segmented progress views.
+- Add wrapper to display percentage outside of progress view: leading, trailing, above, below.
+
+**Examples**
+- Fix crash when phone is in portrait mode.
+- Make layouts of all examples vertically scrollable.
+- Include controls to change all parameters except for color.
+- Make layouts dynamic. No controls should overlap.
+- Add app extension example.
+- Research and Add watch OS example. (After everything else is done)
 
 **Ring**
-- New symbols for "x" and "check"
 - Add stroke animation for x and "check" when shown, fade when hide.
 - Add boolean to set the bar background color to the tint color instead of secondary.
 - Multistage animation for indeterminate transition.
@@ -25,6 +44,30 @@ TODO
     - Animate in the gap in the progress background.
     - Start rotating the progress background.
     - When finished, complete a revolution before closing the gap.
+
+**Navigation Bar**
+- Custom height of progress bar.
+- Custom progress bar offset.
+- Prefix all methods with "m13_" to avoid conflicts.
+
+**Segmented Progress Views**
+- Add support for an array of primary colors.
+
+**Console**
+- Remove? Not up to par with the rest of the controls. Can't see use case for it.
+
+**Filtered Image**
+- Pre-render images? Provide hook for ΔProgress to render images for? Therefore fixing issues with lag.
+
+**Image**
+- Rename to greyscale image.
+
+**Pie**
+- Better indeterminate animation.
+- Hide progress once finished when switching to non-normal state.
+
+**HUD**
+- Add option of buttons to allow cancelation of current activity.
 
 M13ProgressSuite
 ================
