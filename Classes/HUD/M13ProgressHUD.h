@@ -83,6 +83,9 @@ typedef enum {
 @property (nonatomic, assign) CGSize progressViewSize;
 /**The origin of the show/hide animation. show: will animate from this point, and hide: will animate to this point.*/
 @property (nonatomic, assign) CGPoint animationPoint;
+/**If true, animation doesn't come from animation point, but frame background view position
+ */
+@property (nonatomic, assign) BOOL animationCentered;
 
 /**@name Properties*/
 /**The durations of animations in seconds.*/
