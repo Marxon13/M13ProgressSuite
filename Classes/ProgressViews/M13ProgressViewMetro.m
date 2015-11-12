@@ -38,6 +38,15 @@
     return self;
 }
 
+- (id)copy
+{
+    id copy = [[[self class] alloc] init];
+    if (copy) {
+        [copy setup];
+    }
+    return copy;
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];

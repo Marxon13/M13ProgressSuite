@@ -228,7 +228,7 @@
         [self setNeedsDisplay];
         [CATransaction begin];
         for (int i = 0; i < _numberOfSegments; i++) {
-            CAShapeLayer *layer = _segmentsLayer.sublayers[i];
+            CAShapeLayer *layer = (CAShapeLayer *) _segmentsLayer.sublayers[i];
             CABasicAnimation *barAnimation = [self barColorAnimation];
             barAnimation.fromValue = (id)layer.fillColor;
             barAnimation.toValue = (id)[self colorForSegment:i].CGColor;
@@ -240,7 +240,7 @@
         [self setNeedsDisplay];
         [CATransaction begin];
         for (int i = 0; i < _numberOfSegments; i++) {
-            CAShapeLayer *layer = _segmentsLayer.sublayers[i];
+            CAShapeLayer *layer = (CAShapeLayer *) _segmentsLayer.sublayers[i];
             CABasicAnimation *barAnimation = [self barColorAnimation];
             barAnimation.fromValue = (id)layer.fillColor;
             barAnimation.toValue = (id)_successColor.CGColor;
@@ -252,7 +252,7 @@
         [self setNeedsDisplay];
         [CATransaction begin];
         for (int i = 0; i < _numberOfSegments; i++) {
-            CAShapeLayer *layer = _segmentsLayer.sublayers[i];
+            CAShapeLayer *layer = (CAShapeLayer *) _segmentsLayer.sublayers[i];
             CABasicAnimation *barAnimation = [self barColorAnimation];
             barAnimation.fromValue = (id)layer.fillColor;
             barAnimation.toValue = (id)_failureColor.CGColor;
@@ -450,7 +450,7 @@
         }
         
         //Add segment to the proper layer, and color it
-        CAShapeLayer *layer = _segmentsLayer.sublayers[i];
+        CAShapeLayer *layer = (CAShapeLayer *) _segmentsLayer.sublayers[i];
         layer.path = path.CGPath;
         layer.fillColor = [self colorForSegment:i].CGColor;
     }
@@ -529,7 +529,7 @@
         }
         
         //Add the segment to the proper path //Add segment to the proper layer, and color it
-        CAShapeLayer *layer = _segmentsLayer.sublayers[i];
+        CAShapeLayer *layer = (CAShapeLayer *) _segmentsLayer.sublayers[i];
         layer.path = path.CGPath;
         if (i >= indeterminateIndex && i < indeterminateIndex + numberOfSegmentsToBeColored) {
             layer.fillColor = ((UIColor *)segmentColorsPrimary[i]).CGColor;
