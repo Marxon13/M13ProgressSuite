@@ -7,66 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8016FD31BC1C77400A6E276 /* CircularPieExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8016FD21BC1C77400A6E276 /* CircularPieExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C8016FD51BC1C77E00A6E276 /* M13ProgressPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */; settings = {ASSET_TAGS = (); }; };
-		C859FAD91BCACCBD0033D54F /* M13ProgressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859FAD81BCACCBD0033D54F /* M13ProgressImage.swift */; settings = {ASSET_TAGS = (); }; };
-		C859FADB1BCACD770033D54F /* GreyscaleImageExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859FADA1BCACD770033D54F /* GreyscaleImageExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C88840C61BBF17C700DA8B78 /* M13ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */; settings = {ASSET_TAGS = (); }; };
-		C88840C81BBF17D000DA8B78 /* CircularRingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C89A5FA11BCB57C0000DDB42 /* FilteredImageExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A5FA01BCB57C0000DDB42 /* FilteredImageExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C89A5FA31BCB57F1000DDB42 /* M13ProgressFilteredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A5FA21BCB57F1000DDB42 /* M13ProgressFilteredImage.swift */; settings = {ASSET_TAGS = (); }; };
-		C8A7D1961BC2F69A00B2500F /* M13ProgressSegmentedRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */; settings = {ASSET_TAGS = (); }; };
-		C8A7D1981BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7D1971BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C8C0AB8C1BC2D37100BD2B45 /* M13ProgressCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */; settings = {ASSET_TAGS = (); }; };
-		CA27D1461BA1F65C0065D9E5 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27D1451BA1F65C0065D9E5 /* SplitViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		CA92C82B1BA3906C009F3A19 /* M13ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */; settings = {ASSET_TAGS = (); }; };
-		CA92C82D1BA390D2009F3A19 /* M13ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */; settings = {ASSET_TAGS = (); }; };
-		CA92C8321BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C8311BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		CA92C8341BA5F1ED009F3A19 /* M13ProgressSuite.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CA92C8331BA5F1ED009F3A19 /* M13ProgressSuite.podspec */; settings = {ASSET_TAGS = (); }; };
-		CA92C8371BA5F43F009F3A19 /* M13BorderedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */; settings = {ASSET_TAGS = (); }; };
-		CA92C83A1BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA92C8391BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		CAA870DD1BCC207000D0FC28 /* M13HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA870DC1BCC207000D0FC28 /* M13HUDController.swift */; settings = {ASSET_TAGS = (); }; };
-		CAD9FDC21BA0A13000E5CB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9FDC11BA0A13000E5CB05 /* AppDelegate.swift */; };
-		CAD9FDC41BA0A13000E5CB05 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9FDC31BA0A13000E5CB05 /* MasterViewController.swift */; };
-		CAD9FDC61BA0A13000E5CB05 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9FDC51BA0A13000E5CB05 /* DetailViewController.swift */; };
-		CAD9FDC91BA0A13000E5CB05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD9FDC71BA0A13000E5CB05 /* Main.storyboard */; };
-		CAD9FDCB1BA0A13000E5CB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD9FDCA1BA0A13000E5CB05 /* Assets.xcassets */; };
-		CAD9FDCE1BA0A13000E5CB05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD9FDCC1BA0A13000E5CB05 /* LaunchScreen.storyboard */; };
+		EA9045701C0649AF006C692A /* M13HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9045651C0649AF006C692A /* M13HUDController.swift */; };
+		EA9045711C0649AF006C692A /* M13BorderedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9045671C0649AF006C692A /* M13BorderedProgressBar.swift */; };
+		EA9045721C0649AF006C692A /* M13ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9045681C0649AF006C692A /* M13ProgressBar.swift */; };
+		EA9045731C0649AF006C692A /* M13ProgressCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9045691C0649AF006C692A /* M13ProgressCircular.swift */; };
+		EA9045741C0649AF006C692A /* M13ProgressFilteredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90456A1C0649AF006C692A /* M13ProgressFilteredImage.swift */; };
+		EA9045751C0649AF006C692A /* M13ProgressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90456B1C0649AF006C692A /* M13ProgressImage.swift */; };
+		EA9045761C0649AF006C692A /* M13ProgressPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90456C1C0649AF006C692A /* M13ProgressPie.swift */; };
+		EA9045771C0649AF006C692A /* M13ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90456D1C0649AF006C692A /* M13ProgressRing.swift */; };
+		EA9045781C0649AF006C692A /* M13ProgressSegmentedRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90456E1C0649AF006C692A /* M13ProgressSegmentedRing.swift */; };
+		EA9045791C0649AF006C692A /* M13ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90456F1C0649AF006C692A /* M13ProgressView.swift */; };
+		EA90457F1C065733006C692A /* Examples.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA90457E1C065733006C692A /* Examples.storyboard */; };
+		EABA2F6A1C08B25C006FA498 /* BorderedBarExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA2F691C08B25C006FA498 /* BorderedBarExampleViewController.swift */; };
+		EABA2F6C1C08B44C006FA498 /* RingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA2F6B1C08B44C006FA498 /* RingExampleViewController.swift */; };
+		EABA2F6E1C08B9EE006FA498 /* SegmentedRingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA2F6D1C08B9EE006FA498 /* SegmentedRingExampleViewController.swift */; };
+		EABA2F701C08BD02006FA498 /* PieExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA2F6F1C08BD02006FA498 /* PieExampleViewController.swift */; };
+		EABA2F721C09F651006FA498 /* GreyscaleImageExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA2F711C09F651006FA498 /* GreyscaleImageExampleViewController.swift */; };
+		EABA2F741C09FA1E006FA498 /* FilteredImageExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA2F731C09FA1E006FA498 /* FilteredImageExampleViewController.swift */; };
+		EADD11311C06A2F4001862B2 /* BaseExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADD11301C06A2F4001862B2 /* BaseExampleViewController.swift */; };
+		EADD11331C06AEFA001862B2 /* BarExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADD11321C06AEFA001862B2 /* BarExampleViewController.swift */; };
+		EAF117331C0647D0003616CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF117321C0647D0003616CD /* AppDelegate.swift */; };
+		EAF117351C0647D0003616CD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF117341C0647D0003616CD /* MasterViewController.swift */; };
+		EAF117371C0647D0003616CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF117361C0647D0003616CD /* DetailViewController.swift */; };
+		EAF1173A1C0647D0003616CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF117381C0647D0003616CD /* Main.storyboard */; };
+		EAF1173C1C0647D0003616CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF1173B1C0647D0003616CD /* Assets.xcassets */; };
+		EAF1173F1C0647D0003616CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF1173D1C0647D0003616CD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C8016FD21BC1C77400A6E276 /* CircularPieExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularPieExampleViewController.swift; sourceTree = "<group>"; };
-		C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressPie.swift; path = "Classes/Progress Views/M13ProgressPie.swift"; sourceTree = SOURCE_ROOT; };
-		C859FAD81BCACCBD0033D54F /* M13ProgressImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressImage.swift; path = "Classes/Progress Views/M13ProgressImage.swift"; sourceTree = SOURCE_ROOT; };
-		C859FADA1BCACD770033D54F /* GreyscaleImageExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreyscaleImageExampleViewController.swift; sourceTree = "<group>"; };
-		C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressRing.swift; path = "Classes/Progress Views/M13ProgressRing.swift"; sourceTree = SOURCE_ROOT; };
-		C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRingExampleViewController.swift; sourceTree = "<group>"; };
-		C89A5FA01BCB57C0000DDB42 /* FilteredImageExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageExampleViewController.swift; sourceTree = "<group>"; };
-		C89A5FA21BCB57F1000DDB42 /* M13ProgressFilteredImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressFilteredImage.swift; path = "Classes/Progress Views/M13ProgressFilteredImage.swift"; sourceTree = SOURCE_ROOT; };
-		C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressSegmentedRing.swift; path = "Classes/Progress Views/M13ProgressSegmentedRing.swift"; sourceTree = SOURCE_ROOT; };
-		C8A7D1971BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSegmentedRingExampleViewController.swift; sourceTree = "<group>"; };
-		C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressCircular.swift; path = "Classes/Progress Views/M13ProgressCircular.swift"; sourceTree = SOURCE_ROOT; };
-		CA27D1451BA1F65C0065D9E5 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
-		CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressView.swift; path = "../Classes/Progress Views/M13ProgressView.swift"; sourceTree = "<group>"; };
-		CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressBar.swift; path = "Classes/Progress Views/M13ProgressBar.swift"; sourceTree = SOURCE_ROOT; };
-		CA92C8311BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicProgressBarExampleViewController.swift; sourceTree = "<group>"; };
-		CA92C8331BA5F1ED009F3A19 /* M13ProgressSuite.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = M13ProgressSuite.podspec; sourceTree = SOURCE_ROOT; };
-		CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13BorderedProgressBar.swift; path = "Classes/Progress Views/M13BorderedProgressBar.swift"; sourceTree = SOURCE_ROOT; };
-		CA92C8391BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedProgressBarExampleViewController.swift; sourceTree = "<group>"; };
-		CAA870DC1BCC207000D0FC28 /* M13HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13HUDController.swift; path = Classes/HUD/M13HUDController.swift; sourceTree = SOURCE_ROOT; };
-		CAA870EE1BCD80F700D0FC28 /* M13ProgressSuite.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = M13ProgressSuite.podspec; sourceTree = "<group>"; };
-		CAD9FDBE1BA0A13000E5CB05 /* M13ProgressSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAD9FDC11BA0A13000E5CB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAD9FDC31BA0A13000E5CB05 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		CAD9FDC51BA0A13000E5CB05 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		CAD9FDC81BA0A13000E5CB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CAD9FDCA1BA0A13000E5CB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAD9FDCD1BA0A13000E5CB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CAD9FDCF1BA0A13000E5CB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA9045651C0649AF006C692A /* M13HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13HUDController.swift; sourceTree = "<group>"; };
+		EA9045671C0649AF006C692A /* M13BorderedProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13BorderedProgressBar.swift; sourceTree = "<group>"; };
+		EA9045681C0649AF006C692A /* M13ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressBar.swift; sourceTree = "<group>"; };
+		EA9045691C0649AF006C692A /* M13ProgressCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressCircular.swift; sourceTree = "<group>"; };
+		EA90456A1C0649AF006C692A /* M13ProgressFilteredImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressFilteredImage.swift; sourceTree = "<group>"; };
+		EA90456B1C0649AF006C692A /* M13ProgressImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressImage.swift; sourceTree = "<group>"; };
+		EA90456C1C0649AF006C692A /* M13ProgressPie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressPie.swift; sourceTree = "<group>"; };
+		EA90456D1C0649AF006C692A /* M13ProgressRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressRing.swift; sourceTree = "<group>"; };
+		EA90456E1C0649AF006C692A /* M13ProgressSegmentedRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressSegmentedRing.swift; sourceTree = "<group>"; };
+		EA90456F1C0649AF006C692A /* M13ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13ProgressView.swift; sourceTree = "<group>"; };
+		EA90457E1C065733006C692A /* Examples.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Examples.storyboard; sourceTree = "<group>"; };
+		EABA2F691C08B25C006FA498 /* BorderedBarExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedBarExampleViewController.swift; sourceTree = "<group>"; };
+		EABA2F6B1C08B44C006FA498 /* RingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingExampleViewController.swift; sourceTree = "<group>"; };
+		EABA2F6D1C08B9EE006FA498 /* SegmentedRingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedRingExampleViewController.swift; sourceTree = "<group>"; };
+		EABA2F6F1C08BD02006FA498 /* PieExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieExampleViewController.swift; sourceTree = "<group>"; };
+		EABA2F711C09F651006FA498 /* GreyscaleImageExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreyscaleImageExampleViewController.swift; sourceTree = "<group>"; };
+		EABA2F731C09FA1E006FA498 /* FilteredImageExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageExampleViewController.swift; sourceTree = "<group>"; };
+		EADD11301C06A2F4001862B2 /* BaseExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseExampleViewController.swift; path = Examples/BaseExampleViewController.swift; sourceTree = "<group>"; };
+		EADD11321C06AEFA001862B2 /* BarExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarExampleViewController.swift; sourceTree = "<group>"; };
+		EAF1172F1C0647D0003616CD /* M13ProgressSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF117321C0647D0003616CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAF117341C0647D0003616CD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		EAF117361C0647D0003616CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EAF117391C0647D0003616CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAF1173B1C0647D0003616CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAF1173E1C0647D0003616CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAF117401C0647D0003616CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CAD9FDBB1BA0A13000E5CB05 /* Frameworks */ = {
+		EAF1172C1C0647D0003616CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,116 +75,115 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA27D1431BA1F4640065D9E5 /* Classes */ = {
+		EA9045621C06499A006C692A /* Example App */ = {
 			isa = PBXGroup;
 			children = (
-				CAA870DB1BCC205E00D0FC28 /* HUD */,
-				CA27D1441BA1F46C0065D9E5 /* Progress Views */,
+				EA90457A1C0649C5006C692A /* Example Views */,
+				EAF117321C0647D0003616CD /* AppDelegate.swift */,
+				EAF117341C0647D0003616CD /* MasterViewController.swift */,
+				EAF117361C0647D0003616CD /* DetailViewController.swift */,
+				EAF117381C0647D0003616CD /* Main.storyboard */,
+				EA90457E1C065733006C692A /* Examples.storyboard */,
+				EAF1173B1C0647D0003616CD /* Assets.xcassets */,
+				EAF1173D1C0647D0003616CD /* LaunchScreen.storyboard */,
+				EAF117401C0647D0003616CD /* Info.plist */,
 			);
-			name = Classes;
+			name = "Example App";
 			sourceTree = "<group>";
 		};
-		CA27D1441BA1F46C0065D9E5 /* Progress Views */ = {
+		EA9045631C0649AF006C692A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CA92C82A1BA3906C009F3A19 /* M13ProgressView.swift */,
-				CAA870E01BCC2D1600D0FC28 /* Bars */,
-				CAA870E11BCC2D2200D0FC28 /* Circular */,
-				CAA870E21BCC2D2D00D0FC28 /* Image */,
+				EA9045641C0649AF006C692A /* HUD */,
+				EA9045661C0649AF006C692A /* Progress Views */,
 			);
-			name = "Progress Views";
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		EA9045641C0649AF006C692A /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				EA9045651C0649AF006C692A /* M13HUDController.swift */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
-		CA27D1471BA1F7AC0065D9E5 /* Example */ = {
+		EA9045661C0649AF006C692A /* Progress Views */ = {
 			isa = PBXGroup;
 			children = (
-				CAB8C8301BA23F1B00C8FE72 /* Progress View Controllers */,
-				CAD9FDC11BA0A13000E5CB05 /* AppDelegate.swift */,
-				CA27D1451BA1F65C0065D9E5 /* SplitViewController.swift */,
-				CAD9FDC31BA0A13000E5CB05 /* MasterViewController.swift */,
-				CAD9FDC51BA0A13000E5CB05 /* DetailViewController.swift */,
-				CAD9FDC71BA0A13000E5CB05 /* Main.storyboard */,
-				CAD9FDCA1BA0A13000E5CB05 /* Assets.xcassets */,
-				CAD9FDCC1BA0A13000E5CB05 /* LaunchScreen.storyboard */,
-				CAD9FDCF1BA0A13000E5CB05 /* Info.plist */,
-				CA92C8331BA5F1ED009F3A19 /* M13ProgressSuite.podspec */,
+				EA90456F1C0649AF006C692A /* M13ProgressView.swift */,
+				EA90457B1C0651FD006C692A /* Bar */,
+				EA90457C1C065232006C692A /* Circular */,
+				EA90457D1C065258006C692A /* Image */,
 			);
-			name = Example;
+			path = "Progress Views";
 			sourceTree = "<group>";
 		};
-		CAA870DB1BCC205E00D0FC28 /* HUD */ = {
+		EA90457A1C0649C5006C692A /* Example Views */ = {
 			isa = PBXGroup;
 			children = (
-				CAA870DC1BCC207000D0FC28 /* M13HUDController.swift */,
+				EADD11301C06A2F4001862B2 /* BaseExampleViewController.swift */,
+				EADD11321C06AEFA001862B2 /* BarExampleViewController.swift */,
+				EABA2F691C08B25C006FA498 /* BorderedBarExampleViewController.swift */,
+				EABA2F6B1C08B44C006FA498 /* RingExampleViewController.swift */,
+				EABA2F6D1C08B9EE006FA498 /* SegmentedRingExampleViewController.swift */,
+				EABA2F6F1C08BD02006FA498 /* PieExampleViewController.swift */,
+				EABA2F711C09F651006FA498 /* GreyscaleImageExampleViewController.swift */,
+				EABA2F731C09FA1E006FA498 /* FilteredImageExampleViewController.swift */,
 			);
-			name = HUD;
+			name = "Example Views";
 			sourceTree = "<group>";
 		};
-		CAA870E01BCC2D1600D0FC28 /* Bars */ = {
+		EA90457B1C0651FD006C692A /* Bar */ = {
 			isa = PBXGroup;
 			children = (
-				CA92C82C1BA390D2009F3A19 /* M13ProgressBar.swift */,
-				CA92C8361BA5F43F009F3A19 /* M13BorderedProgressBar.swift */,
+				EA9045681C0649AF006C692A /* M13ProgressBar.swift */,
+				EA9045671C0649AF006C692A /* M13BorderedProgressBar.swift */,
 			);
-			name = Bars;
+			name = Bar;
 			sourceTree = "<group>";
 		};
-		CAA870E11BCC2D2200D0FC28 /* Circular */ = {
+		EA90457C1C065232006C692A /* Circular */ = {
 			isa = PBXGroup;
 			children = (
-				C8C0AB8B1BC2D37100BD2B45 /* M13ProgressCircular.swift */,
-				C8016FD41BC1C77E00A6E276 /* M13ProgressPie.swift */,
-				C88840C51BBF17C700DA8B78 /* M13ProgressRing.swift */,
-				C8A7D1951BC2F69A00B2500F /* M13ProgressSegmentedRing.swift */,
+				EA9045691C0649AF006C692A /* M13ProgressCircular.swift */,
+				EA90456C1C0649AF006C692A /* M13ProgressPie.swift */,
+				EA90456D1C0649AF006C692A /* M13ProgressRing.swift */,
+				EA90456E1C0649AF006C692A /* M13ProgressSegmentedRing.swift */,
 			);
 			name = Circular;
 			sourceTree = "<group>";
 		};
-		CAA870E21BCC2D2D00D0FC28 /* Image */ = {
+		EA90457D1C065258006C692A /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				C859FAD81BCACCBD0033D54F /* M13ProgressImage.swift */,
-				C89A5FA21BCB57F1000DDB42 /* M13ProgressFilteredImage.swift */,
+				EA90456A1C0649AF006C692A /* M13ProgressFilteredImage.swift */,
+				EA90456B1C0649AF006C692A /* M13ProgressImage.swift */,
 			);
 			name = Image;
 			sourceTree = "<group>";
 		};
-		CAB8C8301BA23F1B00C8FE72 /* Progress View Controllers */ = {
+		EAF117261C0647D0003616CD = {
 			isa = PBXGroup;
 			children = (
-				CA92C8311BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift */,
-				CA92C8391BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift */,
-				C8016FD21BC1C77400A6E276 /* CircularPieExampleViewController.swift */,
-				C88840C71BBF17D000DA8B78 /* CircularRingExampleViewController.swift */,
-				C8A7D1971BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift */,
-				C89A5FA01BCB57C0000DDB42 /* FilteredImageExampleViewController.swift */,
-				C859FADA1BCACD770033D54F /* GreyscaleImageExampleViewController.swift */,
-			);
-			name = "Progress View Controllers";
-			sourceTree = "<group>";
-		};
-		CAD9FDB51BA0A13000E5CB05 = {
-			isa = PBXGroup;
-			children = (
-				CAD9FDC01BA0A13000E5CB05 /* M13ProgressSuite */,
-				CAD9FDBF1BA0A13000E5CB05 /* Products */,
-				CAA870EE1BCD80F700D0FC28 /* M13ProgressSuite.podspec */,
+				EAF117311C0647D0003616CD /* M13ProgressSuite */,
+				EAF117301C0647D0003616CD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CAD9FDBF1BA0A13000E5CB05 /* Products */ = {
+		EAF117301C0647D0003616CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAD9FDBE1BA0A13000E5CB05 /* M13ProgressSuite.app */,
+				EAF1172F1C0647D0003616CD /* M13ProgressSuite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CAD9FDC01BA0A13000E5CB05 /* M13ProgressSuite */ = {
+		EAF117311C0647D0003616CD /* M13ProgressSuite */ = {
 			isa = PBXGroup;
 			children = (
-				CA27D1431BA1F4640065D9E5 /* Classes */,
-				CA27D1471BA1F7AC0065D9E5 /* Example */,
+				EA9045631C0649AF006C692A /* Classes */,
+				EA9045621C06499A006C692A /* Example App */,
 			);
 			path = M13ProgressSuite;
 			sourceTree = "<group>";
@@ -193,13 +191,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CAD9FDBD1BA0A13000E5CB05 /* M13ProgressSuite */ = {
+		EAF1172E1C0647D0003616CD /* M13ProgressSuite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAD9FDD21BA0A13000E5CB05 /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */;
+			buildConfigurationList = EAF117431C0647D0003616CD /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */;
 			buildPhases = (
-				CAD9FDBA1BA0A13000E5CB05 /* Sources */,
-				CAD9FDBB1BA0A13000E5CB05 /* Frameworks */,
-				CAD9FDBC1BA0A13000E5CB05 /* Resources */,
+				EAF1172B1C0647D0003616CD /* Sources */,
+				EAF1172C1C0647D0003616CD /* Frameworks */,
+				EAF1172D1C0647D0003616CD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -207,24 +205,26 @@
 			);
 			name = M13ProgressSuite;
 			productName = M13ProgressSuite;
-			productReference = CAD9FDBE1BA0A13000E5CB05 /* M13ProgressSuite.app */;
+			productReference = EAF1172F1C0647D0003616CD /* M13ProgressSuite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CAD9FDB61BA0A13000E5CB05 /* Project object */ = {
+		EAF117271C0647D0003616CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Brandon McQuilkin";
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Marxon13;
 				TargetAttributes = {
-					CAD9FDBD1BA0A13000E5CB05 = {
-						CreatedOnToolsVersion = 7.0;
+					EAF1172E1C0647D0003616CD = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 3RCGQ2RRJJ;
 					};
 				};
 			};
-			buildConfigurationList = CAD9FDB91BA0A13000E5CB05 /* Build configuration list for PBXProject "M13ProgressSuite" */;
+			buildConfigurationList = EAF1172A1C0647D0003616CD /* Build configuration list for PBXProject "M13ProgressSuite" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,74 +232,74 @@
 				en,
 				Base,
 			);
-			mainGroup = CAD9FDB51BA0A13000E5CB05;
-			productRefGroup = CAD9FDBF1BA0A13000E5CB05 /* Products */;
+			mainGroup = EAF117261C0647D0003616CD;
+			productRefGroup = EAF117301C0647D0003616CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CAD9FDBD1BA0A13000E5CB05 /* M13ProgressSuite */,
+				EAF1172E1C0647D0003616CD /* M13ProgressSuite */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CAD9FDBC1BA0A13000E5CB05 /* Resources */ = {
+		EAF1172D1C0647D0003616CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA92C8341BA5F1ED009F3A19 /* M13ProgressSuite.podspec in Resources */,
-				CAD9FDCE1BA0A13000E5CB05 /* LaunchScreen.storyboard in Resources */,
-				CAD9FDCB1BA0A13000E5CB05 /* Assets.xcassets in Resources */,
-				CAD9FDC91BA0A13000E5CB05 /* Main.storyboard in Resources */,
+				EAF1173F1C0647D0003616CD /* LaunchScreen.storyboard in Resources */,
+				EA90457F1C065733006C692A /* Examples.storyboard in Resources */,
+				EAF1173C1C0647D0003616CD /* Assets.xcassets in Resources */,
+				EAF1173A1C0647D0003616CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CAD9FDBA1BA0A13000E5CB05 /* Sources */ = {
+		EAF1172B1C0647D0003616CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8016FD51BC1C77E00A6E276 /* M13ProgressPie.swift in Sources */,
-				C88840C61BBF17C700DA8B78 /* M13ProgressRing.swift in Sources */,
-				CAD9FDC61BA0A13000E5CB05 /* DetailViewController.swift in Sources */,
-				CA92C8371BA5F43F009F3A19 /* M13BorderedProgressBar.swift in Sources */,
-				C88840C81BBF17D000DA8B78 /* CircularRingExampleViewController.swift in Sources */,
-				C859FADB1BCACD770033D54F /* GreyscaleImageExampleViewController.swift in Sources */,
-				C8A7D1961BC2F69A00B2500F /* M13ProgressSegmentedRing.swift in Sources */,
-				CA92C82B1BA3906C009F3A19 /* M13ProgressView.swift in Sources */,
-				C89A5FA11BCB57C0000DDB42 /* FilteredImageExampleViewController.swift in Sources */,
-				C8A7D1981BC2F75100B2500F /* CircularSegmentedRingExampleViewController.swift in Sources */,
-				CAD9FDC41BA0A13000E5CB05 /* MasterViewController.swift in Sources */,
-				CA92C83A1BA5FEB8009F3A19 /* BorderedProgressBarExampleViewController.swift in Sources */,
-				C8016FD31BC1C77400A6E276 /* CircularPieExampleViewController.swift in Sources */,
-				C8C0AB8C1BC2D37100BD2B45 /* M13ProgressCircular.swift in Sources */,
-				C859FAD91BCACCBD0033D54F /* M13ProgressImage.swift in Sources */,
-				CAD9FDC21BA0A13000E5CB05 /* AppDelegate.swift in Sources */,
-				CA92C8321BA5B8A3009F3A19 /* BasicProgressBarExampleViewController.swift in Sources */,
-				CAA870DD1BCC207000D0FC28 /* M13HUDController.swift in Sources */,
-				C89A5FA31BCB57F1000DDB42 /* M13ProgressFilteredImage.swift in Sources */,
-				CA27D1461BA1F65C0065D9E5 /* SplitViewController.swift in Sources */,
-				CA92C82D1BA390D2009F3A19 /* M13ProgressBar.swift in Sources */,
+				EABA2F701C08BD02006FA498 /* PieExampleViewController.swift in Sources */,
+				EABA2F721C09F651006FA498 /* GreyscaleImageExampleViewController.swift in Sources */,
+				EA9045721C0649AF006C692A /* M13ProgressBar.swift in Sources */,
+				EA9045741C0649AF006C692A /* M13ProgressFilteredImage.swift in Sources */,
+				EAF117371C0647D0003616CD /* DetailViewController.swift in Sources */,
+				EA9045771C0649AF006C692A /* M13ProgressRing.swift in Sources */,
+				EA9045731C0649AF006C692A /* M13ProgressCircular.swift in Sources */,
+				EA9045711C0649AF006C692A /* M13BorderedProgressBar.swift in Sources */,
+				EA9045751C0649AF006C692A /* M13ProgressImage.swift in Sources */,
+				EA9045791C0649AF006C692A /* M13ProgressView.swift in Sources */,
+				EABA2F6E1C08B9EE006FA498 /* SegmentedRingExampleViewController.swift in Sources */,
+				EABA2F6A1C08B25C006FA498 /* BorderedBarExampleViewController.swift in Sources */,
+				EAF117351C0647D0003616CD /* MasterViewController.swift in Sources */,
+				EA9045761C0649AF006C692A /* M13ProgressPie.swift in Sources */,
+				EAF117331C0647D0003616CD /* AppDelegate.swift in Sources */,
+				EA9045701C0649AF006C692A /* M13HUDController.swift in Sources */,
+				EADD11331C06AEFA001862B2 /* BarExampleViewController.swift in Sources */,
+				EADD11311C06A2F4001862B2 /* BaseExampleViewController.swift in Sources */,
+				EABA2F6C1C08B44C006FA498 /* RingExampleViewController.swift in Sources */,
+				EABA2F741C09FA1E006FA498 /* FilteredImageExampleViewController.swift in Sources */,
+				EA9045781C0649AF006C692A /* M13ProgressSegmentedRing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CAD9FDC71BA0A13000E5CB05 /* Main.storyboard */ = {
+		EAF117381C0647D0003616CD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CAD9FDC81BA0A13000E5CB05 /* Base */,
+				EAF117391C0647D0003616CD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CAD9FDCC1BA0A13000E5CB05 /* LaunchScreen.storyboard */ = {
+		EAF1173D1C0647D0003616CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CAD9FDCD1BA0A13000E5CB05 /* Base */,
+				EAF1173E1C0647D0003616CD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CAD9FDD01BA0A13000E5CB05 /* Debug */ = {
+		EAF117411C0647D0003616CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -343,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -352,7 +352,7 @@
 			};
 			name = Debug;
 		};
-		CAD9FDD11BA0A13000E5CB05 /* Release */ = {
+		EAF117421C0647D0003616CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -382,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,26 +390,28 @@
 			};
 			name = Release;
 		};
-		CAD9FDD31BA0A13000E5CB05 /* Debug */ = {
+		EAF117441C0647D0003616CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = M13ProgressSuite/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brandonmcquilkin.M13ProgressSuite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marxon13.M13ProgressSuite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		CAD9FDD41BA0A13000E5CB05 /* Release */ = {
+		EAF117451C0647D0003616CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = M13ProgressSuite/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brandonmcquilkin.M13ProgressSuite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marxon13.M13ProgressSuite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -417,25 +419,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CAD9FDB91BA0A13000E5CB05 /* Build configuration list for PBXProject "M13ProgressSuite" */ = {
+		EAF1172A1C0647D0003616CD /* Build configuration list for PBXProject "M13ProgressSuite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAD9FDD01BA0A13000E5CB05 /* Debug */,
-				CAD9FDD11BA0A13000E5CB05 /* Release */,
+				EAF117411C0647D0003616CD /* Debug */,
+				EAF117421C0647D0003616CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAD9FDD21BA0A13000E5CB05 /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */ = {
+		EAF117431C0647D0003616CD /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAD9FDD31BA0A13000E5CB05 /* Debug */,
-				CAD9FDD41BA0A13000E5CB05 /* Release */,
+				EAF117441C0647D0003616CD /* Debug */,
+				EAF117451C0647D0003616CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CAD9FDB61BA0A13000E5CB05 /* Project object */;
+	rootObject = EAF117271C0647D0003616CD /* Project object */;
 }

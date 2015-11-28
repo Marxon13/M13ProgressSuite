@@ -1,5 +1,3 @@
-<img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/M13ProgressSuiteBanner.png">
-
 2.0.0
 =====
 

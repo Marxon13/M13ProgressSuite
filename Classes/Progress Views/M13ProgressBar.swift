@@ -198,22 +198,12 @@ public class M13ProgressBar: M13ProgressView {
                 var progressFrame: CGRect = CGRectZero
                 switch weakSelf.progressDirection {
                 case .LeadingToTrailing:
-                    if #available(iOS 9.0, *) {
                         let xPosition = UIView.userInterfaceLayoutDirectionForSemanticContentAttribute(UISemanticContentAttribute.Spatial) == UIUserInterfaceLayoutDirection.LeftToRight ? 0.0 : weakSelf.frame.size.width - (weakSelf.frame.size.width * weakSelf.progress)
                         progressFrame = CGRectMake(xPosition, 0.0, weakSelf.frame.size.width * weakSelf.progress, weakSelf.frame.size.height)
-                    } else {
-                        let xPosition = NSLocale.characterDirectionForLanguage(NSLocale.preferredLanguages().first!) != NSLocaleLanguageDirection.RightToLeft ? 0.0 : weakSelf.frame.size.width - (weakSelf.frame.size.width * weakSelf.progress)
-                        progressFrame = CGRectMake(xPosition, 0.0, weakSelf.frame.size.width * weakSelf.progress, weakSelf.frame.size.height)
-                    }
                     break
                 case .TrailingToLeading:
-                    if #available(iOS 9.0, *) {
                         let xPosition = UIView.userInterfaceLayoutDirectionForSemanticContentAttribute(UISemanticContentAttribute.Spatial) == UIUserInterfaceLayoutDirection.RightToLeft ? 0.0 : weakSelf.frame.size.width - (weakSelf.frame.size.width * weakSelf.progress)
                         progressFrame = CGRectMake(xPosition, 0.0, weakSelf.frame.size.width * weakSelf.progress, weakSelf.frame.size.height)
-                    } else {
-                        let xPosition = NSLocale.characterDirectionForLanguage(NSLocale.preferredLanguages().first!) == NSLocaleLanguageDirection.RightToLeft ? 0.0 : weakSelf.frame.size.width - (weakSelf.frame.size.width * weakSelf.progress)
-                        progressFrame = CGRectMake(xPosition, 0.0, weakSelf.frame.size.width * weakSelf.progress, weakSelf.frame.size.height)
-                    }
                     break
                 case .BottomToTop:
                     progressFrame = CGRectMake(0.0, weakSelf.frame.size.height - (weakSelf.frame.size.height * weakSelf.progress), weakSelf.frame.size.width, weakSelf.frame.size.height * weakSelf.progress)
@@ -242,12 +232,7 @@ public class M13ProgressBar: M13ProgressView {
                 // Set the new frame of the bar: either move it by the travel delta, or move it back to the begining.
                 switch weakSelf.progressDirection {
                 case .LeadingToTrailing:
-                    var leftToRight: Bool = true;
-                    if #available(iOS 9.0, *) {
-                        leftToRight = UIView.userInterfaceLayoutDirectionForSemanticContentAttribute(UISemanticContentAttribute.Spatial) == UIUserInterfaceLayoutDirection.LeftToRight
-                    } else {
-                        leftToRight = NSLocale.characterDirectionForLanguage(NSLocale.preferredLanguages().first!) != NSLocaleLanguageDirection.RightToLeft
-                    }
+                    let leftToRight: Bool = UIView.userInterfaceLayoutDirectionForSemanticContentAttribute(UISemanticContentAttribute.Spatial) == UIUserInterfaceLayoutDirection.LeftToRight
                     if leftToRight {
                         if barPosition >= weakSelf.frame.size.width {
                             weakSelf.indeterminateLayer.frame = CGRectMake(-barLength, 0.0, barLength, weakSelf.frame.size.height)
@@ -263,12 +248,7 @@ public class M13ProgressBar: M13ProgressView {
                     }
                     break
                 case .TrailingToLeading:
-                    var rightToLeft: Bool = true;
-                    if #available(iOS 9.0, *) {
-                        rightToLeft = UIView.userInterfaceLayoutDirectionForSemanticContentAttribute(UISemanticContentAttribute.Spatial) == UIUserInterfaceLayoutDirection.RightToLeft
-                    } else {
-                        rightToLeft = NSLocale.characterDirectionForLanguage(NSLocale.preferredLanguages().first!) == NSLocaleLanguageDirection.RightToLeft
-                    }
+                    var rightToLeft: Bool = UIView.userInterfaceLayoutDirectionForSemanticContentAttribute(UISemanticContentAttribute.Spatial) == UIUserInterfaceLayoutDirection.RightToLeft
                     if rightToLeft {
                         if barPosition <= -barLength {
                             weakSelf.indeterminateLayer.frame = CGRectMake(weakSelf.frame.size.width, 0.0, barLength, weakSelf.frame.size.height)
