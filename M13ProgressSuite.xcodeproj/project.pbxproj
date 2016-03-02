@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		62BB86011C87300F0019306A /* UIApplication+M13ProgressSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BB86001C87300F0019306A /* UIApplication+M13ProgressSuite.m */; };
 		CA2FAF9C1889907300BCAEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9B1889907300BCAEF5 /* Foundation.framework */; };
 		CA2FAF9E1889907300BCAEF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9D1889907300BCAEF5 /* CoreGraphics.framework */; };
 		CA2FAFA01889907300BCAEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9F1889907300BCAEF5 /* UIKit.framework */; };
@@ -129,6 +130,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		62BB85FF1C87300F0019306A /* UIApplication+M13ProgressSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+M13ProgressSuite.h"; path = "Classes/Application/UIApplication+M13ProgressSuite.h"; sourceTree = "<group>"; };
+		62BB86001C87300F0019306A /* UIApplication+M13ProgressSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+M13ProgressSuite.m"; path = "Classes/Application/UIApplication+M13ProgressSuite.m"; sourceTree = "<group>"; };
 		CA1C945C18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetroDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.h; sourceTree = "<group>"; };
 		CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetroDotPolygon.m; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.m; sourceTree = "<group>"; };
 		CA2FAF981889907300BCAEF5 /* M13ProgressSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +263,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62BB85FE1C872FF50019306A /* M13ProgressApplication */ = {
+			isa = PBXGroup;
+			children = (
+				62BB85FF1C87300F0019306A /* UIApplication+M13ProgressSuite.h */,
+				62BB86001C87300F0019306A /* UIApplication+M13ProgressSuite.m */,
+			);
+			name = M13ProgressApplication;
+			sourceTree = "<group>";
+		};
 		CA2FAF8F1889907300BCAEF5 = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +359,7 @@
 				CA2FAFDF1889935700BCAEF5 /* HUD */,
 				CA2FAFDB1889934300BCAEF5 /* Console */,
 				CA2FAFD41889928200BCAEF5 /* M13ProgressNavigationController */,
+				62BB85FE1C872FF50019306A /* M13ProgressApplication */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -761,6 +774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62BB86011C87300F0019306A /* UIApplication+M13ProgressSuite.m in Sources */,
 				CA2FB02B1889946F00BCAEF5 /* SampleViewController.m in Sources */,
 				CA6F31C7190EBF11008D1E64 /* LetterpressViewController.m in Sources */,
 				CA2FB0221889946F00BCAEF5 /* BarViewController.m in Sources */,

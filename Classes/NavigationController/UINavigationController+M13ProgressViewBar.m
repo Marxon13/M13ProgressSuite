@@ -4,6 +4,7 @@
 //
 
 #import "UINavigationController+M13ProgressViewBar.h"
+#import "UIApplication+M13ProgressSuite.h"
 #import <objc/runtime.h>
 
 //Keys to set properties since one cannot define properties in a category.
@@ -135,18 +136,17 @@ static char secondaryColorKey;
 {
     UIInterfaceOrientation orientation;
 
-    //Define "M13_APP_EXTENSIONS" Preprocessor Macro for App Extension target
-#if defined(M13_APP_EXTENSIONS)
-    if ([UIScreen mainScreen].bounds.size.width < [UIScreen mainScreen].bounds.size.height) {
-        orientation = UIInterfaceOrientationPortrait;
+    if ([UIApplication isM13AppExtension]) {
+        if ([UIScreen mainScreen].bounds.size.width < [UIScreen mainScreen].bounds.size.height) {
+            orientation = UIInterfaceOrientationPortrait;
+        } else {
+            orientation = UIInterfaceOrientationLandscapeLeft;
+        }
     } else {
-        orientation = UIInterfaceOrientationLandscapeLeft;
+        orientation = [UIApplication safeM13SharedApplication].statusBarOrientation;
     }
-#else
-    orientation = [UIApplication sharedApplication].statusBarOrientation;
-#endif
   
-  return orientation;
+    return orientation;
 }
 
 #pragma mark Drawing
