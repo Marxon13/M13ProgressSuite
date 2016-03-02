@@ -9,7 +9,7 @@
 
 + (BOOL)isM13AppExtension
 {
-  return [[self class] safeSharedApplication] == nil;
+  return [[self class] safeM13SharedApplication] == nil;
 }
 
 + (UIApplication *)safeM13SharedApplication
