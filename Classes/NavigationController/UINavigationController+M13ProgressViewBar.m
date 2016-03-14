@@ -103,7 +103,6 @@ static char secondaryColorKey;
                 } completion:^(BOOL finished) {
                     [progressView removeFromSuperview];
                     progressView.alpha = 1;
-                    [self setTitle:nil];
                     [self setIsShowingProgressBar:NO];
                 }];
             }];
@@ -122,7 +121,6 @@ static char secondaryColorKey;
             } completion:^(BOOL finished) {
                 [progressView removeFromSuperview];
                 progressView.alpha = 1;
-                [self setTitle:nil];
                 [self setIsShowingProgressBar:NO];
             }];
         });
