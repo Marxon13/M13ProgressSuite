@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB2A7BDB1B793E5600FE4E4A"
-               BuildableName = "M13ProgressSuiteFramework.framework"
+               BuildableName = "M13ProgressSuite.framework"
                BlueprintName = "M13ProgressSuiteFramework"
                ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2A7BDB1B793E5600FE4E4A"
-            BuildableName = "M13ProgressSuiteFramework.framework"
+            BuildableName = "M13ProgressSuite.framework"
             BlueprintName = "M13ProgressSuiteFramework"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2A7BDB1B793E5600FE4E4A"
-            BuildableName = "M13ProgressSuiteFramework.framework"
+            BuildableName = "M13ProgressSuite.framework"
             BlueprintName = "M13ProgressSuiteFramework"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
          </BuildableReference>
