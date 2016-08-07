@@ -228,11 +228,16 @@
         [self setNeedsDisplay];
         [CATransaction begin];
         for (int i = 0; i < _numberOfSegments; i++) {
-            CAShapeLayer *layer = _segmentsLayer.sublayers[i];
-            CABasicAnimation *barAnimation = [self barColorAnimation];
-            barAnimation.fromValue = (id)layer.fillColor;
-            barAnimation.toValue = (id)[self colorForSegment:i].CGColor;
-            [layer addAnimation:barAnimation forKey:@"fillColor"];
+            CALayer *layer = _segmentsLayer.sublayers[i];
+            
+            // Make sure type of layer is ShapeLayer
+            if ([layer isKindOfClass:[CAShapeLayer class]]) {
+                CAShapeLayer *shapeLayer = (CAShapeLayer *)layer;
+                CABasicAnimation *barAnimation = [self barColorAnimation];
+                barAnimation.fromValue = (id)shapeLayer.fillColor;
+                barAnimation.toValue = (id)[self colorForSegment:i].CGColor;
+                [layer addAnimation:barAnimation forKey:@"fillColor"];
+            }
         }
         [CATransaction commit];
     } else if (action == M13ProgressViewActionSuccess && _currentAction != M13ProgressViewActionSuccess) {
@@ -240,11 +245,16 @@
         [self setNeedsDisplay];
         [CATransaction begin];
         for (int i = 0; i < _numberOfSegments; i++) {
-            CAShapeLayer *layer = _segmentsLayer.sublayers[i];
-            CABasicAnimation *barAnimation = [self barColorAnimation];
-            barAnimation.fromValue = (id)layer.fillColor;
-            barAnimation.toValue = (id)_successColor.CGColor;
-            [layer addAnimation:barAnimation forKey:@"fillColor"];
+            CALayer *layer = _segmentsLayer.sublayers[i];
+            
+            // Make sure type of layer is ShapeLayer
+            if ([layer isKindOfClass:[CAShapeLayer class]]) {
+                CAShapeLayer *shapeLayer = (CAShapeLayer *)layer;
+                CABasicAnimation *barAnimation = [self barColorAnimation];
+                barAnimation.fromValue = (id)shapeLayer.fillColor;
+                barAnimation.toValue = (id)_successColor.CGColor;
+                [layer addAnimation:barAnimation forKey:@"fillColor"];
+            }
         }
         [CATransaction commit];
     } else if (action == M13ProgressViewActionFailure && _currentAction != M13ProgressViewActionFailure) {
@@ -252,11 +262,17 @@
         [self setNeedsDisplay];
         [CATransaction begin];
         for (int i = 0; i < _numberOfSegments; i++) {
-            CAShapeLayer *layer = _segmentsLayer.sublayers[i];
-            CABasicAnimation *barAnimation = [self barColorAnimation];
-            barAnimation.fromValue = (id)layer.fillColor;
-            barAnimation.toValue = (id)_failureColor.CGColor;
-            [layer addAnimation:barAnimation forKey:@"fillColor"];
+            CALayer *layer = _segmentsLayer.sublayers[i];
+            
+            // Make sure type of layer is ShapeLayer
+            if ([layer isKindOfClass:[CAShapeLayer class]]) {
+                CAShapeLayer *shapeLayer = (CAShapeLayer *)layer;
+                CABasicAnimation *barAnimation = [self barColorAnimation];
+                barAnimation.fromValue = (id)shapeLayer.fillColor;
+                barAnimation.toValue = (id)_failureColor.CGColor;
+                [layer addAnimation:barAnimation forKey:@"fillColor"];
+            }
+            
         }
         [CATransaction commit];
     }
@@ -450,9 +466,12 @@
         }
         
         //Add segment to the proper layer, and color it
-        CAShapeLayer *layer = _segmentsLayer.sublayers[i];
-        layer.path = path.CGPath;
-        layer.fillColor = [self colorForSegment:i].CGColor;
+        CALayer *layer = _segmentsLayer.sublayers[i];
+        if ([layer isKindOfClass:[CAShapeLayer class]]) {
+            CAShapeLayer *shapeLayer = (CAShapeLayer *)layer;
+            shapeLayer.path = path.CGPath;
+            shapeLayer.fillColor = [self colorForSegment:i].CGColor;
+        }
     }
 }
 
@@ -529,14 +548,16 @@
         }
         
         //Add the segment to the proper path //Add segment to the proper layer, and color it
-        CAShapeLayer *layer = _segmentsLayer.sublayers[i];
-        layer.path = path.CGPath;
-        if (i >= indeterminateIndex && i < indeterminateIndex + numberOfSegmentsToBeColored) {
-            layer.fillColor = ((UIColor *)segmentColorsPrimary[i]).CGColor;
-        } else {
-            layer.fillColor = ((UIColor *)segmentColorsBackground[i]).CGColor;
+        CALayer *layer = _segmentsLayer.sublayers[i];
+        if ([layer isKindOfClass:[CAShapeLayer class]]) {
+            CAShapeLayer *shapeLayer = (CAShapeLayer *)layer;
+            shapeLayer.path = path.CGPath;
+            if (i >= indeterminateIndex && i < indeterminateIndex + numberOfSegmentsToBeColored) {
+                shapeLayer.fillColor = ((UIColor *)segmentColorsPrimary[i]).CGColor;
+            } else {
+                shapeLayer.fillColor = ((UIColor *)segmentColorsBackground[i]).CGColor;
+            }
         }
-        
     }
     
     //increase the index by one for movement
