@@ -96,9 +96,53 @@ A set of progess view based off of the same superclass. Allowing easy switching 
 
 <img src="https://raw.github.com/Marxon13/M13ProgressSuite/master/ReadmeResources/StripedIndeterminate.gif">
 
-Known Bugs:
-------------
-* When the HUD is set to apply the iOS 7 style blur to the HUD background, it doesn't work. The screenshot of the superview is not taken in the proper CGRect. It seems to work when the mask type is set to iOS 7 Blur, I beleive it is because the CGRectOrigin is {0, 0}.
+Progress View Usage:
+--------------------
+
+All progress bars follow the same general usage:
+
+```
+// Create the progress view.
+M13ProgressViewBar *progressView = [[M13ProgressViewBar alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 5.0)];
+
+// Configure the progress view here.
+
+// Add it to the view.
+[self.view addSubview: progressView];
+
+// Update the progress as needed
+[progressView setProgress: 0.1 animated: YES];
+
+```
+
+HUD Usage:
+----------
+
+```
+// Create the HUD
+M13ProgressHUD *HUD = [[M13ProgressHUD alloc] initWithProgressView:[[M13ProgressViewRing alloc] init]];
+
+// Configure the progress view
+HUD.progressViewSize = CGSizeMake(60.0, 60.0);
+HUD.animationPoint = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 2);
+
+// Add the HUD to the window. (Or any UIView)
+UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
+[window addSubview:HUD];
+
+// Show the HUD
+[HUD show:YES];
+
+//Update the HUD progress
+[HUD setProgress:0.5 animated:YES];
+
+// Update the HUD status
+HUD.status = @"Processing";
+
+// Hide the HUD
+[HUD show:NO];
+
+```
 
 Contact Me:
 -------------
