@@ -89,7 +89,7 @@
     self.backgroundColor = [UIColor clearColor];
     
     //Set defaut sizes
-    _progressRingWidth = fmaxf(self.bounds.size.width * .25, 1.0);
+    _progressRingWidth = fmaxf((float)self.bounds.size.width * .25f, 1.0);
     _progressRingWidthOverriden = NO;
     _segmentSeparationAngleOverriden = NO;
     self.animationDuration = .3;

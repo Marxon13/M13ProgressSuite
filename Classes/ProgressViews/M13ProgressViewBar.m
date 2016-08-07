@@ -229,18 +229,18 @@
 - (void)animateProgress:(CADisplayLink *)displayLink
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        CGFloat dt = (displayLink.timestamp - _animationStartTime) / self.animationDuration;
+        CGFloat dt = (displayLink.timestamp - self.animationStartTime) / self.animationDuration;
         if (dt >= 1.0) {
             //Order is important! Otherwise concurrency will cause errors, because setProgress: will detect an animation in progress and try to stop it by itself. Once over one, set to actual progress amount. Animation is over.
             [self.displayLink invalidate];
             self.displayLink = nil;
-            [super setProgress:_animationToValue animated:NO];
+            [super setProgress:self.animationToValue animated:NO];
             [self setNeedsDisplay];
             return;
         }
         
         //Set progress
-        [super setProgress:_animationFromValue + dt * (_animationToValue - _animationFromValue) animated:YES];
+        [super setProgress:self.animationFromValue + dt * (self.animationToValue - self.animationFromValue) animated:YES];
         [self setNeedsDisplay];
         
     });
@@ -250,7 +250,7 @@
 {
     if (action == M13ProgressViewActionNone && _currentAction != M13ProgressViewActionNone) {
         _currentAction = action;
-        _percentageLabel.string = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:self.progress]];
+        _percentageLabel.string = [self.percentageFormatter stringFromNumber:[NSNumber numberWithFloat:(float)self.progress]];
         [self setNeedsDisplay];
         [CATransaction begin];
         CABasicAnimation *barAnimation = [self barColorAnimation];

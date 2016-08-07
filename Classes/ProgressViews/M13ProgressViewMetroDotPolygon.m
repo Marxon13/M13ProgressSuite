@@ -33,7 +33,7 @@
     } else {
         NSMutableArray *pointsArray = [NSMutableArray array];
         for (int i = 0; i < _numberOfSides; i++) {
-            CGPoint point = CGPointMake(_radius * cosf((2.0 * M_PI * (float)i) / (float)_numberOfSides), _radius * sinf((2.0 * M_PI * (float)i) / (float)_numberOfSides));
+            CGPoint point = CGPointMake(_radius * cosf((2.0f * (float)M_PI * (float)i) / (float)_numberOfSides), (float)_radius * sinf((2.0f * (float)M_PI * (float)i) / (float)_numberOfSides));
             NSValue *value = [NSValue valueWithCGPoint:point];
             [pointsArray addObject:value];
         }
