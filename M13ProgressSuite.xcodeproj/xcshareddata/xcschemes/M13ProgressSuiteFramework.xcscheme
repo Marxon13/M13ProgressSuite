@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0640"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB2A7BDB1B793E5600FE4E4A"
-               BuildableName = "M13ProgressSuiteFramework.framework"
+               BuildableName = "M13ProgressSuite.framework"
                BlueprintName = "M13ProgressSuiteFramework"
                ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
             </BuildableReference>
@@ -23,27 +23,30 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2A7BDB1B793E5600FE4E4A"
-            BuildableName = "M13ProgressSuiteFramework.framework"
+            BuildableName = "M13ProgressSuite.framework"
             BlueprintName = "M13ProgressSuiteFramework"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
          </BuildableReference>
@@ -52,16 +55,16 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2A7BDB1B793E5600FE4E4A"
-            BuildableName = "M13ProgressSuiteFramework.framework"
+            BuildableName = "M13ProgressSuite.framework"
             BlueprintName = "M13ProgressSuiteFramework"
             ReferencedContainer = "container:M13ProgressSuite.xcodeproj">
          </BuildableReference>

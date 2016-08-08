@@ -15,6 +15,7 @@
 #import "M13ProgressHUD.h"
 #import "M13ProgressViewRing.h"
 #import "AppDelegate.h"
+#import "UIApplication+M13ProgressSuite.h"
 
 @interface ProgressHUDViewController ()
 
@@ -45,7 +46,7 @@
     HUD = [[M13ProgressHUD alloc] initWithProgressView:[[M13ProgressViewRing alloc] init]];
     HUD.progressViewSize = CGSizeMake(60.0, 60.0);
     HUD.animationPoint = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 2);
-    UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
+    UIWindow *window = ((AppDelegate *)[UIApplication safeM13SharedApplication].delegate).window;
     [window addSubview:HUD];
     
 }
@@ -175,7 +176,7 @@
 {
     if (_superviewControl.selectedSegmentIndex == 0) {
         [HUD removeFromSuperview];
-        UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
+        UIWindow *window = ((AppDelegate *)[UIApplication safeM13SharedApplication].delegate).window;
         [window addSubview:HUD];
     } else {
         [HUD removeFromSuperview];
