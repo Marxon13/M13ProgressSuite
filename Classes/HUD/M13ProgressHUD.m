@@ -320,7 +320,16 @@
     
     CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
     positionAnimation.duration = _animationDuration;
-    positionAnimation.fromValue = [NSValue valueWithCGPoint:_animationPoint];
+    
+    if (_animationCentered)
+    {
+        positionAnimation.fromValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
+    }
+    else
+    {
+        positionAnimation.fromValue = [NSValue valueWithCGPoint:_animationPoint];
+    }
+
     positionAnimation.toValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
     positionAnimation.removedOnCompletion = YES;
     
@@ -351,9 +360,22 @@
     scaleAnimation.removedOnCompletion = YES;
 
     CABasicAnimation *frameAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    frameAnimation.fromValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
-    frameAnimation.toValue = [NSValue valueWithCGPoint:_animationPoint];
+    
+    if (_animationCentered)
+    {
+        frameAnimation.toValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
+    }
+    else
+    {
+        frameAnimation.toValue = [NSValue valueWithCGPoint:_animationPoint];
+    }
+    
     frameAnimation.removedOnCompletion = YES;
+    
+    if (!_animationCentered)
+    {
+        backgroundView.layer.position = _animationPoint;
+    }
     backgroundView.layer.position = _animationPoint;
     
     CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
