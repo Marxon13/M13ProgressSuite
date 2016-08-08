@@ -233,18 +233,18 @@
 - (void)animateProgress:(CADisplayLink *)displayLink
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        CGFloat dt = (displayLink.timestamp - _animationStartTime) / self.animationDuration;
+        CGFloat dt = (displayLink.timestamp - self.animationStartTime) / self.animationDuration;
         if (dt >= 1.0) {
             //Order is important! Otherwise concurrency will cause errors, because setProgress: will detect an animation in progress and try to stop it by itself. Once over one, set to actual progress amount. Animation is over.
             [self.displayLink invalidate];
             self.displayLink = nil;
-            [super setProgress:_animationToValue animated:NO];
+            [super setProgress:self.animationToValue animated:NO];
             [self setNeedsDisplay];
             return;
         }
         
         //Set progress
-        [super setProgress:_animationFromValue + dt * (_animationToValue - _animationFromValue) animated:YES];
+        [super setProgress:self.animationFromValue + dt * (self.animationToValue - self.animationFromValue) animated:YES];
         [self setNeedsDisplay];
         
     });
@@ -274,9 +274,9 @@
             [CATransaction begin];
             [_iconLayer addAnimation:[self hideAnimation] forKey:kM13ProgressViewSegmentedRingHideKey];
             [CATransaction setCompletionBlock:^{
-                _currentAction = action;
+                self.currentAction = action;
                 [self drawIcon];
-                [_iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewSegmentedRingShowKey];
+                [self.iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewSegmentedRingShowKey];
             }];
             [CATransaction commit];
         }
@@ -294,9 +294,9 @@
             [CATransaction begin];
             [_iconLayer addAnimation:[self hideAnimation] forKey:kM13ProgressViewSegmentedRingHideKey];
             [CATransaction setCompletionBlock:^{
-                _currentAction = action;
+                self.currentAction = action;
                 [self drawIcon];
-                [_iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewSegmentedRingShowKey];
+                [self.iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewSegmentedRingShowKey];
             }];
             [CATransaction commit];
         }
@@ -333,8 +333,8 @@
         [_percentageLabel.layer addAnimation:[self showAnimation] forKey:kM13ProgressViewSegmentedRingShowKey];
         [CATransaction setCompletionBlock:^{
             //Remove the rotation animation and reset the background
-            [_backgroundLayer removeAnimationForKey:@"rotationAnimation"];
-            [_progressLayer removeAnimationForKey:@"rotationAnimation"];
+            [self.backgroundLayer removeAnimationForKey:@"rotationAnimation"];
+            [self.progressLayer removeAnimationForKey:@"rotationAnimation"];
             [self drawBackground];
             [self drawProgress];
         }];

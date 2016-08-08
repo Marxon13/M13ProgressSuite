@@ -373,7 +373,7 @@
         //Remove all animations
         [_indeterminateLayer removeAnimationForKey:@"position"];
         //Reset progress text
-        _percentageLabel.string = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:self.progress]];
+        _percentageLabel.string = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:(float)self.progress]];
     }
 }
 
@@ -600,7 +600,7 @@
         _percentageLabel.string = @"✕";
     } else if (_currentAction == M13ProgressViewActionNone) {
         if (!self.indeterminate) {
-            _percentageLabel.string = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:self.progress]];
+            _percentageLabel.string = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:(float)self.progress]];
         } else {
             _percentageLabel.string = @"∞";
         }

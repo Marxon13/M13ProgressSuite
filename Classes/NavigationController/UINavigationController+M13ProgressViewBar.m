@@ -215,7 +215,7 @@ static char secondaryColorKey;
     //Layout
     if (![self getIndeterminate]) {
         //Calculate the width of the progress view;
-        float progressWidth = width * [self getProgress];
+        float progressWidth = (float)width * (float)[self getProgress];
         //Set the frame of the progress view
         progressView.frame = CGRectMake(0, height - 2.5, progressWidth, 2.5);
     } else {
@@ -361,7 +361,7 @@ static char secondaryColorKey;
 
 - (void)setAnimationFromValue:(CGFloat)animationFromValue
 {
-    objc_setAssociatedObject(self, &animationFromKey, [NSNumber numberWithFloat:animationFromValue], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &animationFromKey, [NSNumber numberWithFloat:(float)animationFromValue], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)getAnimationFromValue
@@ -372,7 +372,7 @@ static char secondaryColorKey;
 
 - (void)setAnimationToValue:(CGFloat)animationToValue
 {
-    objc_setAssociatedObject(self, &animationToKey, [NSNumber numberWithFloat:animationToValue], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &animationToKey, [NSNumber numberWithFloat:(float)animationToValue], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)getAnimationToValue
@@ -383,7 +383,7 @@ static char secondaryColorKey;
 
 - (void)setAnimationStartTime:(NSTimeInterval)animationStartTime
 {
-    objc_setAssociatedObject(self, &animationStartTimeKey, [NSNumber numberWithFloat:animationStartTime], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &animationStartTimeKey, [NSNumber numberWithFloat:(float)animationStartTime], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSTimeInterval)getAnimationStartTime
@@ -399,7 +399,7 @@ static char secondaryColorKey;
     } else if (progress < 0.0) {
         progress = 0.0;
     }
-    objc_setAssociatedObject(self, &progressKey, [NSNumber numberWithFloat:progress], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &progressKey, [NSNumber numberWithFloat:(float)progress], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     //Draw the update
     if ([NSThread isMainThread]) {
         [self updateProgress];

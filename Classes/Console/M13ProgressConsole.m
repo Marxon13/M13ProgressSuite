@@ -276,7 +276,7 @@
     if (!_indeterminate) {
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         formatter.numberStyle = NSNumberFormatterPercentStyle;
-        return [NSString stringWithFormat:@"\n%@",[formatter stringFromNumber:[NSNumber numberWithFloat:_progress]]];
+        return [NSString stringWithFormat:@"\n%@",[formatter stringFromNumber:[NSNumber numberWithFloat:(float)_progress]]];
     } else {
         return @"\n??%";
     }

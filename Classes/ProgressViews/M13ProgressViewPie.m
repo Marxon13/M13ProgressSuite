@@ -85,7 +85,7 @@
     
     //Set defaut sizes
     _backgroundRingWidthOverriden = NO;
-    _backgroundRingWidth = fmaxf(self.bounds.size.width * .025, 1.0);
+    _backgroundRingWidth = fmaxf((float)self.bounds.size.width * .025f, 1.0);
     
     self.animationDuration = .3;
     

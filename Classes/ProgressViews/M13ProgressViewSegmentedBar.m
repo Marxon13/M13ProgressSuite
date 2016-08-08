@@ -204,18 +204,18 @@
 - (void)animateProgress:(CADisplayLink *)displayLink
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        CGFloat dt = (displayLink.timestamp - _animationStartTime) / self.animationDuration;
+        CGFloat dt = (displayLink.timestamp - self.animationStartTime) / self.animationDuration;
         if (dt >= 1.0) {
             //Order is important! Otherwise concurrency will cause errors, because setProgress: will detect an animation in progress and try to stop it by itself. Once over one, set to actual progress amount. Animation is over.
             [self.displayLink invalidate];
             self.displayLink = nil;
-            [super setProgress:_animationToValue animated:NO];
+            [super setProgress:self.animationToValue animated:NO];
             [self setNeedsDisplay];
             return;
         }
         
         //Set progress
-        [super setProgress:_animationFromValue + dt * (_animationToValue - _animationFromValue) animated:YES];
+        [super setProgress:self.animationFromValue + dt * (self.animationToValue - self.animationFromValue) animated:YES];
         [self setNeedsDisplay];
         
     });
@@ -359,7 +359,7 @@
 
 - (NSInteger)numberOfFullSegments
 {
-    return (NSInteger)floorf(self.progress * _numberOfSegments);
+    return (NSInteger)floorf((float)self.progress * (float)_numberOfSegments);
 }
 
 - (UIColor *)colorForSegment:(NSUInteger)index
@@ -393,7 +393,7 @@
     if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
         cornerRadius = _cornerRadius;
     } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-        cornerRadius = floorf(self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0);
+        cornerRadius = floorf(self.bounds.size.height < segmentWidth ? (float)self.bounds.size.height / 2.0f : (float)segmentWidth / 2.0f);
     }
     
     //Iterate through all the segments that are full.
@@ -470,7 +470,7 @@
     if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeRoundedRect) {
         cornerRadius = _cornerRadius;
     } else if (_segmentShape == M13ProgressViewSegmentedBarSegmentShapeCircle) {
-        cornerRadius = floorf(self.bounds.size.height < segmentWidth ? self.bounds.size.height / 2.0 : segmentWidth / 2.0);
+        cornerRadius = floorf(self.bounds.size.height < segmentWidth ? (float)self.bounds.size.height / 2.0f : (float)segmentWidth / 2.0f);
     }
     //What index will the segments be colored from.
     NSInteger numberOfSegmentsToBeColored = _numberOfSegments / 4;
