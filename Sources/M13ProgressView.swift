@@ -14,7 +14,7 @@ import UIKit
 public protocol M13ProgressView {
     
     /// A secondary tint color for the progress view.
-    var secondaryTintColor: UIColor! { get set }
+    var secondaryTintColor: UIColor? { get set }
     
     
 }

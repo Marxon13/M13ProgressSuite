@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43E4A70D1D58E77100030A4F /* M13ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4A70C1D58E77100030A4F /* M13ProgressBar.swift */; };
+		43E4A70F1D58ECAE00030A4F /* M13ProgressViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4A70E1D58ECAE00030A4F /* M13ProgressViewBase.swift */; };
 		EAC2CA591D578B5D0007D30D /* M13ProgressSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC2CA571D578B5D0007D30D /* M13ProgressSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAC2CA611D578BFA0007D30D /* M13ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2CA601D578BFA0007D30D /* M13ProgressView.swift */; };
 		EAC2CA631D578C330007D30D /* M13ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2CA621D578C330007D30D /* M13ProgressState.swift */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43E4A70C1D58E77100030A4F /* M13ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressBar.swift; path = Sources/M13ProgressBar.swift; sourceTree = "<group>"; };
+		43E4A70E1D58ECAE00030A4F /* M13ProgressViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13ProgressViewBase.swift; path = Sources/M13ProgressViewBase.swift; sourceTree = "<group>"; };
 		EAC2CA541D578B5D0007D30D /* M13ProgressSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M13ProgressSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC2CA571D578B5D0007D30D /* M13ProgressSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M13ProgressSuite.h; sourceTree = "<group>"; };
 		EAC2CA581D578B5D0007D30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43E4A70B1D58E75300030A4F /* Progress Views */ = {
+			isa = PBXGroup;
+			children = (
+				43E4A70C1D58E77100030A4F /* M13ProgressBar.swift */,
+			);
+			name = "Progress Views";
+			sourceTree = "<group>";
+		};
 		EAC2CA4A1D578B5D0007D30D = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC2CA641D57B9E30007D30D /* Base */,
+				43E4A70B1D58E75300030A4F /* Progress Views */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -73,6 +86,7 @@
 				EAC2CA601D578BFA0007D30D /* M13ProgressView.swift */,
 				EAC2CA621D578C330007D30D /* M13ProgressState.swift */,
 				EAC2CA651D57BA140007D30D /* M13ProgressType.swift */,
+				43E4A70E1D58ECAE00030A4F /* M13ProgressViewBase.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -160,6 +174,8 @@
 			files = (
 				EAC2CA631D578C330007D30D /* M13ProgressState.swift in Sources */,
 				EAC2CA661D57BA140007D30D /* M13ProgressType.swift in Sources */,
+				43E4A70F1D58ECAE00030A4F /* M13ProgressViewBase.swift in Sources */,
+				43E4A70D1D58E77100030A4F /* M13ProgressBar.swift in Sources */,
 				EAC2CA611D578BFA0007D30D /* M13ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

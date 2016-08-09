@@ -9,10 +9,9 @@
 /**
 The possible states of progress views.
  
- **States**
- - normal: The progress view is in its normal state of displaying progress.
- - success: The progress view displays an indicator that the operation completed successfully.
- - failure: The progress view displays an indicator that the operation failed.
+ - **normal**: The progress view is in its normal state of displaying progress.
+ - **success**: The progress view displays an indicator that the operation completed successfully.
+ - **failure**: The progress view displays an indicator that the operation failed.
 */
 public enum M13ProgressState {
     /// The progress view is in its normal state of displaying progress.

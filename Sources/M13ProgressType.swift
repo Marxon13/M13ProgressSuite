@@ -11,9 +11,8 @@ import UIKit
 /**
  The possible types of progress the progress views can display.
  
- **Types**
- - determinate: The amount of progress made or the time remaining is known.
- - indeterminate: The amount of progress and the remaining time is unknown.
+ - **determinate**: The amount of progress made or the time remaining is known.
+ - **indeterminate**: The amount of progress and the remaining time is unknown.
  */
 public enum M13ProgressType {
     /// The amount of progress made or the time remaining is known.
@@ -39,6 +38,11 @@ public protocol M13ProgressViewDeterminate {
      - parameter completion: The completion block to run once the animation has finished.
      */
     func setProgress(_ progress: CGFloat, animated: Bool, completion: ((progress: CGFloat) -> Void)?)
+    
+    /**
+     The animation duration for determinate progress animations.
+    */
+    var determinateProgressAnimationDuration: TimeInterval { get set }
 }
 
 /**
@@ -46,6 +50,10 @@ public protocol M13ProgressViewDeterminate {
 */
 public protocol M13ProgressViewIndeterminate {
     
+    /**
+     The animation duration for indeterminate progress animations.
+    */
+    var indeterminateProgressAnimationDuration: TimeInterval { get set }
 }
 
 /**
