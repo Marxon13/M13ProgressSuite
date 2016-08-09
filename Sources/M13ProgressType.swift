@@ -40,9 +40,10 @@ public protocol M13ProgressViewDeterminate {
     func setProgress(_ progress: CGFloat, animated: Bool, completion: ((progress: CGFloat) -> Void)?)
     
     /**
-     The animation duration for determinate progress animations.
+     The property animator that controls the determinate progress animations.
+     - warning: Wait until all animations are complete before changing the property animator.
     */
-    var determinateProgressAnimationDuration: TimeInterval { get set }
+    var determinatePropertyAnimator: UIViewPropertyAnimator { get set }
 }
 
 /**
@@ -51,9 +52,10 @@ public protocol M13ProgressViewDeterminate {
 public protocol M13ProgressViewIndeterminate {
     
     /**
-     The animation duration for indeterminate progress animations.
-    */
-    var indeterminateProgressAnimationDuration: TimeInterval { get set }
+     The property animator that controls the indeterminate progress animations.
+     - warning: Wait until all animations are complete before changing the property animator.
+     */
+    var indeterminatePropertyAnimator: UIViewPropertyAnimator { get set }
 }
 
 /**

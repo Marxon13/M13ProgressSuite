@@ -114,17 +114,9 @@ public class M13ProgressBar: M13ProgressViewBase, M13ProgressViewMultipleType {
         }
     }
     
-    @IBInspectable public var determinateProgressAnimationDuration: TimeInterval = 0.3 {
-        didSet {
-            
-        }
-    }
+    public var determinatePropertyAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 0.3, curve: .easeIn, animations: nil)
     
-    @IBInspectable public var indeterminateProgressAnimationDuration: TimeInterval = 1.0 {
-        didSet {
-            
-        }
-    }
+    public var indeterminatePropertyAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 1.0, curve: .easeInOut, animations: nil)
     
     // ---------------------------------
     // MARK: - Progress
@@ -141,7 +133,39 @@ public class M13ProgressBar: M13ProgressViewBase, M13ProgressViewMultipleType {
     }
     
     public func setProgress(_ progress: CGFloat, animated: Bool, completion: ((progress: CGFloat) -> Void)?) {
+        // Only adjust if we are showing determinate progress.
+        guard type == .determinate else {
+            return
+        }
         
+        // Adjusted progress
+        let adjustedProgress = max(min(progress, 1.0), 0.0)
+        
+        // If we are not animated, end any animations and set the proper frame to the progress layer
+        if !animated {
+            determinatePropertyAnimator.stopAnimation(false)
+            progressLayer.frame = CGRect(x: 0.0, y: 0.0, width: frame.size.width * adjustedProgress, height: frame.height)
+            return
+        }
+        
+        // Adjust the animation for the new progress value.
+        let durationFactor = determinatePropertyAnimator.fractionComplete
+        determinatePropertyAnimator.stopAnimation(false)
+        determinatePropertyAnimator.finishAnimation(at: .current)
+        
+        determinatePropertyAnimator.addAnimations { [unowned self] in
+            self._progress = adjustedProgress
+            self.progressLayer.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width * adjustedProgress, height: self.frame.height)
+        }
+        
+        determinatePropertyAnimator.addCompletion { (position) in
+            completion?(progress: adjustedProgress)
+        }
+        
+        // Restart the animation.
+        determinatePropertyAnimator.startAnimation()
+        determinatePropertyAnimator.pauseAnimation()
+        determinatePropertyAnimator.continueAnimation(withTimingParameters: nil, durationFactor: durationFactor)
     }
     
     private var _type: M13ProgressType = .determinate
