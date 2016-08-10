@@ -134,7 +134,7 @@
 		62BB86001C87300F0019306A /* UIApplication+M13ProgressSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+M13ProgressSuite.m"; path = "Classes/Application/UIApplication+M13ProgressSuite.m"; sourceTree = "<group>"; };
 		CA1C945C18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetroDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.h; sourceTree = "<group>"; };
 		CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetroDotPolygon.m; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.m; sourceTree = "<group>"; };
-		CA2FAF981889907300BCAEF5 /* M13ProgressSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2FAF981889907300BCAEF5 /* M13ProgressSuiteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuiteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2FAF9B1889907300BCAEF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA2FAF9D1889907300BCAEF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CA2FAF9F1889907300BCAEF5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -288,7 +288,7 @@
 		CA2FAF991889907300BCAEF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA2FAF981889907300BCAEF5 /* M13ProgressSuite.app */,
+				CA2FAF981889907300BCAEF5 /* M13ProgressSuiteDemo.app */,
 				CA2FAFBC1889907300BCAEF5 /* M13ProgressSuiteTests.xctest */,
 				FB2A7BDC1B793E5600FE4E4A /* M13ProgressSuite.framework */,
 			);
@@ -629,9 +629,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CA2FAF971889907300BCAEF5 /* M13ProgressSuite */ = {
+		CA2FAF971889907300BCAEF5 /* M13ProgressSuiteDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA2FAFCD1889907300BCAEF5 /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */;
+			buildConfigurationList = CA2FAFCD1889907300BCAEF5 /* Build configuration list for PBXNativeTarget "M13ProgressSuiteDemo" */;
 			buildPhases = (
 				CA2FAF941889907300BCAEF5 /* Sources */,
 				CA2FAF951889907300BCAEF5 /* Frameworks */,
@@ -643,9 +643,9 @@
 			dependencies = (
 				FB2A7BF21B793E5600FE4E4A /* PBXTargetDependency */,
 			);
-			name = M13ProgressSuite;
+			name = M13ProgressSuiteDemo;
 			productName = M13ProgressSuite;
-			productReference = CA2FAF981889907300BCAEF5 /* M13ProgressSuite.app */;
+			productReference = CA2FAF981889907300BCAEF5 /* M13ProgressSuiteDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CA2FAFBB1889907300BCAEF5 /* M13ProgressSuiteTests */ = {
@@ -714,7 +714,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA2FAF971889907300BCAEF5 /* M13ProgressSuite */,
+				CA2FAF971889907300BCAEF5 /* M13ProgressSuiteDemo */,
 				CA2FAFBB1889907300BCAEF5 /* M13ProgressSuiteTests */,
 				FB2A7BDB1B793E5600FE4E4A /* M13ProgressSuiteFramework */,
 				CA2FB0431889986D00BCAEF5 /* Documentation */,
@@ -834,7 +834,7 @@
 /* Begin PBXTargetDependency section */
 		CA2FAFC21889907300BCAEF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CA2FAF971889907300BCAEF5 /* M13ProgressSuite */;
+			target = CA2FAF971889907300BCAEF5 /* M13ProgressSuiteDemo */;
 			targetProxy = CA2FAFC11889907300BCAEF5 /* PBXContainerItemProxy */;
 		};
 		FB2A7BF21B793E5600FE4E4A /* PBXTargetDependency */ = {
@@ -1112,7 +1112,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA2FAFCD1889907300BCAEF5 /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */ = {
+		CA2FAFCD1889907300BCAEF5 /* Build configuration list for PBXNativeTarget "M13ProgressSuiteDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA2FAFCE1889907300BCAEF5 /* Debug */,

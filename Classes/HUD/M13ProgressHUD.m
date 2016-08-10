@@ -301,7 +301,7 @@
     [self setNeedsDisplay];
     
     onScreen = YES;
-
+    
     //Animate the HUD on screen
     CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     fadeAnimation.duration = _animationDuration;
@@ -329,7 +329,7 @@
     {
         positionAnimation.fromValue = [NSValue valueWithCGPoint:_animationPoint];
     }
-
+    
     positionAnimation.toValue = [NSValue valueWithCGPoint:backgroundView.layer.position];
     positionAnimation.removedOnCompletion = YES;
     
@@ -350,7 +350,7 @@
     fadeAnimation.fromValue = [NSNumber numberWithFloat:1.0];
     fadeAnimation.toValue = [NSNumber numberWithFloat:0.0];
     fadeAnimation.removedOnCompletion = YES;
-
+    
     [self.layer addAnimation:fadeAnimation forKey:@"fadeAnimation"];
     self.layer.opacity = 0.0;
     
@@ -358,7 +358,7 @@
     scaleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
     scaleAnimation.toValue = [NSNumber numberWithFloat:0.0];
     scaleAnimation.removedOnCompletion = YES;
-
+    
     CABasicAnimation *frameAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
     
     if (_animationCentered)
@@ -407,7 +407,7 @@
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
     UIDeviceOrientation deviceOrientation = [notification.object orientation];
-
+    
     if (_shouldAutorotate && UIDeviceOrientationIsValidInterfaceOrientation(deviceOrientation)) {
         if (UIDeviceOrientationIsPortrait(deviceOrientation)) {
             if (deviceOrientation == UIDeviceOrientationPortraitUpsideDown) {
@@ -556,7 +556,7 @@
         }
         
         backgroundRect.origin.x = (self.bounds.size.width / 2.0) - (backgroundRect.size.width / 2.0);
-        backgroundRect.origin.y = (self.bounds.size.height / 2.0) - (_minimumSize.height / 2.0);        
+        backgroundRect.origin.y = (self.bounds.size.height / 2.0) - (_minimumSize.height / 2.0);
         
         //There is no status label text, center the progress view
         progressRect.origin.x = (backgroundRect.size.width / 2.0) - (progressRect.size.width / 2.0);
@@ -696,6 +696,11 @@
         //Create the gradient as an image, and then set it as the color of the mask view.
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
         CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        if (!context) {
+            return;
+        }
+        
         //Create the gradient
         size_t locationsCount = 2;
         CGFloat locations[2] = {0.0f, 1.0f};
@@ -713,6 +718,7 @@
         UIGraphicsEndImageContext();
         //Set the background
         maskView.backgroundColor = [UIColor colorWithPatternImage:image];
+        
     } else if (_maskType == M13ProgressHUDMaskTypeIOS7Blur) {
         // do nothing; we don't want to take a snapshot of the background for blurring now, no idea what the background is
     }
@@ -720,45 +726,45 @@
 
 - (void)redrawBlurs
 {
-        if (_maskType == M13ProgressHUDMaskTypeIOS7Blur) {
-            //Get the snapshot of the mask
-            __block UIImage *image = [self snapshotForBlurredBackgroundInView:maskView];
-            if (image != nil) {
-                //Apply the filters to blur the image
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    image = [image applyLightEffect];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        // Fade on content's change, if there was already an image.
-                        CATransition *transition = [CATransition new];
-                        transition.duration = 0.3;
-                        transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-                        transition.type = kCATransitionFade;
-                        [self->maskView.layer addAnimation:transition forKey:nil];
-                        self->maskView.backgroundColor = [UIColor colorWithPatternImage:image];
-                    });
+    if (_maskType == M13ProgressHUDMaskTypeIOS7Blur) {
+        //Get the snapshot of the mask
+        __block UIImage *image = [self snapshotForBlurredBackgroundInView:maskView];
+        if (image != nil) {
+            //Apply the filters to blur the image
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                image = [image applyLightEffect];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    // Fade on content's change, if there was already an image.
+                    CATransition *transition = [CATransition new];
+                    transition.duration = 0.3;
+                    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+                    transition.type = kCATransitionFade;
+                    [self->maskView.layer addAnimation:transition forKey:nil];
+                    self->maskView.backgroundColor = [UIColor colorWithPatternImage:image];
                 });
-            }
+            });
         }
-        if (_applyBlurToBackground) {
-            //Get the snapshot of the mask
-            __block UIImage *image = [self snapshotForBlurredBackgroundInView:backgroundView];
-            if (image != nil) {
-                //Apply the filters to blur the image
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    //image = [image applyLightEffect];
-                    image = [image applyLightEffect];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        // Fade on content's change, if there was already an image.
-                        CATransition *transition = [CATransition new];
-                        transition.duration = 0.3;
-                        transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-                        transition.type = kCATransitionFade;
-                        [self->backgroundView.layer addAnimation:transition forKey:nil];
-                        self->backgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
-                    });
+    }
+    if (_applyBlurToBackground) {
+        //Get the snapshot of the mask
+        __block UIImage *image = [self snapshotForBlurredBackgroundInView:backgroundView];
+        if (image != nil) {
+            //Apply the filters to blur the image
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                //image = [image applyLightEffect];
+                image = [image applyLightEffect];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    // Fade on content's change, if there was already an image.
+                    CATransition *transition = [CATransition new];
+                    transition.duration = 0.3;
+                    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+                    transition.type = kCATransitionFade;
+                    [self->backgroundView.layer addAnimation:transition forKey:nil];
+                    self->backgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
                 });
-            }
+            });
         }
+    }
 }
 
 - (UIImage *)snapshotForBlurredBackgroundInView:(UIView *)view
