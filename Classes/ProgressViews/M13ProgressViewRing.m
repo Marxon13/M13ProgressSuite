@@ -82,7 +82,7 @@
     self.backgroundColor = [UIColor clearColor];
     
     //Set defaut sizes
-    _backgroundRingWidth = fmaxf(self.bounds.size.width * .025, 1.0);
+    _backgroundRingWidth = fmaxf((float)self.bounds.size.width * .025f, 1.0);
     _progressRingWidth = 3 * _backgroundRingWidth;
     _progressRingWidthOverriden = NO;
     _backgroundRingWidthOverriden = NO;
@@ -250,9 +250,9 @@
             [CATransaction begin];
             [_iconLayer addAnimation:[self hideAnimation] forKey:kM13ProgressViewRingHideKey];
             [CATransaction setCompletionBlock:^{
-                _currentAction = action;
+                self.currentAction = action;
                 [self drawIcon];
-                [_iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewRingShowKey];
+                [self.iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewRingShowKey];
             }];
             [CATransaction commit];
         }
@@ -270,9 +270,9 @@
             [CATransaction begin];
             [_iconLayer addAnimation:[self hideAnimation] forKey:kM13ProgressViewRingHideKey];
             [CATransaction setCompletionBlock:^{
-                _currentAction = action;
+                self.currentAction = action;
                 [self drawIcon];
-                [_iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewRingShowKey];
+                [self.iconLayer addAnimation:[self showAnimation] forKey:kM13ProgressViewRingShowKey];
             }];
             [CATransaction commit];
         }
@@ -288,7 +288,7 @@
         
         //Create the rotation animation
         CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-        rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0];
+        rotationAnimation.toValue = [NSNumber numberWithFloat: (float)(M_PI * 2.0)];
         rotationAnimation.duration = 1;
         rotationAnimation.cumulative = YES;
         rotationAnimation.repeatCount = HUGE_VALF;
@@ -357,7 +357,7 @@
     
     //Update line widths if not overriden
     if (!_backgroundRingWidthOverriden) {
-        _backgroundRingWidth = fmaxf(self.frame.size.width * .025, 1.0);
+        _backgroundRingWidth = fmaxf((float)self.frame.size.width * .025f, 1.0);
     }
     if (!_progressRingWidthOverriden) {
         _progressRingWidth = _backgroundRingWidth * 3;
@@ -462,14 +462,14 @@
 - (void)drawBackground
 {
     //Create parameters to draw background
-    float startAngle = - M_PI_2;
-    float endAngle = startAngle + (2.0 * M_PI);
+    float startAngle = - (float)M_PI_2;
+    float endAngle = (float)(startAngle + (2.0 * M_PI));
     CGPoint center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.width / 2.0);
     CGFloat radius = (self.bounds.size.width - _backgroundRingWidth) / 2.0;
     
     //If indeterminate, recalculate the end angle
     if (self.indeterminate) {
-        endAngle = .8 * endAngle;
+        endAngle = .8f * endAngle;
     }
     
     //Draw path
@@ -485,8 +485,8 @@
 - (void)drawProgress
 {
     //Create parameters to draw progress
-    float startAngle = - M_PI_2;
-    float endAngle = startAngle + (2.0 * M_PI * self.progress);
+    float startAngle = - (float)M_PI_2;
+    float endAngle = (float)(startAngle + (2.0 * M_PI * self.progress));
     CGPoint center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.width / 2.0);
     CGFloat radius = (self.bounds.size.width - _progressRingWidth) / 2.0;
     
@@ -500,7 +500,7 @@
     [_progressLayer setPath:path.CGPath];
     
     //Update label
-    _percentageLabel.text = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:self.progress]];
+    _percentageLabel.text = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:(float)self.progress]];
 }
 
 - (void)drawIcon

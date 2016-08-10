@@ -310,13 +310,13 @@
         
         //Create the rotation animation
         CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-        rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0];
+        rotationAnimation.toValue = [NSNumber numberWithFloat: (float)(M_PI * 2.0)];
         rotationAnimation.duration = 5 * self.animationDuration;
         rotationAnimation.cumulative = YES;
         rotationAnimation.repeatCount = HUGE_VALF;
         
         CABasicAnimation *rotationAnimationProgress = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-        rotationAnimationProgress.toValue = [NSNumber numberWithFloat: M_PI * 2.0];
+        rotationAnimationProgress.toValue = [NSNumber numberWithFloat: (float)(M_PI * 2.0)];
         rotationAnimationProgress.duration = 5 * self.animationDuration;
         rotationAnimationProgress.cumulative = YES;
         rotationAnimationProgress.repeatCount = HUGE_VALF;
@@ -384,7 +384,7 @@
     
     //Update line widths if not overriden
     if (!_progressRingWidthOverriden) {
-        _progressRingWidth = fmaxf(self.frame.size.width * .25, 1.0);
+        _progressRingWidth = fmaxf((float)(self.frame.size.width * .25), 1.0);
     }
     
     [self updateAngles];
@@ -418,14 +418,14 @@
     //Calculate the outer ring angle for the progress segment.*/
     outerRingAngle = ((2.0 * M_PI) / (float)_numberOfSegments) - _segmentSeparationAngle;
     //Calculate the angle gap for the inner ring
-    _segmentSeparationInnerAngle = 2.0 * asinf(((self.bounds.size.width / 2.0) * sinf(_segmentSeparationAngle / 2.0)) / ((self.bounds.size.width / 2.0) - _progressRingWidth));
+    _segmentSeparationInnerAngle = 2.0f * asinf((float)((self.bounds.size.width / 2.0) * sinf((float)_segmentSeparationAngle / 2.0f)) / (((float)self.bounds.size.width / 2.0f) - (float)_progressRingWidth));
     //Calculate the inner ring angle for the progress segment.*/
     innerRingAngle = ((2.0 * M_PI) / (float)_numberOfSegments) - _segmentSeparationInnerAngle;
 }
 
 - (NSInteger)numberOfFullSegments
 {
-    return (NSInteger)floorf(self.progress * _numberOfSegments);
+    return (NSInteger)floorf((float)(self.progress * _numberOfSegments));
 }
 
 #pragma mark Drawing
@@ -585,7 +585,7 @@
     CGPathRelease(pathRef);
 
     //Update label
-    _percentageLabel.text = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:self.progress]];
+    _percentageLabel.text = [_percentageFormatter stringFromNumber:[NSNumber numberWithFloat:(float)self.progress]];
 }
 
 - (void)drawIcon
