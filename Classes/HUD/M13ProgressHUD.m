@@ -286,6 +286,7 @@
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
     [_progressView setProgress:progress animated:animated];
+	self.progress = progress;
 }
 
 - (void)performAction:(M13ProgressViewAction)action animated:(BOOL)animated
