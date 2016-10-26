@@ -174,6 +174,7 @@
 - (void)setBorderWidth:(CGFloat)borderWidth
 {
     _borderWidth = borderWidth;
+    _backgroundLayer.lineWidth = borderWidth;
     [self invalidateIntrinsicContentSize];
     [self setNeedsDisplay];
 }
