@@ -186,12 +186,12 @@ static char backgroundViewKey;
 	{
 		progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 2.5)];
 		progressView.backgroundColor = self.navigationBar.tintColor;
-        if ([self getPrimaryColor]) {
-            progressView.backgroundColor = [self getPrimaryColor];
-        }
         progressView.clipsToBounds = YES;
         [self setProgressView:progressView];
 	}
+    if ([self getPrimaryColor]) {
+        progressView.backgroundColor = [self getPrimaryColor];
+    }
     
     //Create background view if it doesn't exist
     UIView *backgroundView = [self getBackgroundView];
@@ -199,11 +199,11 @@ static char backgroundViewKey;
     {
         backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 2.5)];
         backgroundView.backgroundColor = [UIColor clearColor];
-        if ([self getBackgroundColor]) {
-            backgroundView.backgroundColor = [self getBackgroundColor];
-        }
         backgroundView.clipsToBounds = YES;
         [self setBackgroundView:backgroundView];
+    }
+    if ([self getBackgroundColor]) {
+        backgroundView.backgroundColor = [self getBackgroundColor];
     }
     
     //Calculate the frame of the navigation bar, based off the orientation.
