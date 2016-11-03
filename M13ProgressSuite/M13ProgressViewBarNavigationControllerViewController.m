@@ -33,6 +33,7 @@
 {
     [self.navigationController showProgress];
     [super viewDidLoad];
+    [self.navigationController setBackgroundColor:[UIColor blackColor]];
 	// Do any additional setup after loading the view.
 }
 
