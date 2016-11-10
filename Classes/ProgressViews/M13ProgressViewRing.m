@@ -359,10 +359,13 @@
     if (!_backgroundRingWidthOverriden) {
         _backgroundRingWidth = fmaxf((float)self.frame.size.width * .025f, 1.0);
     }
+     _backgroundLayer.lineWidth = _backgroundRingWidth;
+
     if (!_progressRingWidthOverriden) {
         _progressRingWidth = _backgroundRingWidth * 3;
     }
-    
+    _progressLayer.lineWidth = _progressRingWidth;
+
     //Redraw
     [self setNeedsDisplay];
 }
