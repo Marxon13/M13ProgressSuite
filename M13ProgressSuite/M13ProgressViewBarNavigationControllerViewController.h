@@ -21,6 +21,7 @@
 @property (nonatomic, retain) IBOutlet UISwitch *titleSwitch;
 @property (nonatomic, retain) IBOutlet UIButton *finishButton;
 @property (nonatomic, retain) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UISwitch *clearBackgroundSwitch;
 
 - (IBAction)animateProgress:(id)sender;
 - (IBAction)progressChanged:(id)sender;
@@ -30,5 +31,7 @@
 - (IBAction)secondaryColorChanged:(id)sender;
 - (IBAction)finish:(id)sender;
 - (IBAction)cancel:(id)sender;
+- (IBAction)backgroundColorChanged:(id)sender;
+- (IBAction)clearBackgroundChanged:(id)sender;
 
 @end

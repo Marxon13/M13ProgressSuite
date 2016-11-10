@@ -50,5 +50,11 @@
  @param secondaryColor The color to set.
  */
 - (void)setSecondaryColor:(UIColor *)secondaryColor;
+/**
+ The background color of the progress bar, if nil, the background color will be the clearColor.
+ 
+ @param background The color to set.
+ */
+- (void)setBackgroundColor:(UIColor *)backgroundColor;
 
 @end

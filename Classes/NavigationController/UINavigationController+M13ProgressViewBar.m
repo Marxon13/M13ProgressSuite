@@ -20,6 +20,8 @@ static char indeterminateLayerKey;
 static char isShowingProgressKey;
 static char primaryColorKey;
 static char secondaryColorKey;
+static char backgroundColorKey;
+static char backgroundViewKey;
 
 @implementation UINavigationController (M13ProgressViewBar)
 
@@ -91,8 +93,8 @@ static char secondaryColorKey;
 - (void)finishProgress
 {
     UIView *progressView = [self getProgressView];
-
-    if (progressView) {
+    UIView *backgroundView = [self getBackgroundView];
+    if (progressView && backgroundView) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:0.1 animations:^{
                 CGRect progressFrame = progressView.frame;
@@ -101,8 +103,11 @@ static char secondaryColorKey;
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.5 animations:^{
                     progressView.alpha = 0;
+                    backgroundView.alpha = 0;
                 } completion:^(BOOL finished) {
                     [progressView removeFromSuperview];
+                    [backgroundView removeFromSuperview];
+                    backgroundView.alpha = 1;
                     progressView.alpha = 1;
                     [self setTitle:nil];
                     [self setIsShowingProgressBar:NO];
@@ -115,14 +120,18 @@ static char secondaryColorKey;
 - (void)cancelProgress
 {
     UIView *progressView = [self getProgressView];
-    
-    if (progressView) {
+    UIView *backgroundView = [self getBackgroundView];
+
+    if (progressView && backgroundView) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:0.5 animations:^{
                 progressView.alpha = 0;
+                backgroundView.alpha = 0;
             } completion:^(BOOL finished) {
                 [progressView removeFromSuperview];
+                [backgroundView removeFromSuperview];
                 progressView.alpha = 1;
+                backgroundView.alpha = 1;
                 [self setTitle:nil];
                 [self setIsShowingProgressBar:NO];
             }];
@@ -154,9 +163,11 @@ static char secondaryColorKey;
 - (void)showProgress
 {
     UIView *progressView = [self getProgressView];
+    UIView *backgroundView = [self getBackgroundView];
     
     [UIView animateWithDuration:.1 animations:^{
         progressView.alpha = 1;
+        backgroundView.alpha = 1;
     }];
     
     [self setIsShowingProgressBar:YES];
@@ -174,13 +185,30 @@ static char secondaryColorKey;
     if(!progressView)
 	{
 		progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 2.5)];
-		progressView.backgroundColor = self.navigationBar.tintColor;
-        if ([self getPrimaryColor]) {
-            progressView.backgroundColor = [self getPrimaryColor];
-        }
         progressView.clipsToBounds = YES;
         [self setProgressView:progressView];
 	}
+    
+    if ([self getPrimaryColor]) {
+        progressView.backgroundColor = [self getPrimaryColor];
+    } else {
+        progressView.backgroundColor = self.navigationBar.tintColor;
+    }
+    
+    //Create background view if it doesn't exist
+    UIView *backgroundView = [self getBackgroundView];
+    if (!backgroundView)
+    {
+        backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 2.5)];
+        backgroundView.clipsToBounds = YES;
+        [self setBackgroundView:backgroundView];
+    }
+    
+    if ([self getBackgroundColor]) {
+        backgroundView.backgroundColor = [self getBackgroundColor];
+    } else {
+        backgroundView.backgroundColor = [UIColor clearColor];
+    }
     
     //Calculate the frame of the navigation bar, based off the orientation.
     UIView *topView = self.topViewController.view;
@@ -209,6 +237,7 @@ static char secondaryColorKey;
     
     //Check if the progress view is in its superview and if we are showing the bar.
     if (progressView.superview == nil && [self isShowingProgressBar]) {
+        [self.navigationBar addSubview:backgroundView];
         [self.navigationBar addSubview:progressView];
     }
     
@@ -222,7 +251,7 @@ static char secondaryColorKey;
         //Calculate the width of the progress view
         progressView.frame = CGRectMake(0, height - 2.5, width, 2.5);
     }
-    
+    backgroundView.frame = CGRectMake(0, height - 2.5, width, 2.5);
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -437,6 +466,17 @@ static char secondaryColorKey;
     return objc_getAssociatedObject(self, &progressViewKey);
 }
 
+- (void)setBackgroundView:(UIView *)view
+{
+    objc_setAssociatedObject(self, &backgroundViewKey, view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIView *)getBackgroundView
+{
+    return objc_getAssociatedObject(self, &backgroundViewKey);
+}
+
+
 - (void)setIndeterminate:(BOOL)indeterminate
 {
     objc_setAssociatedObject(self, &indeterminateKey, [NSNumber numberWithBool:indeterminate], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -486,6 +526,17 @@ static char secondaryColorKey;
 - (UIColor *)getSecondaryColor
 {
     return objc_getAssociatedObject(self, &secondaryColorKey);
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    objc_setAssociatedObject(self, &backgroundColorKey, backgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self setIndeterminate:[self getIndeterminate]];
+}
+
+- (UIColor *)getBackgroundColor
+{
+    return objc_getAssociatedObject(self, &backgroundColorKey);
 }
 
 @end

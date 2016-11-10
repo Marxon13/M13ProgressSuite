@@ -33,6 +33,7 @@
 {
     [self.navigationController showProgress];
     [super viewDidLoad];
+    [self.navigationController setBackgroundColor:[UIColor blackColor]];
 	// Do any additional setup after loading the view.
 }
 
@@ -109,6 +110,23 @@
     [self.navigationController cancelProgress];
 }
 
+- (IBAction)backgroundColorChanged:(id)sender
+{
+    CGFloat red = (float)arc4random_uniform(256)/255.0;
+    CGFloat green = (float)arc4random_uniform(256)/255.0;
+    CGFloat blue = (float)arc4random_uniform(256)/255.0;
+    [self.navigationController setBackgroundColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0]];
+}
+
+- (IBAction)clearBackgroundChanged:(id)sender
+{
+    if (_clearBackgroundSwitch.on) {
+        [self.navigationController setBackgroundColor:nil];
+    } else {
+        [self.navigationController setBackgroundColor:[UIColor blackColor]];
+    }
+}
+
 - (void)primaryColorChanged:(id)sender
 {
     CGFloat red = (float)arc4random_uniform(256)/255.0;
@@ -124,5 +142,7 @@
     CGFloat blue = (float)arc4random_uniform(256)/255.0;
     [self.navigationController setSecondaryColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0]];
 }
+
+
 
 @end
