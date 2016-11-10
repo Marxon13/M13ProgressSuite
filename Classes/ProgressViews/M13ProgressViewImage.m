@@ -187,10 +187,10 @@
 - (UIImage *)createImageForCurrentProgress
 {
     const int ALPHA = 0;
-    const int RED = 1;
+    const int RED = 3;
     const int GREEN = 2;
-    const int BLUE = 3;
-    
+    const int BLUE = 1;
+
     //Create image rectangle with current image width/height
     CGRect imageRect = CGRectMake(0, 0, _progressImage.size.width * _progressImage.scale, _progressImage.size.height * _progressImage.scale);
     
@@ -218,23 +218,23 @@
     int yTo = height;
     
     if (_progressDirection == M13ProgressViewImageProgressDirectionBottomToTop) {
-        yTo = height * (int)(1 - self.progress);
+        yTo = (int)(height * (1 - self.progress));
     } else if (_progressDirection == M13ProgressViewImageProgressDirectionTopToBottom) {
-        yFrom = height * (int)self.progress;
+        yFrom = (int)(height * self.progress);
     } else if (_progressDirection == M13ProgressViewImageProgressDirectionLeftToRight) {
-        xFrom = width * (int)self.progress;
+        xFrom = (int)(width * self.progress);
     } else if (_progressDirection == M13ProgressViewImageProgressDirectionRightToLeft) {
-        xTo = width * (int)(1 - self.progress);
+        xTo = (int)(width * (1 - self.progress));
     }
     
     for (int x = xFrom; x < xTo; x++) {
         for (int y = yFrom; y < yTo; y++) {
             //Get the pixel
-            uint32_t *rgbaPixel = (uint32_t *) &pixels[y * width + x];
+            uint8_t *rgbaPixel = (uint8_t *) &pixels[y * width + x];
             //Convert
             if (_drawGreyscaleBackground) {
                 //Convert to grayscale using luma coding: http://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
-                uint32_t gray = (uint32_t)(0.3 * rgbaPixel[RED] + 0.59 * rgbaPixel[GREEN] + 0.11 * rgbaPixel[BLUE]);
+                uint8_t gray = (uint8_t)(0.3 * rgbaPixel[RED] + 0.59 * rgbaPixel[GREEN] + 0.11 * rgbaPixel[BLUE]);
                 // set the pixels to gray
                 rgbaPixel[RED] = gray;
                 rgbaPixel[GREEN] = gray;
