@@ -25,4 +25,7 @@
 /**Wether or not to display a percentage inside the ring.*/
 @property (nonatomic, assign) BOOL showPercentage;
 
+/* The cap style used when stroking the path for `progressRing`. Options are `kCALineCapButt', `kCALineCapRound' and `kCALineCapSquare'. Defaults to `kCALineCapButt'. */
+@property(nonatomic, copy) NSString *progressRingLineCap;
+
 @end

@@ -176,6 +176,13 @@
     }
 }
 
+- (void)setProgressRingLineCap:(NSString *)lineCap
+{
+    _progressRingLineCap = lineCap;
+    _progressLayer.lineCap = lineCap;
+    [self setNeedsDisplay];
+}
+
 #pragma mark Actions
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
