@@ -467,7 +467,7 @@
     //Create parameters to draw background
     float startAngle = - (float)M_PI_2;
     float endAngle = (float)(startAngle + (2.0 * M_PI));
-    CGPoint center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.width / 2.0);
+    CGPoint center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.height / 2.0);
     CGFloat radius = (self.bounds.size.width - _backgroundRingWidth) / 2.0;
     
     //If indeterminate, recalculate the end angle
