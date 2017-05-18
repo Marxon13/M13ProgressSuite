@@ -289,7 +289,7 @@
         //Create the rotation animation
         CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
         rotationAnimation.toValue = [NSNumber numberWithFloat: (float)(M_PI * 2.0)];
-        rotationAnimation.duration = self.animationDuration
+        rotationAnimation.duration = self.animationDuration;
         rotationAnimation.cumulative = YES;
         rotationAnimation.repeatCount = HUGE_VALF;
         
