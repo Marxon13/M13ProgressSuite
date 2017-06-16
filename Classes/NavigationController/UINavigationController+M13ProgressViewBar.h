@@ -53,7 +53,7 @@
 /**
  The background color of the progress bar, if nil, the background color will be the clearColor.
  
- @param background The color to set.
+ @param backgroundColor The color to set.
  */
 - (void)setBackgroundColor:(UIColor *)backgroundColor;
 
