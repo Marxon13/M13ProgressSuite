@@ -213,8 +213,6 @@
 - (void)rotateWithDisplayLink:(CADisplayLink *)displayLink
 {
     //Take account for lag
-    NSInteger timeInterval = 0;
-
     for (int i = 0; i < displayLink.preferredFramesPerSecond; i++){
 		
         //Calculate the new angle
