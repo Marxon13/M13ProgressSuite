@@ -213,7 +213,9 @@
 - (void)rotateWithDisplayLink:(CADisplayLink *)displayLink
 {
     //Take account for lag
-    for (int i = 0; i < displayLink.frameInterval; i++){
+    NSInteger timeInterval = 0;
+
+    for (int i = 0; i < displayLink.preferredFramesPerSecond; i++){
 		
         //Calculate the new angle
 		CGFloat displacement = rotation - restRotation;
