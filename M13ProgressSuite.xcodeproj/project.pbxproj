@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -22,6 +22,38 @@
 
 /* Begin PBXBuildFile section */
 		62BB86011C87300F0019306A /* UIApplication+M13ProgressSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BB86001C87300F0019306A /* UIApplication+M13ProgressSuite.m */; };
+		84390FBF253723C4000E2704 /* UIApplication+M13ProgressSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BB86001C87300F0019306A /* UIApplication+M13ProgressSuite.m */; };
+		84390FC0253723C4000E2704 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB01B1889946F00BCAEF5 /* SampleViewController.m */; };
+		84390FC1253723C4000E2704 /* LetterpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F31C6190EBF11008D1E64 /* LetterpressViewController.m */; };
+		84390FC2253723C4000E2704 /* BarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0091889946F00BCAEF5 /* BarViewController.m */; };
+		84390FC3253723C4000E2704 /* M13ProgressViewBarNavigationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0131889946F00BCAEF5 /* M13ProgressViewBarNavigationControllerViewController.m */; };
+		84390FC4253723C4000E2704 /* RadiativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA412B0418D2638E00FCB7CC /* RadiativeViewController.m */; };
+		84390FC5253723C4000E2704 /* ProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0171889946F00BCAEF5 /* ProgressHUDViewController.m */; };
+		84390FC6253723C4000E2704 /* RingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0191889946F00BCAEF5 /* RingViewController.m */; };
+		84390FC7253723C4000E2704 /* SegmentedBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB01D1889946F00BCAEF5 /* SegmentedBarViewController.m */; };
+		84390FC8253723C4000E2704 /* MetroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66890518CBEF9300827C48 /* MetroViewController.m */; };
+		84390FC9253723C4000E2704 /* PieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0151889946F00BCAEF5 /* PieViewController.m */; };
+		84390FCA253723C4000E2704 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0111889946F00BCAEF5 /* ImageViewController.m */; };
+		84390FCB253723C4000E2704 /* BorderedBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB00B1889946F00BCAEF5 /* BorderedBarViewController.m */; };
+		84390FCC253723C4000E2704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFAB1889907300BCAEF5 /* AppDelegate.m */; };
+		84390FCD253723C4000E2704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAFA71889907300BCAEF5 /* main.m */; };
+		84390FCE253723C4000E2704 /* FilteredImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB00F1889946F00BCAEF5 /* FilteredImageViewController.m */; };
+		84390FCF253723C4000E2704 /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB00D1889946F00BCAEF5 /* ConsoleViewController.m */; };
+		84390FD0253723C4000E2704 /* StripedBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB0211889946F00BCAEF5 /* StripedBarViewController.m */; };
+		84390FD1253723C4000E2704 /* SegmentedRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2FB01F1889946F00BCAEF5 /* SegmentedRingViewController.m */; };
+		84390FD3253723C4000E2704 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9D1889907300BCAEF5 /* CoreGraphics.framework */; };
+		84390FD5253723C4000E2704 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB03D1889975A00BCAEF5 /* QuartzCore.framework */; };
+		84390FD6253723C4000E2704 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB03B1889975400BCAEF5 /* CoreImage.framework */; };
+		84390FD7253723C4000E2704 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FB0391889974600BCAEF5 /* Accelerate.framework */; };
+		84390FD8253723C4000E2704 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9F1889907300BCAEF5 /* UIKit.framework */; };
+		84390FD9253723C4000E2704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9B1889907300BCAEF5 /* Foundation.framework */; };
+		84390FDB253723C4000E2704 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAFB01889907300BCAEF5 /* Main_iPad.storyboard */; };
+		84390FDC253723C4000E2704 /* Galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA2FB0341889952E00BCAEF5 /* Galaxy.jpg */; };
+		84390FDD253723C4000E2704 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAFB61889907300BCAEF5 /* Images.xcassets */; };
+		84390FDE253723C4000E2704 /* Striped_apple_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2FB0351889952E00BCAEF5 /* Striped_apple_logo.png */; };
+		84390FDF253723C4000E2704 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAFAD1889907300BCAEF5 /* Main_iPhone.storyboard */; };
+		84390FE0253723C4000E2704 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAFA41889907300BCAEF5 /* InfoPlist.strings */; };
+		84390FFB25372598000E2704 /* M13ProgressSuite in Frameworks */ = {isa = PBXBuildFile; productRef = 84390FFA25372598000E2704 /* M13ProgressSuite */; };
 		CA2FAF9C1889907300BCAEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9B1889907300BCAEF5 /* Foundation.framework */; };
 		CA2FAF9E1889907300BCAEF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9D1889907300BCAEF5 /* CoreGraphics.framework */; };
 		CA2FAFA01889907300BCAEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2FAF9F1889907300BCAEF5 /* UIKit.framework */; };
@@ -132,6 +164,7 @@
 /* Begin PBXFileReference section */
 		62BB85FF1C87300F0019306A /* UIApplication+M13ProgressSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+M13ProgressSuite.h"; path = "Classes/Application/UIApplication+M13ProgressSuite.h"; sourceTree = "<group>"; };
 		62BB86001C87300F0019306A /* UIApplication+M13ProgressSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+M13ProgressSuite.m"; path = "Classes/Application/UIApplication+M13ProgressSuite.m"; sourceTree = "<group>"; };
+		84390FE6253723C4000E2704 /* M13ProgressSuiteDemo-SPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M13ProgressSuiteDemo-SPM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1C945C18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetroDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.h; sourceTree = "<group>"; };
 		CA1C945D18CCF59500B469BF /* M13ProgressViewMetroDotPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetroDotPolygon.m; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.m; sourceTree = "<group>"; };
 		CA2FAF981889907300BCAEF5 /* M13ProgressSuiteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13ProgressSuiteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +262,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		84390FD2253723C4000E2704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84390FD3253723C4000E2704 /* CoreGraphics.framework in Frameworks */,
+				84390FD5253723C4000E2704 /* QuartzCore.framework in Frameworks */,
+				84390FD6253723C4000E2704 /* CoreImage.framework in Frameworks */,
+				84390FFB25372598000E2704 /* M13ProgressSuite in Frameworks */,
+				84390FD7253723C4000E2704 /* Accelerate.framework in Frameworks */,
+				84390FD8253723C4000E2704 /* UIKit.framework in Frameworks */,
+				84390FD9253723C4000E2704 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA2FAF951889907300BCAEF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +338,7 @@
 				CA2FAF981889907300BCAEF5 /* M13ProgressSuiteDemo.app */,
 				CA2FAFBC1889907300BCAEF5 /* M13ProgressSuiteTests.xctest */,
 				FB2A7BDC1B793E5600FE4E4A /* M13ProgressSuite.framework */,
+				84390FE6253723C4000E2704 /* M13ProgressSuiteDemo-SPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -629,6 +677,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		84390FBB253723C4000E2704 /* M13ProgressSuiteDemo-SPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84390FE3253723C4000E2704 /* Build configuration list for PBXNativeTarget "M13ProgressSuiteDemo-SPM" */;
+			buildPhases = (
+				84390FBE253723C4000E2704 /* Sources */,
+				84390FD2253723C4000E2704 /* Frameworks */,
+				84390FDA253723C4000E2704 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "M13ProgressSuiteDemo-SPM";
+			packageProductDependencies = (
+				84390FFA25372598000E2704 /* M13ProgressSuite */,
+			);
+			productName = M13ProgressSuite;
+			productReference = 84390FE6253723C4000E2704 /* M13ProgressSuiteDemo-SPM.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CA2FAF971889907300BCAEF5 /* M13ProgressSuiteDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA2FAFCD1889907300BCAEF5 /* Build configuration list for PBXNativeTarget "M13ProgressSuiteDemo" */;
@@ -706,6 +774,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -718,11 +787,25 @@
 				CA2FAFBB1889907300BCAEF5 /* M13ProgressSuiteTests */,
 				FB2A7BDB1B793E5600FE4E4A /* M13ProgressSuiteFramework */,
 				CA2FB0431889986D00BCAEF5 /* Documentation */,
+				84390FBB253723C4000E2704 /* M13ProgressSuiteDemo-SPM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		84390FDA253723C4000E2704 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84390FDB253723C4000E2704 /* Main_iPad.storyboard in Resources */,
+				84390FDC253723C4000E2704 /* Galaxy.jpg in Resources */,
+				84390FDD253723C4000E2704 /* Images.xcassets in Resources */,
+				84390FDE253723C4000E2704 /* Striped_apple_logo.png in Resources */,
+				84390FDF253723C4000E2704 /* Main_iPhone.storyboard in Resources */,
+				84390FE0253723C4000E2704 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA2FAF961889907300BCAEF5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -770,6 +853,32 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		84390FBE253723C4000E2704 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84390FBF253723C4000E2704 /* UIApplication+M13ProgressSuite.m in Sources */,
+				84390FC0253723C4000E2704 /* SampleViewController.m in Sources */,
+				84390FC1253723C4000E2704 /* LetterpressViewController.m in Sources */,
+				84390FC2253723C4000E2704 /* BarViewController.m in Sources */,
+				84390FC3253723C4000E2704 /* M13ProgressViewBarNavigationControllerViewController.m in Sources */,
+				84390FC4253723C4000E2704 /* RadiativeViewController.m in Sources */,
+				84390FC5253723C4000E2704 /* ProgressHUDViewController.m in Sources */,
+				84390FC6253723C4000E2704 /* RingViewController.m in Sources */,
+				84390FC7253723C4000E2704 /* SegmentedBarViewController.m in Sources */,
+				84390FC8253723C4000E2704 /* MetroViewController.m in Sources */,
+				84390FC9253723C4000E2704 /* PieViewController.m in Sources */,
+				84390FCA253723C4000E2704 /* ImageViewController.m in Sources */,
+				84390FCB253723C4000E2704 /* BorderedBarViewController.m in Sources */,
+				84390FCC253723C4000E2704 /* AppDelegate.m in Sources */,
+				84390FCD253723C4000E2704 /* main.m in Sources */,
+				84390FCE253723C4000E2704 /* FilteredImageViewController.m in Sources */,
+				84390FCF253723C4000E2704 /* ConsoleViewController.m in Sources */,
+				84390FD0253723C4000E2704 /* StripedBarViewController.m in Sources */,
+				84390FD1253723C4000E2704 /* SegmentedRingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA2FAF941889907300BCAEF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -880,6 +989,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		84390FE4253723C4000E2704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "M13ProgressSuite/M13ProgressSuite-Prefix.pch";
+				INFOPLIST_FILE = "M13ProgressSuite/M13ProgressSuite-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrandonMcQuilkin.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84390FE5253723C4000E2704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "M13ProgressSuite/M13ProgressSuite-Prefix.pch";
+				INFOPLIST_FILE = "M13ProgressSuite/M13ProgressSuite-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrandonMcQuilkin.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		CA2FAFCB1889907300BCAEF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -961,7 +1106,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "M13ProgressSuite/M13ProgressSuite-Prefix.pch";
 				INFOPLIST_FILE = "M13ProgressSuite/M13ProgressSuite-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BrandonMcQuilkin.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -976,7 +1124,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "M13ProgressSuite/M13ProgressSuite-Prefix.pch";
 				INFOPLIST_FILE = "M13ProgressSuite/M13ProgressSuite-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BrandonMcQuilkin.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1061,7 +1212,11 @@
 				INFOPLIST_FILE = M13ProgressSuiteFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BrandonMcQuilkin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = M13ProgressSuite;
@@ -1090,7 +1245,11 @@
 				INFOPLIST_FILE = M13ProgressSuiteFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BrandonMcQuilkin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = M13ProgressSuite;
@@ -1103,6 +1262,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84390FE3253723C4000E2704 /* Build configuration list for PBXNativeTarget "M13ProgressSuiteDemo-SPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84390FE4253723C4000E2704 /* Debug */,
+				84390FE5253723C4000E2704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA2FAF931889907300BCAEF5 /* Build configuration list for PBXProject "M13ProgressSuite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1149,6 +1317,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84390FFA25372598000E2704 /* M13ProgressSuite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = M13ProgressSuite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA2FAF901889907300BCAEF5 /* Project object */;
 }
