@@ -18,14 +18,14 @@ let package = Package(
         .target(
             name: "M13ProgressSuite",
             path: "Classes",
-            publicHeadersPath: "",
-            cSettings: [
-                .headerSearchPath("Application"),
-                .headerSearchPath("Console"),
-                .headerSearchPath("HUD"),
-                .headerSearchPath("NavigationController"),
-                .headerSearchPath("ProgressViews"),
-                  ]
+            sources: [
+                "Application",
+                "Console",
+                "HUD",
+                "NavigationController",
+                "ProgressViews",
+            ],
+            publicHeadersPath: ""
         ),
     ]
 )
