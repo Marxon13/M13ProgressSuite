@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressConsole.h"
+@import M13ProgressSuite;
 
 @interface ConsoleViewController : UIViewController
 

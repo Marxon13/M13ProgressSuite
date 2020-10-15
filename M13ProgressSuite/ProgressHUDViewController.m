@@ -12,10 +12,8 @@
  */
 
 #import "ProgressHUDViewController.h"
-#import "M13ProgressHUD.h"
-#import "M13ProgressViewRing.h"
 #import "AppDelegate.h"
-#import "UIApplication+M13ProgressSuite.h"
+@import M13ProgressSuite;
 
 @interface ProgressHUDViewController ()
 
