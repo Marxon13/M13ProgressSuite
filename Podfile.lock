@@ -1,0 +1,16 @@
+PODS:
+  - M13ProgressSuite (1.2.9)
+
+DEPENDENCIES:
+  - M13ProgressSuite (from `.`)
+
+EXTERNAL SOURCES:
+  M13ProgressSuite:
+    :path: "."
+
+SPEC CHECKSUMS:
+  M13ProgressSuite: ea9f7263e73e9215e6849dfa54e29ee0ad6a145c
+
+PODFILE CHECKSUM: 368c1b6119851027ce695d080c0952f824e3d347
+
+COCOAPODS: 1.9.3
