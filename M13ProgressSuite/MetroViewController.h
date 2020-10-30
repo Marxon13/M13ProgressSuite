@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewMetro.h"
+@import M13ProgressSuite;
 
 @interface MetroViewController : UIViewController
 

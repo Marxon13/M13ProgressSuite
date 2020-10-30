@@ -12,7 +12,7 @@
  */
 
 #import "M13ProgressViewBarNavigationControllerViewController.h"
-#import "UINavigationController+M13ProgressViewBar.h"
+@import M13ProgressSuite;
 
 @interface M13ProgressViewBarNavigationControllerViewController ()
 

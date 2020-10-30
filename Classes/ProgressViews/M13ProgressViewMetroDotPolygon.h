@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "M13ProgressViewMetro.h"
 
 /**A subclass of M13ProgressViewMetroDot.*/
