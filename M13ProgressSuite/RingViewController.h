@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewRing.h"
+@import M13ProgressSuite;
 
 @interface RingViewController : UIViewController
 

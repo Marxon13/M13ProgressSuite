@@ -7,7 +7,7 @@
 //
 
 #import "MetroViewController.h"
-#import "M13ProgressViewMetroDotPolygon.h"
+@import M13ProgressSuite;
 
 @interface MetroViewController ()
 

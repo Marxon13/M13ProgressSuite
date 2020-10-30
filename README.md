@@ -4,6 +4,50 @@ M13ProgressSuite
 
 A set of classes used to display progress information to users on iOS.
 
+Installation
+------------
+
+### CocoaPods
+
+Add to Podfile:
+
+``` bash
+pod 'M13ProgressSuite'
+```
+
+### Swift Package Manager
+
+Add te dependency to your `Package.swift` and use in your target
+``` swift
+dependencies: [
+    .package(url: "https://github.com/Marxon13/M13ProgressSuite.git", .upToNextMajor(from: "1.3.0"))
+]
+```
+
+Sample `Package.swift`
+
+``` swift
+let package = Package(
+    name: "YourDependency",
+    products: [
+        .library(
+            name: "YourDependency",
+            targets: ["YourDependency"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/Marxon13/M13ProgressSuite.git", .upToNextMajor(from: "1.3.0")),
+    ],
+    targets: [
+        .target(
+            name: "YourDependency",
+            dependencies: [
+                "M13ProgressSuite"
+            ]
+        ),
+    ]
+)
+```
+
 Includes:
 ---------
 * A interchangeable set of progress view of diffrent styles. All the progress views are based on the same superclass, allowing any of them to be switched with any other easily.
