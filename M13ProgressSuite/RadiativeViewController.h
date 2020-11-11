@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewRadiative.h"
+@import M13ProgressSuite;
 
 @interface RadiativeViewController : UIViewController
 

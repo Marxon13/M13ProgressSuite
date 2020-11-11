@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewStripedBar.h"
+@import M13ProgressSuite;
 
 @interface StripedBarViewController : UIViewController
 

@@ -12,6 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 /**A UINavagationController category that adds a progress view to the UINavigationBar.*/
 @interface UINavigationController (M13ProgressViewBar)

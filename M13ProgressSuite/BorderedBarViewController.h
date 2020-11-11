@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewBorderedBar.h"
+@import M13ProgressSuite;
 
 @interface BorderedBarViewController : UIViewController
 

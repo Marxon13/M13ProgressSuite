@@ -12,6 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "M13ProgressView.h"
 
 typedef enum {

@@ -12,6 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 typedef enum {
     /**Resets the action and returns the progress view to its normal state.*/

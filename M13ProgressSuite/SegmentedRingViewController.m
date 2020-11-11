@@ -12,6 +12,7 @@
  */
 
 #import "SegmentedRingViewController.h"
+@import M13ProgressSuite;
 
 @interface SegmentedRingViewController ()
 

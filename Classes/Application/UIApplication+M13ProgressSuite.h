@@ -12,6 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 /**A UIApplication category that deals with app extensions.*/
 @interface UIApplication (M13ProgressSuite)

@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewFilteredImage.h"
+@import M13ProgressSuite;
 
 @interface FilteredImageViewController : UIViewController
 
