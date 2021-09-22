@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                    M13ProgressSuite includes many diffrent of styles of progress views: bar, ring, pie, etc. It also includes a HUD overlay and a UINavigationController with progress bar built in.
                    DESC
 
-  s.homepage     = "https://github.com/Marxon13/M13ProgressSuite"
+  s.homepage     = "https://github.com/dahiri-farid/M13ProgressSuite"
   s.license      = {:type => 'MIT',
                     :text => <<-LICENSE
  Copyright (c) 2013 Brandon McQuilkin
