@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   s.platform     = :ios, '7.0'
 
-  s.source = { :git => "https://github.com/dahiri-farid/M13ProgressSuite" }
+  s.source = { :git => "https://github.com/dahiri-farid/M13ProgressSuite", :tag => s.version.to_s }
 
   s.source_files  = 'Classes/*/*'
 
