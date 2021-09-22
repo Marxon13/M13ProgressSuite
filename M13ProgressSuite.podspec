@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "M13ProgressSuite"
-  s.version      = "1.2.9"
+  s.version      = "1.2.10"
   s.summary      = "A suite containing many tools to display progress information on iOS."
 
   s.description  = <<-DESC
