@@ -20,7 +20,7 @@ pod 'M13ProgressSuite'
 Add te dependency to your `Package.swift` and use in your target
 ``` swift
 dependencies: [
-    .package(url: "https://github.com/Marxon13/M13ProgressSuite.git", .upToNextMajor(from: "1.3.0"))
+    .package(url: "https://github.com/Marxon13/M13ProgressSuite.git", .upToNextMajor(from: "1.3.1"))
 ]
 ```
 
@@ -35,7 +35,7 @@ let package = Package(
             targets: ["YourDependency"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Marxon13/M13ProgressSuite.git", .upToNextMajor(from: "1.3.0")),
+        .package(url: "https://github.com/Marxon13/M13ProgressSuite.git", .upToNextMajor(from: "1.3.1")),
     ],
     targets: [
         .target(
