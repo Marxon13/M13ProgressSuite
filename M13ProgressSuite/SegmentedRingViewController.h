@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewSegmentedRing.h"
+@import M13ProgressSuite;
 
 @interface SegmentedRingViewController : UIViewController
 

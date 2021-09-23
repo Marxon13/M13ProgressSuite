@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewSegmentedBar.h"
+@import M13ProgressSuite;
 
 @interface SegmentedBarViewController : UIViewController
 

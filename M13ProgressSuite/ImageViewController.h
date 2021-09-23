@@ -12,7 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "M13ProgressViewImage.h"
+@import M13ProgressSuite;
 
 @interface ImageViewController : UIViewController
 

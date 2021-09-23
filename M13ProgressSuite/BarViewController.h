@@ -12,8 +12,7 @@
  */
 
 #import <UIKit/UIKit.h>
-
-#import "M13ProgressViewBar.h"
+@import M13ProgressSuite;
 
 @interface BarViewController : UIViewController
 

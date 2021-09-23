@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Brandon McQuilkin. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "M13ProgressView.h"
 
 typedef enum {
