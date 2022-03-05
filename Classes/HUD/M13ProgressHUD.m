@@ -407,20 +407,20 @@
 }
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
-    UIDeviceOrientation deviceOrientation = [notification.object orientation];
+    UIDeviceOrientation deviceOrientation = [notification.object progressOrientation];
     
     if (_shouldAutorotate && UIDeviceOrientationIsValidInterfaceOrientation(deviceOrientation)) {
         if (UIDeviceOrientationIsPortrait(deviceOrientation)) {
             if (deviceOrientation == UIDeviceOrientationPortraitUpsideDown) {
-                _orientation = UIInterfaceOrientationPortraitUpsideDown;
+                _progressOrientation = UIInterfaceOrientationPortraitUpsideDown;
             } else {
-                _orientation = UIInterfaceOrientationPortrait;
+                _progressOrientation = UIInterfaceOrientationPortrait;
             }
         } else {
             if (deviceOrientation == UIDeviceOrientationLandscapeLeft) {
-                _orientation = UIInterfaceOrientationLandscapeLeft;
+                _progressOrientation = UIInterfaceOrientationLandscapeLeft;
             } else {
-                _orientation = UIInterfaceOrientationLandscapeRight;
+                _progressOrientation = UIInterfaceOrientationLandscapeRight;
             }
         }
         [self layoutHUD];
@@ -567,7 +567,7 @@
     }
     
     //Swap height and with on rotation
-    if (_orientation == UIInterfaceOrientationLandscapeLeft || _orientation == UIInterfaceOrientationLandscapeRight) {
+    if (_progressOrientation == UIInterfaceOrientationLandscapeLeft || _progressOrientation == UIInterfaceOrientationLandscapeRight) {
         //Flip the width and height.
         CGFloat temp = backgroundRect.size.width;
         backgroundRect.size.width = backgroundRect.size.height;
@@ -803,11 +803,11 @@
 
 - (CGFloat)angleForDeviceOrientation
 {
-    if (_orientation == UIInterfaceOrientationLandscapeLeft) {
+    if (_progressOrientation == UIInterfaceOrientationLandscapeLeft) {
         return M_PI_2;
-    } else if (_orientation == UIInterfaceOrientationLandscapeRight) {
+    } else if (_progressOrientation == UIInterfaceOrientationLandscapeRight) {
         return -M_PI_2;
-    } else if (_orientation == UIInterfaceOrientationPortraitUpsideDown) {
+    } else if (_progressOrientation == UIInterfaceOrientationPortraitUpsideDown) {
         return M_PI;
     }
     return 0;
