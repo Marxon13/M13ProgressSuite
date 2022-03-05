@@ -104,7 +104,7 @@ typedef enum {
  */
 @property (nonatomic, assign) BOOL shouldAutorotate;
 /**The orientation of the HUD.*/
-@property (nonatomic, assign) UIInterfaceOrientation orientation;
+@property (nonatomic, assign) UIInterfaceOrientation progressOrientation;
 
 /**@name Actions*/
 /**Set the progress of the `M13ProgressView`.
